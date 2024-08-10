@@ -71,7 +71,7 @@ a.nav-link.px-2 {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 18px;
-    color: var(--font-color-lt);
+    color: var(--yellow);
 }
 
 a.nav-link.px-2:hover {
@@ -97,6 +97,11 @@ button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
     letter-spacing: 1.25px;
     color: var(--teal);
     text-decoration: none;
+}
+
+a.dropdown-toggle.dropdown-toggle-split:hover,
+button.btn.btn-none.dropdown-toggle.dropdown-toggle-split:hover  {
+    color: var(--salmon-light);
 }
 
 /* ------------- Hamburger */
