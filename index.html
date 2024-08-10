@@ -22,8 +22,8 @@
 
 <body>
     <nav class="py-2 bg-black shadow-lg">
-        <div class="container d-flex flex-wrap">
-            <ul class="nav me-auto mb-2">
+        <div class="container-fluid d-flex flex-wrap">
+            <ul class="nav me-auto mb-3">
                 <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png"></a>
             </ul>
             <ul class="nav my-3">
@@ -32,15 +32,14 @@
             </ul>
         </div>
     </nav>
-    <header class="py-3 mb-4 border-bottom">
+    <header class="pt-3 mb-4 border-bottom">
         <div class="container d-flex flex-wrap justify-content-center">
             <!-- Example single danger button -->
             <div class="row">
-                <div class="btn-group">
-
-                    <button type="button" class="btn btn-none dropdown-toggle dropdown-toggle-split"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Teams </button>
+                <div class="btn-group my-2">
+                    <a type="button" class=" dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                        Teams </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -50,9 +49,9 @@
                         </li>
                         <li><a class="dropdown-item" href="#">Separated link</a></li>
                     </ul>
-                    <button type="button" class="btn btn-none dropdown-toggle dropdown-toggle-split"
+                    <a type="button" class=" dropdown-toggle dropdown-toggle-split"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Camps & Clinics </button>
+                        Camps & Clinics </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -71,10 +70,10 @@
                         <li><a class="dropdown-item" href="#">Separated link</a></li>
                     </ul>
 
-                    <button type="button" class="btn btn-none dropdown-toggle dropdown-toggle-split"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Coaches
-                    </button>
+                    <a type="button" class=" dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                                            Coaches
+                </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -97,46 +96,57 @@
         </div>
     </header>
     <!--Hero Starts Here-->
-    <section class="blingby-hero container-fluid px-3 px-md-4 px-lg-5 g-5 py-3 py-md-5 py-lg-5 py-xxl-5"
-        id="blingbyHero">
-        <div class="row d-flex flex-lg-row-reverse align-items-center g-4 py-5">
-            <div class="col-12 col-sm-8 col-lg-6">
-                <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aA7TB5yXxxU"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+    <section class="coast-hero">
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item  carousel-item-1 active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-start">
+                    <h1>Example headline.</h1>
+                    <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                  </div>
                 </div>
+              </div>
+              <div class="carousel-item carousel-item-2">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item carousel-item-3">
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <h1 class="display-1 fw-bold lh-1 my-2" id="hero-start">
-                    <span class="text-main hero-fade" data-aos="fade-in" data-aos-duration="2500"
-                        data-aos-delay="1800">Blingby</span>
-                </h1>
-                <br>
-                <h1 class="display-5 fw-bold lh-1" id="hero-start">
-                    <span class="text-main hero-fade" data-aos="fade-in" data-aos-duration="2500"
-                        data-aos-delay="300">Next</span>
-                    <span class="dark" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="600">Level</span>
-                    <span class="text-main hero-fade" data-aos="fade-in" data-aos-duration="2500"
-                        data-aos-delay="900">Digital</span>
-                    <span class="dark" data-aos="fade-in" data-aos-duration="2500"
-                        data-aos-delay="1200">Marketing</span>
-                    </p>
-                    <div class="row pt-3 pt-md-4">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <button type="button" class="btn btn-dark w-50 lg-w-auto shadow-lg px-4 me-md-2"
-                                id="btn-cta-1">LEARN MORE</button>
-                            <button type="button" class="btn btn-outline-secondary shadow-lg w-50 px-4"
-                                id="btn-cta-2">REGISTER</button>
-                        </div>
-                    </div>
-            </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
     </section>
 
     <!--Parallex Starts Here-->
-    <aside class="blingby-statement">
+    <aside class="coast-statement">
         <div class="parallax-section" id="bg">
             <div class="container">
                 <div class="row d-flex justify-content-center">
@@ -147,24 +157,20 @@
                                 data-aos-delay="200">'Out of
                                 the Box'</span>
                             <br>
-                            <span class="dark" data-aos="fade-in" data-aos-duration="2500"
-                                data-aos-delay="400">embeddable</span>
-                            <span class="dark" data-aos="fade-in" data-aos-duration="2500"
-                                data-aos-delay="600">technology</span>
+                            <span class="dark" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="400">Ut enim
+                                ad minim veniam</span>
                         </h2>
 
                         <h3 class="parallex-text text-center" id="parallex-content-2">
-                            <span class="dark" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="900">Add
-                                interactivity to your digital content</span>
+                            <span class="dark" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="900">Lorem
+                                ipsum dolor sit amet, </span>
                             <br>
                             <span class="text-main hero-fade" data-aos="fade-in" data-aos-duration="2500"
                                 data-aos-delay="1200">
-                                Make clickable elements more engaging.
-                            </span>
+                                consectetur adipiscing elit </span>
                             <br>
                             <span class="dark" data-aos="fade-in" data-aos-duration="2500" data-aos-delay="1500">
-                                Increase engagement and conversion rates.
-                            </span>
+                                ut labore et dolore magna aliqua. </span>
                             <br>
                             <span class="text-main hero-fade" data-aos="fade-in" data-aos-duration="2500"
                                 data-aos-delay="1800">
@@ -180,7 +186,7 @@
 
     <!--About-->
     <section class="about-section" id="about">
-        <div class="container px-4 py-5" id="blingby-about">
+        <div class="container px-4 py-5" id="coast-about">
             <h2 class="pb-2 my-2 border-bottom">Who We Are</h2>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">

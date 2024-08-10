@@ -36,6 +36,9 @@ body {
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
 /* ---------------- Project Styles ---------------- */
 .text-main {
     color: #515151aa;
@@ -75,6 +78,7 @@ a.nav-link.px-2:hover {
     color: var(--teal);
     font-weight: 400;
 }
+
 .navbar-brand {
     letter-spacing: 1px;
     font-size: 1.25rem;
@@ -84,6 +88,15 @@ img.logo {
     max-width: 100%;
     height: 42px;
     max-height: 42px;
+}
+
+a.dropdown-toggle.dropdown-toggle-split,
+button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1.25px;
+    color: var(--teal);
+    text-decoration: none;
 }
 
 /* ------------- Hamburger */
@@ -277,13 +290,44 @@ button#btn-cta-2:hover {
     color: #0a0a0a;
 }
 
-#blingbyHero {
+#coastHero {
     margin: 0 auto;
     width: 100%;
     min-height: 700px;
     height: 100%;
 }
 
+.coast-hero {
+    min-height: 80vh;
+    height: 80vh;
+}
+
+
+.carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+  }
+
+  .carousel-item-1 {
+    background-image: url("https://images.pexels.com/photos/159573/lacrosse-lax-lacrosse-game-game-159573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  }
+
+  .carousel-item-2 {
+    background-image: url("https://images.pexels.com/photos/264382/pexels-photo-264382.jpeg?auto=compress&cs=tinysrgb&w=800");
+  }
+
+  .carousel-item-3 {
+    background-image: url('https://images.pexels.com/photos/262491/pexels-photo-262491.jpeg?auto=compress&cs=tinysrgb&w=800');
+  }
 #videoHero,
 #hero-start {
     animation: fadeInAnimation ease 5s;
@@ -379,6 +423,16 @@ button#btn-cta-2:hover {
         max-height: 62px;
 
     }
+    a.dropdown-toggle.dropdown-toggle-split,
+    button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
+        text-transform: uppercase;
+        font-size: 1.175rem;
+        letter-spacing: 1.25px;
+        margin: 0 7.5px;
+    }
+    
+    
+}
 
 
     @media screen and (min-width: 1024px) {
