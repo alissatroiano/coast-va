@@ -463,6 +463,21 @@ img.img-about {
     max-height: 650px;
 }
 
+section.about-section {
+    min-height: 60vh;
+}
+
+.text-feature-icon-1 {
+    color: var(--teal);
+}
+
+.text-feature-icon-2 {
+    color: var(--salmon-dark);
+}
+
+.text-feature-icon-3 {
+    color: #fcde63;
+}
 
 @media screen and (min-width: 768px) {
     img.logo {
