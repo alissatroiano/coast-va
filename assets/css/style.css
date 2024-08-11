@@ -39,6 +39,7 @@ body {
 a {
     text-decoration: none;
 }
+
 /* ---------------- Project Styles ---------------- */
 .text-main {
     color: #515151aa;
@@ -54,17 +55,18 @@ h6 {
     font-weight: 900;
     text-transform: uppercase;
 }
- a.link-font {
+
+a.link-font {
     font-family: var(--secondary-font);
     text-decoration: none;
     color: var(--teal);
     text-transform: capitalize;
     font-weight: 500;
- }
+}
 
- a.link-font:hover {
+a.link-font:hover {
     color: var(--salmon-dark)
- }
+}
 
 /* ---------------- Header ---------------- */
 header {
@@ -112,7 +114,7 @@ button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
 
 a.dropdown-toggle.dropdown-toggle-split:hover,
 div.btn-group.my-2:hover a.dropdown-toggle.dropdown-toggle-split:hover,
-button.btn.btn-none.dropdown-toggle.dropdown-toggle-split:hover  {
+button.btn.btn-none.dropdown-toggle.dropdown-toggle-split:hover {
     color: var(--salmon-light);
 }
 
@@ -279,6 +281,7 @@ a.dropdown-item:hover {
     letter-spacing: 1.35;
     background: transparent;
 }
+
 /* ------------------ Hero */
 .ratio.ratio-16x9 {
     height: 400px;
@@ -350,29 +353,44 @@ button#btn-cta-2:hover {
 
 .carousel {
     margin-bottom: 4rem;
-  }
-  /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
     bottom: 3rem;
     z-index: 10;
-  }
-  
-  /* Declare heights because of positioning of img element */
-  .carousel-item {
-    height: 32rem;
-  }
+}
 
-  .carousel-item-1 {
-    background-image: url("https://images.pexels.com/photos/159573/lacrosse-lax-lacrosse-game-game-159573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-  }
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    min-height: 60vh;
+}
 
-  .carousel-item-2 {
-    background-image: url("https://images.pexels.com/photos/264382/pexels-photo-264382.jpeg?auto=compress&cs=tinysrgb&w=800");
-  }
+.carousel-item-1 {
+    background-image: linear-gradient(rgba(6, 2, 43, 0.74),
+            rgba(1, 2, 18, 0.743)), url("https://images.pexels.com/photos/159573/lacrosse-lax-lacrosse-game-game-159573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-  .carousel-item-3 {
-    background-image: url('https://images.pexels.com/photos/262491/pexels-photo-262491.jpeg?auto=compress&cs=tinysrgb&w=800');
-  }
+.carousel-item-2 {
+    background-image: linear-gradient(rgba(43, 33, 4, 0.74),
+    rgba(1, 2, 18, 0.743)), url("https://images.pexels.com/photos/264382/pexels-photo-264382.jpeg?auto=compress&cs=tinysrgb&w=800");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item-3 {
+    background-image: linear-gradient(rgba(99, 8, 8, 0.452),
+            rgba(0, 0, 0, 0.725)),
+        url('https://images.pexels.com/photos/262491/pexels-photo-262491.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 #videoHero,
 #hero-start {
     animation: fadeInAnimation ease 5s;
@@ -468,6 +486,7 @@ button#btn-cta-2:hover {
         max-height: 62px;
 
     }
+
     a.dropdown-toggle.dropdown-toggle-split,
     button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
         text-transform: uppercase;
@@ -475,44 +494,44 @@ button#btn-cta-2:hover {
         letter-spacing: 1.25px;
         margin: 0 7.5px;
     }
-    
-    
+
+
 }
 
 
-    @media screen and (min-width: 1024px) {
-        #parallex-content {
-            font-family: 'futura-pt', sans-serif;
-            font-weight: 300;
-            letter-spacing: 1px;
-            font-size: 2.1rem;
-            margin-top: 10px;
-            line-height: 2;
-            font-weight: 200;
-            color: #04181e8b;
-            text-shadow: 0px 0px 6px rgba(41, 41, 41, 0.51);
-        }
-
-        #parallex-content-2 {
-            font-family: 'futura-pt', sans-serif;
-            font-weight: 300;
-            letter-spacing: 1px;
-            color: #010b0e9f;
-            text-shadow: 1px 3px 6px rgba(103, 103, 103, 0.51);
-            font-size: 2.1rem;
-            line-height: 2;
-        }
-
-        #bg,
-        #bg2 {
-            background-image: url('../images/bg.png');
-            background-repeat: no-repeat;
-            height: 650px;
-            max-width: 100%;
-            min-height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+@media screen and (min-width: 1024px) {
+    #parallex-content {
+        font-family: 'futura-pt', sans-serif;
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 2.1rem;
+        margin-top: 10px;
+        line-height: 2;
+        font-weight: 200;
+        color: #04181e8b;
+        text-shadow: 0px 0px 6px rgba(41, 41, 41, 0.51);
     }
+
+    #parallex-content-2 {
+        font-family: 'futura-pt', sans-serif;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: #010b0e9f;
+        text-shadow: 1px 3px 6px rgba(103, 103, 103, 0.51);
+        font-size: 2.1rem;
+        line-height: 2;
+    }
+
+    #bg,
+    #bg2 {
+        background-image: url('../images/bg.png');
+        background-repeat: no-repeat;
+        height: 650px;
+        max-width: 100%;
+        min-height: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
