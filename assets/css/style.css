@@ -54,6 +54,17 @@ h6 {
     font-weight: 900;
     text-transform: uppercase;
 }
+ a.link-font {
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    color: var(--teal);
+    text-transform: capitalize;
+    font-weight: 500;
+ }
+
+ a.link-font:hover {
+    color: var(--salmon-dark)
+ }
 
 /* ---------------- Header ---------------- */
 header {
@@ -100,6 +111,7 @@ button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
 }
 
 a.dropdown-toggle.dropdown-toggle-split:hover,
+div.btn-group.my-2:hover a.dropdown-toggle.dropdown-toggle-split:hover,
 button.btn.btn-none.dropdown-toggle.dropdown-toggle-split:hover  {
     color: var(--salmon-light);
 }
@@ -239,6 +251,34 @@ ul.hamburger-nav:hover {
     color: rgb(26, 201, 201);
 }
 
+ul.dropdown-menu,
+ul.dropdown-menu.show {
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(12px, 26px, 0px);
+    background: #fafafaed;
+    border: none;
+    box-shadow: 0px 6px 14px 3px #202020ba;
+}
+
+div.dropdown-group,
+a.dropdown-item {
+    color: var(--teal);
+    font-family: 'phenomena', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.057rem;
+    font-weight: 510;
+    letter-spacing: 1.25px;
+}
+
+a.dropdown-item:hover {
+    color: var(--salmon-dark);
+    font-weight: 705;
+    font-size: 1.057rem;
+    letter-spacing: 1.35;
+    background: transparent;
+}
 /* ------------------ Hero */
 .ratio.ratio-16x9 {
     height: 400px;
