@@ -68,6 +68,13 @@ a.link-font:hover {
     color: var(--salmon-dark)
 }
 
+.section-title {
+    font-family: 'Mont', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
 /* ---------------- Header ---------------- */
 header {
     font-family: var(--secondary-font);
@@ -341,13 +348,7 @@ button#btn-cta-2:hover {
 #coastHero {
     margin: 0 auto;
     width: 100%;
-    min-height: 700px;
     height: 100%;
-}
-
-.coast-hero {
-    min-height: 80vh;
-    height: 80vh;
 }
 
 
@@ -363,128 +364,111 @@ button#btn-cta-2:hover {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-    min-height: 60vh;
+    min-height: 68vh;
 }
 
 .carousel-item-1 {
-    background-image: linear-gradient(rgba(6, 2, 43, 0.74),
-            rgba(1, 2, 18, 0.743)), url("https://images.pexels.com/photos/159573/lacrosse-lax-lacrosse-game-game-159573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-image: linear-gradient(rgba(19, 2, 2, 0.785), rgba(5, 2, 33, 0.772),
+            rgba(19, 2, 2, 0.785)), url('../images/coast-img-1.JPEG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .carousel-item-2 {
-    background-image: linear-gradient(rgba(43, 33, 4, 0.74),
-    rgba(1, 2, 18, 0.743)), url("https://images.pexels.com/photos/264382/pexels-photo-264382.jpeg?auto=compress&cs=tinysrgb&w=800");
+    background-image: linear-gradient(#752924af,
+            rgba(14, 1, 1, 0.851)),
+        url('../images/coast-img-6.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    max-width: 100%;
+    height: auto
 }
 
 .carousel-item-3 {
-    background-image: linear-gradient(rgba(99, 8, 8, 0.452),
-            rgba(0, 0, 0, 0.725)),
-        url('https://images.pexels.com/photos/262491/pexels-photo-262491.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-image: linear-gradient(rgba(5, 6, 54, 0.789),
+            rgba(8, 1, 25, 0.817)),
+        url('../images/coast-img-7.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    max-width: 100%;
+    height: auto
 }
 
-#videoHero,
-#hero-start {
-    animation: fadeInAnimation ease 5s;
+.carousel-item-btn {
+    margin: 50px auto;
 }
 
-#hero-lead {
-    animation: fadeInAnimation ease 5s;
+a.btn.btn-lg.btn-primary {
+    border: none;
+    color: var(--font-color-lt);
+    font-family: 'phenomena', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.325rem;
 
 }
 
-#parallex-content {
-    font-family: 'futura-pt', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    padding: 20px;
-    margin: 20px 10px;
-    font-size: 1.2rem;
-    line-height: 3.35rem;
-    color: #010b0e9f;
-    text-shadow: 1px 3px 6px rgba(103, 103, 103, 0.5);
-    text-align: center;
-    /* For Edge */
-    -moz-text-align-last: center;
-    /* For Firefox prior 58.0 */
-    text-align-last: center;
+a.carousel-button-1 {
+    background-color: var(--salmon-dark);
+    color: var(--font-color-lt);
+    font-family: 'phenomena', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.325rem;
 }
 
-#parallex-content-2 {
-    font-family: 'futura-pt', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: #010b0e9f;
-    text-shadow: 1px 3px 6px rgba(103, 103, 103, 0.5);
-    font-size: 1.2rem;
-    line-height: 3.35rem;
+a.carousel-button-1:hover {
+    background-color: none;
+    color: var(--salmon-light);
+    text-decoration: line-through;
+    font-size: 1.4258rem;
 }
 
+a.carousel-button-2 {
+    background-color: var(--yellow);
+    font-family: 'phenomena', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.325rem;
+    color: #071327;
+}
+
+a.carousel-button-2:hover {
+    background-color: none;
+    color: #fcdd63da;
+    text-decoration: line-through;
+    font-size: 1.457rem;
+}
+
+a.carousel-button-3 {
+    background-color: var(--teal);
+    color: var(--font-color-lt);
+    font-family: 'phenomena', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.325rem;
+}
+
+a.carousel-button-3:hover {
+    background-color: none;
+    color: #059aa8;
+    text-decoration: line-through;
+    font-size: 1.468rem;
+    font-weight: 500;
+}
 
 /* -------------------- About */
-#bg,
-#bg2 {
-    background-image: url('../images/bg.png');
-    background-repeat: no-repeat;
-    height: 600px;
+img.img-about {
     max-width: 100%;
-    min-height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax-section {
-    /* The image used */
-    background-image: url(../images/bg.png);
-    /* Full height */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: auto;
+    max-height: 650px;
 }
 
 
 @media screen and (min-width: 768px) {
-    #parallex-content {
-        font-family: 'futura-pt', sans-serif;
-        font-weight: 300;
-        letter-spacing: 1.9px;
-        font-size: 1.63rem;
-        margin-top: 10px;
-        font-weight: 200;
-        color: #04181eb0;
-        text-shadow: 0px 0px 6px rgb(66 66 66 / 58%);
-        text-transform: uppercase;
-    }
-
-    #parallex-content-2 {
-        font-family: 'futura-pt', sans-serif;
-        font-weight: 300;
-        letter-spacing: 1px;
-        color: #010b0e9f;
-        text-shadow: 1px 3px 6px rgba(103, 103, 103, 0.5);
-        font-size: 1.52rem;
-        line-height: 3.35rem;
-    }
-
     img.logo {
-
         max-width: 100%;
         height: 62px;
         max-height: 62px;
-
     }
 
     a.dropdown-toggle.dropdown-toggle-split,
@@ -494,8 +478,9 @@ button#btn-cta-2:hover {
         letter-spacing: 1.25px;
         margin: 0 7.5px;
     }
-
-
+    .carousel-item {
+        min-height: 75vh;
+    }
 }
 
 
@@ -511,27 +496,7 @@ button#btn-cta-2:hover {
         color: #04181e8b;
         text-shadow: 0px 0px 6px rgba(41, 41, 41, 0.51);
     }
-
-    #parallex-content-2 {
-        font-family: 'futura-pt', sans-serif;
-        font-weight: 300;
-        letter-spacing: 1px;
-        color: #010b0e9f;
-        text-shadow: 1px 3px 6px rgba(103, 103, 103, 0.51);
-        font-size: 2.1rem;
-        line-height: 2;
-    }
-
-    #bg,
-    #bg2 {
-        background-image: url('../images/bg.png');
-        background-repeat: no-repeat;
-        height: 650px;
-        max-width: 100%;
-        min-height: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .carousel-item {
+        min-height: 82vh;
     }
 }
