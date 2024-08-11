@@ -368,17 +368,17 @@ button#btn-cta-2:hover {
 }
 
 .carousel-item-1 {
-    background-image: linear-gradient(rgba(19, 2, 2, 0.785), rgba(5, 2, 33, 0.772),
-            rgba(19, 2, 2, 0.785)), url('../images/coast-img-1.JPEG');
+    background-image: linear-gradient(rgba(4, 16, 33, 0.785), rgba(16, 9, 79, 0.665),
+            rgba(11, 4, 49, 0.851)), url('../images/coast-img-4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .carousel-item-2 {
-    background-image: linear-gradient(#752924af,
+    background-image: linear-gradient(#7529249e,#51100bb5,
             rgba(14, 1, 1, 0.851)),
-        url('../images/coast-img-6.JPG');
+        url('../images/coast-img-3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -387,9 +387,9 @@ button#btn-cta-2:hover {
 }
 
 .carousel-item-3 {
-    background-image: linear-gradient(rgba(5, 6, 54, 0.789),
+    background-image: linear-gradient(rgba(11, 12, 98, 0.565),
             rgba(8, 1, 25, 0.817)),
-        url('../images/coast-img-7.jpeg');
+        url('../images/coast-img-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -469,10 +469,13 @@ section.about-section {
 
 .text-feature-icon-1 {
     color: var(--teal);
+    text-shadow: 2px 1px 6px #999999;
+
 }
 
 .text-feature-icon-2 {
     color: var(--salmon-dark);
+    text-shadow: 2px 1px 6px var(--salmon-light);
 }
 
 .text-feature-icon-3 {
