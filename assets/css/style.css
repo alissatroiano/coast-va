@@ -59,6 +59,24 @@ a {
     text-decoration: none;
 }
 
+mark.mark-coaches {
+    padding: .1875em;
+    color: #fcde64;
+    background-color: transparent;
+}
+
+.mark-text {
+    font-family: 'Phenomena', sans-serif;
+    font-weight: 400;
+}
+
+.divider {
+    width: 50%;
+    margin: 20px auto;
+    color: var(--light-gray);
+    border-bottom: 1px solid var(--lightest);
+}
+
 /* ---------------- Project Styles ---------------- */
 .text-main {
     color: #515151aa;
@@ -473,9 +491,13 @@ a.carousel-button-3:hover {
 
 
 /*----------------------------- Coaches */
+#coaches {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 .coaches {
     max-width: 100%;
-    min-height: 60vh;
     height: auto;
     background-size: cover;
     background-color: var(--teal);
@@ -484,7 +506,7 @@ a.carousel-button-3:hover {
 .coaches-container .row .col-lg-4 {
     display: flex;
     justify-content: center;
-    margin: 80px 0 0 0;
+    margin: 50px 0 50px 0;
 }
 
 .card {
@@ -493,12 +515,11 @@ a.carousel-button-3:hover {
     margin: 0 !important;
     border-radius: 20px;
     overflow: hidden;
-    max-width: 280px;
+    max-width: 100%;
     max-height: 340px;
     cursor: pointer;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
 }
 
 .card .card-image {
