@@ -446,11 +446,17 @@ a.carousel-button-3:hover {
     min-height: 40vh;
 }
 
-.about-img {
+
+/* .img-wrapper.mt-1.mt-sm-3.mt-md-4 {
+    background: url('../images/coast-img-3.jpg');   
+    min-height: 350px;
+    min-width: fit-content;
+    height: 100%;
     max-width: 100%;
-    min-height: 450px;
-    background: url('../images/coast-img-4.jpg');
-}
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 .text-feature-icon-1 {
     color: var(--teal);
