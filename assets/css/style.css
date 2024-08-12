@@ -20,6 +20,25 @@
     --gh-watermark: url('../images/gh-icon-1.png');
 }
 
+@property --num {
+    syntax: "<integer>";
+    initial-value: 20;
+    inherits: false;
+  }
+
+  @property --num-1 {
+    syntax: "<integer>";
+    initial-value: 4;
+    inherits: false;
+  }
+
+  @property --num-2 {
+    syntax: "<integer>";
+    initial-value: 8;
+    inherits: false;
+  }
+
+
 /* CSS Reset */
 *,
 *::before,
@@ -481,6 +500,75 @@ img.img-about {
 .text-feature-icon-3 {
     color: #fcde63;
 }
+
+/*----------------------------- Counter */
+.counter-1 {
+    animation: counter-1 2s alternate;
+    counter-reset: num var(--num);
+    font: 800 40px system-ui;
+    padding: 2rem;
+    font-family: var(--primary-font);
+    color: var(--yellow);
+    font-size: 4.5rem;
+  }
+  .counter-1::after {
+    content: counter(num);
+  }
+  
+  @keyframes counter-1 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 20;
+    }
+  }
+
+  .counter-2 {
+    animation: counter-2 2s alternate;
+    counter-reset: num-1 var(--num-1);
+    font: 800 40px system-ui;
+    padding: 2rem;
+    font-family: var(--primary-font);
+    color: var(--yellow);
+    font-size: 4.5rem;
+  }
+  .counter-2::after {
+    content: counter(num-1);
+  }
+  
+  @keyframes counter-2 {
+    from {
+      --num-1: 0;
+    }
+    to {
+      --num-1: 4;
+    }
+  }
+  
+.counter-3 {
+    animation: counter-3 1.65s alternate;
+    counter-reset: num-2 var(--num-2);
+    font: 800 40px system-ui;
+    padding: 2rem;
+    font-family: var(--primary-font);
+    color: var(--yellow);
+    font-size: 4.5rem;
+  }
+  .counter-3::after {
+    content: counter(num-2);
+  }
+  
+  @keyframes counter-3 {
+    from {
+      --num-2: 0;
+    }
+    to {
+      --num-2: 8;
+    }
+  }
+  
+  
 
 /*----------------------------- Coaches */
 .coaches {
