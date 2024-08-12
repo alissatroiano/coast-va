@@ -378,7 +378,7 @@ button#btn-cta-2:hover {
 .carousel-item-2 {
     background-image: linear-gradient(#7529249e, #51100bb5,
             rgba(14, 1, 1, 0.851)),
-        url('../images/coast-img-3.jpg');
+        url('../images/coast-img-7.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -460,12 +460,8 @@ a.carousel-button-3:hover {
 img.img-about {
     max-width: 100%;
     height: auto;
-    max-height: 650px;
 }
 
-section.about-section {
-    min-height: 60vh;
-}
 
 .text-feature-icon-1 {
     color: var(--teal);
