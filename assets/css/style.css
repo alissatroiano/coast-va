@@ -75,6 +75,14 @@ h6 {
     text-transform: uppercase;
 }
 
+.bg-teal {
+    background-color: var(--teal);
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
 a.link-font {
     font-family: var(--secondary-font);
     text-decoration: none;
@@ -309,115 +317,55 @@ a.dropdown-item:hover {
 }
 
 /* ------------------ Hero */
-.ratio.ratio-16x9 {
-    height: 400px;
+section.hero {
+    min-height: 80vh;
+    height: 100vh;
 }
 
-.hero-fade {
-    font-family: 'futura-pt', sans-serif;
-    text-transform: uppercase;
-}
-
-.dark {
-    font-family: 'futura-pt', sans-serif;
-    text-transform: uppercase;
-}
-
-button#btn-cta-1 {
-    font-family: 'futura-pt', sans-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 1em 2em;
-    background-color: #0b0b0bcd;
-    font-weight: 700;
-    border: none;
-    box-shadow: 0px 3px 8px 10px rgba(0, 0, 0, 0.4);
-}
-
-
-button#btn-cta-1:hover {
-    font-family: 'futura-pt', sans-serif;
-    text-transform: uppercase;
-    padding: 1em 2em;
-    font-weight: 700;
-    background-color: #fafafa;
-    border: 1.8px solid #0a0a0a;
-    color: #0a0a0a;
-}
-
-button#btn-cta-2 {
-    font-family: '', sans-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 1em 2em;
-    font-weight: 700;
-    border: 1.2px solid rgba(178, 178, 178, 0.369);
-    color: #01090f;
-    box-shadow: 0px 3px 8px 10px rgba(0, 0, 0, 0.4);
-}
-
-button#btn-cta-2:hover {
-    background-color: #fafafa;
-    border: 1.8px solid #0a0a0a;
-    color: #0a0a0a;
-}
-
-#coastHero {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-}
-
-
-.carousel {
-    margin-bottom: 4rem;
-}
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-    bottom: 3rem;
+    bottom: 10px;
     z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-    min-height: 68vh;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .carousel-item-1 {
-    background-image: linear-gradient(rgba(4, 16, 33, 0.785), rgba(16, 9, 79, 0.665),
-            rgba(11, 4, 49, 0.851)), url('../images/coast-img-4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+    background: linear-gradient(rgba(4, 16, 33, 0.869), rgba(16, 9, 79, 0.665),
+            rgba(11, 4, 49, 0.851)), url('../images/coast-img-4.jpg')  no-repeat center center;
+    background-size:cover;
+    max-width: 100%;
+    /* height: 100%; */
+    }
 
 .carousel-item-2 {
-    background-image: linear-gradient(#7529249e, #51100bb5,
+    background: linear-gradient(#7529249e, #51100bb5,
             rgba(14, 1, 1, 0.851)),
-        url('../images/coast-img-7.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    max-width: 100%;
-    height: auto
+        url('../images/coast-img-7.jpg') no-repeat center center;
+        background-size: cover;
+        max-width: 100%;
+        height: auto;
 }
 
 .carousel-item-3 {
-    background-image: linear-gradient(rgba(11, 12, 98, 0.565),
+    background: linear-gradient(rgba(11, 12, 98, 0.565),
             rgba(8, 1, 25, 0.817)),
         url('../images/coast-img-1.jpg');
     background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
-    background-position: center top;
     max-width: 100%;
-    height: auto
+    height: auto;
 }
 
 .carousel-item-btn {
-    margin: 50px auto;
+    margin: 20px auto;
 }
 
 a.btn.btn-lg.btn-primary {
@@ -476,14 +424,14 @@ a.carousel-button-3:hover {
 }
 
 /* -------------------- About */
-img.img-about {
-    max-width: 100%;
-    height: auto;
+.about {
+    min-height: 40vh;
 }
 
-
-.about {
-    min-height: 600px;
+.about-img {
+    max-width: 100%;
+    min-height: 450px;
+    background: url('../images/coast-img-4.jpg');
 }
 
 .text-feature-icon-1 {
@@ -502,77 +450,135 @@ img.img-about {
 }
 
 /*----------------------------- Counter */
-.counter-1 {
-    animation: counter-1 2s alternate;
-    counter-reset: num var(--num);
-    font: 800 40px system-ui;
-    padding: 2rem;
-    font-family: var(--primary-font);
-    color: var(--yellow);
-    font-size: 4.5rem;
-  }
-  .counter-1::after {
-    content: counter(num);
-  }
-  
-  @keyframes counter-1 {
-    from {
-      --num: 0;
-    }
-    to {
-      --num: 20;
-    }
-  }
 
-  .counter-2 {
-    animation: counter-2 2s alternate;
-    counter-reset: num-1 var(--num-1);
-    font: 800 40px system-ui;
-    padding: 2rem;
-    font-family: var(--primary-font);
+[data-count] { 
+    margin: 15vh 0; 
+    font-size: 5rem;
+    font-family: 'Mont', sans-serif;
+    font-weight: 700;
     color: var(--yellow);
-    font-size: 4.5rem;
-  }
-  .counter-2::after {
-    content: counter(num-1);
-  }
-  
-  @keyframes counter-2 {
-    from {
-      --num-1: 0;
-    }
-    to {
-      --num-1: 4;
-    }
-  }
-  
-.counter-3 {
-    animation: counter-3 1.65s alternate;
-    counter-reset: num-2 var(--num-2);
-    font: 800 40px system-ui;
-    padding: 2rem;
-    font-family: var(--primary-font);
-    color: var(--yellow);
-    font-size: 4.5rem;
-  }
-  .counter-3::after {
-    content: counter(num-2);
-  }
-  
-  @keyframes counter-3 {
-    from {
-      --num-2: 0;
-    }
-    to {
-      --num-2: 8;
-    }
-  }
-  
-  
+    text-shadow: 0px 0px 6px #e69d9d;
+
+    /* text-shadow: 2px 2px 0px var(--salmon-light), 4px 4px 0px var(--salmon-dark); */
+}
+
+ .counter-txt {
+    font-family: 'phenomena', sans-serifs;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 1.52px;
+    color: #2cd5e4;
+
+ }
+
 
 /*----------------------------- Coaches */
 .coaches {
+    max-width: 100%;
     min-height: 60vh;
+    height: auto;
+    background-size: cover;
+    background-color: var(--teal);
+}
+
+.coaches-container .row .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 0 0;
+}
+
+.card {
+    position: relative;
+    padding: 0;
+    margin: 0 !important;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 280px;
+    max-height: 340px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.card .card-image {
+    width: 100%;
+    max-height: 340px;
+}
+
+.card .card-image img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.card .card-content {
+    position: absolute;
+    bottom: -180px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    min-height: 140px;
+    width: 100%;
+    transition: bottom .4s ease-in;
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .card-content {
+    bottom: 0px;
+}
+
+.card:hover .card-content h4,
+.card:hover .card-content h5 {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
+.card .card-content h4,
+.card .card-content h5 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition-delay: 0.2s;
+}
+
+.card .card-content h5 {
+    transition: 0.5s;
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card .card-content .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+
+.card .card-content .social-icons li {
+    margin: 10px;
+    transition: 0.5s;
+    transition-delay: calc(0.15s * var(--i));
+    transform: translateY(50px);
+}
+
+
+.card:hover .card-content .social-icons li {
+    transform: translateY(20px);
+}
+
+.card .card-content .social-icons li a {
+    color: #fff;
+}
+
+.card .card-content .social-icons li a span {
+    font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -589,15 +595,12 @@ img.img-about {
         letter-spacing: 1.25px;
         margin: 0 7.5px;
     }
-
-    .carousel-item {
-        min-height: 75vh;
-    }
 }
 
 
 @media screen and (min-width: 1024px) {
     .carousel-item {
-        min-height: 82vh;
+        min-height: 100vh;
+        overflow: hidden;
     }
 }

@@ -34,7 +34,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="container-fluid d-flex flex-wrap justify-content-center bg-white w-100 mb-5">
+        <div class="container-fluid d-flex flex-wrap justify-content-center bg-white w-100">
             <!-- Example single danger button -->
             <div class="row">
                 <div class="btn-group my-2">
@@ -97,123 +97,232 @@
     </div> -->
 
     <!--Hero Starts Here-->
-    <section class="hero my-5 mx-auto py-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div id="myCarousel" class="carousel slide py-5" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item  carousel-item-1 active">
-                            <div class="container">
-                                <div class="carousel-caption text-start">
-                                    <h1>Example headline.</h1>
-                                    <p class="opacity-75">Some representative placeholder content for the first
-                                        slide of the
-                                        carousel.</p>
-                                    <div class="carousel-item-btn">
+    <section class="hero" id="home">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item  carousel-item-1 active">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Example headline.</h1>
+                            <p class="opacity-75">Some representative placeholder content for the first
+                                slide of the
+                                carousel.</p>
+                            <div class="carousel-item-btn">
 
-                                        <a class="btn btn-lg carousel-button-3" href="#">Sign up today</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item carousel-item-2">
-                            <div class="container">
-                                <div class="carousel-caption">
-                                    <h1>Another example headline.</h1>
-                                    <p>Some representative placeholder content for the second slide of the carousel.
-                                    </p>
-                                    <div class="carousel-item-btn">
-                                        <a class="btn btn-lg carousel-button-1">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item carousel-item-3">
-                            <div class="container">
-                                <div class="carousel-caption text-end">
-                                    <h1>One more for good measure.</h1>
-                                    <p>Some representative placeholder content for the third slide of this carousel.
-                                    </p>
-                                    <div class="carousel-item-btn">
-                                        <a class="btn btn-lg carousel-button-2" href="#">Browse gallery</a>
-                                    </div>
-                                </div>
+                                <a class="btn btn-lg carousel-button-3" href="#">Sign up today</a>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                </div>
+                <div class="carousel-item carousel-item-2">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Some representative placeholder content for the second slide of the carousel.
+                            </p>
+                            <div class="carousel-item-btn">
+                                <a class="btn btn-lg carousel-button-1">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-3">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>One more for good measure.</h1>
+                            <p>Some representative placeholder content for the third slide of this carousel.
+                            </p>
+                            <div class="carousel-item-btn">
+                                <a class="btn btn-lg carousel-button-2" href="#">Browse gallery</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
     <!--About-->
-    <section class="about mt-3" id="about">
-        <div class="container my-0 mx-auto">
-            <div class="row py-3 d-inline-flex justify-content-center ">
+    <section class="about bg-yellow" id="about">
+        <div class="container-fluid my-0 mx-auto">
+            <div
+                class="row p-3 p-sm-5 my-3 my-sm-4 my-md-5 mx-auto d-inline-flex justify-content-center flex-row flex-row-reverse">
+                <div class="col-12 col-sm-6 my-0 mx-auto">
+                    <div class="img-wrapper mt-1 mt-sm-3 mt-md-4">
+                        <img src="assets/images/coast-img-3.jpg" class="img-fluid img-about">
+                    </div>
+                </div>
                 <div class="col-12 col-sm-6">
-                    <div class="text-hero mx-3">
-                        <h1 class="display-3 my-3 my-sm-5">About Us</h1>
-                        </div>
-                        <hr>
-                        <div>
-                        <p class="my-3 my-sm-5">Quickly design and customize responsive mobile-first sites with Bootstrap,
+                    <div class="text-hero text-center text-sm-start ">
+                        <h1 class="display-3 mt-3 mt-sm-5">COAST VA</h1>
+                    </div>
+                    <hr>
+                    <div class="text-about">
+                        <p class="my-3 my-sm-5">Quickly design and customize responsive mobile-first sites with
+                            Bootstrap,
                             the world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                             responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start py-3 ms-3">
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a class="link-text" href="about.html">Learn More</a></button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a class="link-text"
+                                href="about.html">Learn More</a></button>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 my-0 mx-auto">
-                    <div class="img-wrapper my-5">
-                        <img src="assets/images/coast-img-3.jpg" class="img-fluid img-about">
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
     <!--./end-about-->
 
-    <div class="container-fluid bg-black">
-        <div class="row d-flex justify-content-center align-items-center text-center  mx-auto">
-            <div class="col-xs-8 col-sm-4">
-                <div class="counter-1"></div>
+    <!--Counter-->
+    <div class="container-fluid bg-black text-light">
+        <div class="row d-flex justify-content-center text-center align-items-center py-3 py-sm-5">
+            <div class="col-12 col-sm-4">
+                <div class="counter-wrap my-3">
+                    <span data-count="50">0</span>
+                    <p class="counter-txt">Programs & Events</p>
+                </div>
             </div>
-            <div class="col-xs-8 col-sm-4">
-                <div class="counter-2"></div>
+            <div class="col-12 col-sm-4">
+                <div class="counter-wrap my-3">
+                    <span data-count="88">0</span>
+                    <p class="counter-txt">Championship Games</p>
+                </div>
             </div>
-            <div class="col-xs-8 col-sm-4">
-                <div class="counter-3"></div>
-            </div>
-        </div>
-    </div>
-    <!--Coaches Landing-->
-    <section class="coaches bg-dark" id="coaches">
-        <div class="container-fluid coaches-container">
-            <div class="row">
-                <div class="col-12">
+            <div class="col-12 col-sm-4">
+                <div class="counter-wrap my-3">
+                    <span class="data-count" data-count="300">0</span>
+                    <p class="counter-txt">College Recruits</p>
                 </div>
             </div>
         </div>
+    </div>
+    <!--./end-counter-->
+
+    <!--Coaches-->
+    <section id="coaches" class="py-3 py-xl-4 bsb-section-py-xxl-1">
+        <div class="container my-5 my-md-6 my-xl-10">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7 text-center">
+                    <h2 class="display-3 fw-bolder mb-4">We are a group of <br><mark
+                            class="bsb-tpl-highlight bsb-tpl-highlight-yellow"><span
+                                class="bsb-tpl-font-hw display-1 text-accent fw-normal">innovative</span></mark>,
+                        experienced, and proficient teams.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container coaches-container">
+            <div class="row d-flex">
+                <div class="col-12 col-lg-4">
+                    <div class="card p-0">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/2746187/pexels-photo-2746187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                alt="">
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center">
+                            <h4 class="pt-2">SomeOne Famous</h4>
+                            <h5>Creative Desinger</h5>
+
+                            <ul class="social-icons d-flex justify-content-center">
+                                <li style="--i:1">
+                                    <a href="#">
+                                        <span class="fab fa-facebook"></span>
+                                    </a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#">
+                                        <span class="fab fa-instagram"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card p-0">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/381843/pexels-photo-381843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                alt="">
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center">
+                            <h4 class="pt-2">SomeOne Famous</h4>
+                            <h5>Creative Desinger</h5>
+
+                            <ul class="social-icons d-flex justify-content-center">
+                                <li style="--i:1">
+                                    <a href="#">
+                                        <span class="fab fa-facebook"></span>
+                                    </a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#">
+                                        <span class="fab fa-instagram"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card p-0">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                alt="">
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center">
+                            <h4 class="pt-2">SomeOne Famous</h4>
+                            <h5>Creative Desinger</h5>
+
+                            <ul class="social-icons d-flex justify-content-center">
+                                <li style="--i:1">
+                                    <a href="#">
+                                        <span class="fab fa-facebook"></span>
+                                    </a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#">
+                                        <span class="fab fa-instagram"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
+    <!--./end-coaches-->
 
     <!--Start Footer-->
     <div class="container">
@@ -235,6 +344,34 @@
         </footer>
     </div>
     <!--./end-footer-->
+
+    <script src="assets/js/counterScript.js"></script>
+    <script>
+        const counters = document.querySelectorAll('.value'),
+            speed = 400,
+            observer = new IntersectionObserver(
+                entries => entries.forEach(entry => entry.isIntersecting && animate(entry.target)),
+                {
+                    threshold: 1 // tells the browser that we only need to execute the callback only when an element (counter) is fully visible in the viewport
+                }
+            ),
+            // the animate function now accepts a counter (HTML element)
+            animate = counter => {
+                const value = +counter.dataset.akhi,
+                    data = +counter.innerText,
+                    time = value / speed;
+                if (data < value) {
+                    counter.innerText = Math.ceil(data + time);
+                    setTimeout(() => animate(counter), 3);
+                } else {
+                    counter.innerText = value;
+                }
+            };
+
+        // attach the counters to the observer
+        counters.forEach(c => observer.observe(c));
+    </script>
+
 
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
