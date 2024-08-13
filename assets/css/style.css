@@ -71,8 +71,7 @@ mark.mark-coaches {
 }
 
 .divider {
-    width: 50%;
-    margin: 20px auto;
+    width: 75%;
     color: var(--light-gray);
     border-bottom: 1px solid var(--lightest);
 }
@@ -105,8 +104,9 @@ a.link-font {
     font-family: var(--secondary-font);
     text-decoration: none;
     color: var(--teal);
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 500;
+    font-size: 1.158rem;
 }
 
 a.link-font:hover {
@@ -164,6 +164,7 @@ button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
     letter-spacing: 1.25px;
     color: var(--teal);
     text-decoration: none;
+    font-weight: 750;
 }
 
 a.dropdown-toggle.dropdown-toggle-split:hover,
@@ -357,16 +358,16 @@ section.hero {
 }
 
 .carousel-item-1 {
-    background: linear-gradient(rgba(4, 16, 33, 0.869), rgba(16, 9, 79, 0.665),
-            rgba(11, 4, 49, 0.851)), url('../images/coast-img-4.jpg')  no-repeat center center;
+    background: linear-gradient(rgba(3, 22, 49, 0.869), rgba(16, 9, 79, 0.665),
+            rgba(10, 3, 49, 0.851)), url('../images/coast-img-4.jpg')  no-repeat center center;
     background-size:cover;
     max-width: 100%;
     /* height: 100%; */
     }
 
 .carousel-item-2 {
-    background: linear-gradient(#7529249e, #51100bb5,
-            rgba(14, 1, 1, 0.851)),
+    background: linear-gradient(#07011ccc, #210301a3,
+            rgba(0, 0, 0, 0.813)),
         url('../images/coast-img-7.jpg') no-repeat center center;
         background-size: cover;
         max-width: 100%;
@@ -374,8 +375,8 @@ section.hero {
 }
 
 .carousel-item-3 {
-    background: linear-gradient(rgba(11, 12, 98, 0.565),
-            rgba(8, 1, 25, 0.817)),
+    background: linear-gradient(rgba(1, 1, 29, 0.688), rgba(0, 0, 0, 0.751),
+            rgba(3, 7, 48, 0.773)),
         url('../images/coast-img-1.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;

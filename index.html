@@ -34,7 +34,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="container-fluid d-flex flex-wrap justify-content-center bg-white w-100">
+        <div class="container-fluid d-flex flex-wrap justify-content-center bg-light w-100 shadow-lg">
             <!-- Example single danger button -->
             <div class="row">
                 <div class="btn-group my-2">
@@ -88,13 +88,6 @@
             </div>
         </div>
     </header>
-
-    <!-- <div class="space-overlay pb-5" id="spaceOverlay">
-        <div class="container">
-            <div class="row pb-5" id="space-row">
-            </div>
-        </div>
-    </div> -->
 
     <!--Hero Starts Here-->
     <section class="hero" id="home">
@@ -330,54 +323,69 @@
     <!--./end-coaches-->
 
     <!--Start Footer-->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
-
-            <a href="/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            </a>
-
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-i
-                tem"><a href="#about" class="nav-link px-2 text-muted">Who We Are</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+    <!--Start Footer-->
+    <div class="container-fluid" id="footer">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-3 ">
+          <div class="col mb-3">
+            <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo.png"></a>
+            <div class="text-start my-3">
+            <hr class="divider my-1 my-sm-2">
+        </div>  
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-3">
+                    <li class="breadcrumb-item active">
+                    Home
+                    </li>
+                  <li class="breadcrumb-item">
+                    <a class="link-font" id="#about">
+                        About Us
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#coaches" class="link-font">
+                        Coaches
+                    </a>
+                </li>
+                </ol>
+              </nav>
+          </div>
+      
+          <div class="col mb-3">
+            
+          </div>
+      
+          <div class="col mb-3">
+            <h5>TEAMS</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Teams</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Registration</a></li>
             </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>CAMPS & CLINICS</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
         </footer>
-    </div>
+      </div>
     <!--./end-footer-->
 
     <script src="assets/js/counterScript.js"></script>
-    <script>
-        const counters = document.querySelectorAll('.value'),
-            speed = 400,
-            observer = new IntersectionObserver(
-                entries => entries.forEach(entry => entry.isIntersecting && animate(entry.target)),
-                {
-                    threshold: 1 // tells the browser that we only need to execute the callback only when an element (counter) is fully visible in the viewport
-                }
-            ),
-            // the animate function now accepts a counter (HTML element)
-            animate = counter => {
-                const value = +counter.dataset.akhi,
-                    data = +counter.innerText,
-                    time = value / speed;
-                if (data < value) {
-                    counter.innerText = Math.ceil(data + time);
-                    setTimeout(() => animate(counter), 3);
-                } else {
-                    counter.innerText = value;
-                }
-            };
-
-        // attach the counters to the observer
-        counters.forEach(c => observer.observe(c));
-    </script>
-
-
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

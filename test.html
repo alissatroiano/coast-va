@@ -1,110 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--Custom Stylesheet-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <style>
-        .bg {
-            background-color: #1e1f26;
-            height: 100vh;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .level.counter {
-            background-color: #00d1b2;
-            padding: 5rem 0;
-            color: #ffffff;
-            margin: 0 !important;
-        }
-
-        .counter-heading {
-            font-size: .75rem;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .js-count-up {
-            color: #fff;
-            font-size: 4rem;
-        }
-
-        .counter-title {
-            color: inherit;
-            width: 200px;
-            height: 36px;
-        }
-    </style>
+    <title>JSON to HTML Example</title>
 </head>
-
 <body>
-
-    <!--Counter-->
-    <div style="height: 800px;">
+    <div id="dataDisplay">
+        <!-- JSON data will be displayed here -->
     </div>
-
-     <!--Counter-->
-    <div class="container">
-        <div class="row d-flex contatore counter-row">
-            <div class="col-md-4">
-                <div class="counter-box colored">
-                    <!-- it is recommended to use "data-*" attributes to cache data that we might use later. The "data-akhi" contains the number to animate -->
-                    <span class="counter value" data-akhi="560">0</span>
-                    <p>Countries visited</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="counter-box">
-                    <span class="counter value" data-akhi="3275">0</span>
-                    <p>Registered travellers</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="counter-box">
-                    <span class="counter value" id="conta" data-akhi="289">0</span>
-                    <p>Partners</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--./counter-->
-
-    <script>
-        const counters = document.querySelectorAll('.value'),
-            speed = 400,
-            /**
-             * create an IntersectionObserver with the specified callback that will be executed for each intersection change for every counter we have. 
-             * You may customize the options (2nd argument) per you requirement
-             */
-            observer = new IntersectionObserver(
-                entries => entries.forEach(entry => entry.isIntersecting && animate(entry.target)),
-                {
-                    threshold: 1 // tells the browser that we only need to execute the callback only when an element (counter) is fully visible in the viewport
-                }
-            ),
-            // the animate function now accepts a counter (HTML element)
-            animate = counter => {
-                const value = +counter.dataset.akhi,
-                    data = +counter.innerText,
-                    time = value / speed;
-                if (data < value) {
-                    counter.innerText = Math.ceil(data + time);
-                    setTimeout(() => animate(counter), 1);
-                } else {
-                    counter.innerText = value;
-                }
-            };
-
-        // attach the counters to the observer
-        counters.forEach(c => observer.observe(c));
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
