@@ -3,6 +3,7 @@
 :root {
     --black: #000000;
     --teal: #00909e;
+    --teal-light: #5be4f0;
     --yellow: #fcde63;
     --background-color: #f3f3f3;
     --font-color: #202020;
@@ -131,6 +132,10 @@ h6 {
     background-color: var(--yellow);
 }
 
+.bg-dark-grey {
+    background:  #666666;
+}
+
 a.link-font {
     font-family: var(--secondary-font);
     text-decoration: none;
@@ -146,11 +151,10 @@ a.link-font:hover {
 
 .section-title {
     font-family: 'Mont', sans-serif;
-    text-shadow: 0px 4px 3px rgba(39, 37, 37, 0.4),
-        0px 8px 13px rgba(0, 0, 0, 0.1),
-        0px 18px 23px rgba(45, 42, 42, 0.1);
-    font-weight: 800;
-    color: #0c1e3ebc;
+    background-clip: text;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0.3);
 }
 
 /* ---------------- Header ---------------- */
@@ -167,13 +171,14 @@ nav li,
 a.nav-link.px-2 {
     font-family: var(--secondary-font);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 18px;
-    color: var(--yellow);
+    letter-spacing: 2px;
+    color: var(--teal);
 }
 
 a.nav-link.px-2:hover {
-    color: var(--teal);
+    color: var(--salmon-light);
     font-weight: 400;
 }
 
@@ -192,10 +197,10 @@ a.dropdown-toggle.dropdown-toggle-split,
 button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
     text-transform: uppercase;
     font-size: 1rem;
-    letter-spacing: 1.25px;
-    color: var(--teal);
+    letter-spacing: 1px;
+    color: var(--black);
     text-decoration: none;
-    font-weight: 750;
+    font-weight: 600;
 }
 
 a.dropdown-toggle.dropdown-toggle-split:hover,
@@ -536,6 +541,17 @@ a.carousel-button-3:hover {
     overflow: hidden;
 }
 
+#coaches::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#00909e, #5be4f0, #21cbda);
+	clip-path: circle(30% at right 70%);
+}
+
 .coaches {
     max-width: 100%;
     height: auto;
@@ -546,101 +562,151 @@ a.carousel-button-3:hover {
 .coaches-container .row .col-lg-4 {
     display: flex;
     justify-content: center;
-    margin: 50px 0 50px 0;
 }
 
-.card {
-    position: relative;
-    padding: 0;
-    margin: 0 !important;
-    border-radius: 20px;
-    overflow: hidden;
-    max-width: 100%;
-    max-height: 340px;
-    cursor: pointer;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
 
-.card .card-image {
-    width: 100%;
-    max-height: 340px;
-}
-
-.card .card-image img {
-    width: 100%;
-    max-height: 340px;
-    object-fit: cover;
-}
-
-.card .card-content {
-    position: absolute;
-    bottom: -180px;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    min-height: 140px;
-    width: 100%;
-    transition: bottom .4s ease-in;
-    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.card:hover .card-content {
-    bottom: 0px;
-}
-
-.card:hover .card-content h4,
-.card:hover .card-content h5 {
-    transform: translateY(10px);
-    opacity: 1;
-}
-
-.card .card-content h4,
-.card .card-content h5 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-align: center;
-    transition: 0.8s;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(-40px);
-    transition-delay: 0.2s;
-}
-
-.card .card-content h5 {
-    transition: 0.5s;
-    font-weight: 200;
-    font-size: 0.8rem;
+h2.coaches-title {
+    font-size: 9vmin;
+    color: #8bf;
+    text-align: left;
+    font-weight: 700;
+    margin: 1rem 0 1rem 2rem;
+  }
+  
+  .typewrite {
+    color: var(--yellow);
+    font-family: var(--primary-font);
     letter-spacing: 2px;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  
+
+#coaches::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#05353a94, #0b5b6282, #084a504f);
+	clip-path: circle(30% at right 70%);
 }
 
-.card .card-content .social-icons {
-    list-style: none;
-    padding: 0;
+#coaches::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#094c5399, #4dabb3ad);
+	clip-path: circle(20% at 10% 10%);
+}
+
+#coaches {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#coaches .card.glassmorphism-card {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.contentBx {
+    max-width: 250px;
+    height: 150px;
+}
+
+#coaches .card.glassmorphism-card .content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+#coaches .card.glassmorphism-card:hover .content {
+	transform: translateY(-20px);
+}
+
+#coaches .card .content .imgBx {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+#coaches .card.glassmorphism-card .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 
-.card .card-content .social-icons li {
-    margin: 10px;
-    transition: 0.5s;
-    transition-delay: calc(0.15s * var(--i));
-    transform: translateY(50px);
+#coaches .card.glassmorphism-card .sci {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
 }
 
-
-.card:hover .card-content .social-icons li {
-    transform: translateY(20px);
+#coaches .card.glassmorphism-card .sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
 }
 
-.card .card-content .social-icons li a {
-    color: #fff;
+#coaches .card.glassmorphism-card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
 }
 
-.card .card-content .social-icons li a span {
-    font-size: 1.3rem;
+#coaches .card.glassmorphism-card .sci li a {
+	color: #fff;
+	font-size: 20px;
 }
+
+#dataDisplay > p {
+    margin: 5px auto;
+}
+
+p.coach-name {
+    color: var(--teal);
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+}
+
+/*----------------------------------- Misc */
+svg.svg-close {
+    max-height: 350px;
+    max-width: 100%;
+}
+
+#graphic {
+    padding: 40px 0;
+}
+/*----------------------------------- Media Queries */
 
 @media screen and (min-width: 768px) {
     img.logo {
