@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 :root {
     --black: #000000;
     --teal: #00909e;
@@ -38,7 +40,36 @@
     inherits: false;
   }
 
-
+  .rajdhani-light {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .rajdhani-medium {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .rajdhani-semibold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .rajdhani-bold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
 /* CSS Reset */
 *,
 *::before,
@@ -358,16 +389,16 @@ section.hero {
 }
 
 .carousel-item-1 {
-    background: linear-gradient(rgba(3, 22, 49, 0.869), rgba(16, 9, 79, 0.665),
-            rgba(10, 3, 49, 0.851)), url('../images/coast-img-4.jpg')  no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.654),
+            rgba(0, 0, 0, 0.864)), url('../images/coast-img-4.jpg')  no-repeat center center;
     background-size:cover;
     max-width: 100%;
     /* height: 100%; */
     }
 
 .carousel-item-2 {
-    background: linear-gradient(#07011ccc, #210301a3,
-            rgba(0, 0, 0, 0.813)),
+    background: linear-gradient(rgba(0, 0, 0, 0.654),
+            rgba(0, 0, 0, 0.864)),
         url('../images/coast-img-7.jpg') no-repeat center center;
         background-size: cover;
         max-width: 100%;
@@ -375,8 +406,8 @@ section.hero {
 }
 
 .carousel-item-3 {
-    background: linear-gradient(rgba(1, 1, 29, 0.688), rgba(0, 0, 0, 0.751),
-            rgba(3, 7, 48, 0.773)),
+    background: linear-gradient(rgba(0, 0, 0, 0.757),
+    rgba(0, 0, 0, 0.864)),
         url('../images/coast-img-1.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
