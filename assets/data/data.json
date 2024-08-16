@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Alex Michaels",
+        "university": "Adelphi University",
+        "prev": "Ahelphi University Assistant Coach",
+        "bio": "Coaching is unlocking a person's potential to maximize their growth.",
+        "imgSrc": "https://plus.unsplash.com/premium_photo-1661962978096-9d03e3a43e97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Carli Triangle",
+        "university": "Ohio State",
+        "prev": "Mt. Carmel Youth Coach",
+        "bio": "The best way to predict the future is to create it.",
+        "imgSrc": "https://i.im.ge/2024/08/16/fIzTCY.AdobeStock-571926179.jpeg"
+    },
+    {
+        "name": "Keith Daniels",
+        "university": "Michigan State",
+        "prev": "Mt. Carmel Youth Coach",
+        "bio": "Phasellus eget enim eu lectus faucibus vestibulum.",
+        "imgSrc": "https://plus.unsplash.com/premium_photo-1661962978096-9d03e3a43e97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Keith Daniels",
+        "university": "Michigan State",
+        "prev": "Mt. Carmel Youth Coach",
+        "bio": "Phasellus eget enim eu lectus faucibus vestibulum.",
+        "imgSrc": "https://i.im.ge/2024/08/16/fIzTCY.AdobeStock-571926179.jpeg"
+    }
+]
