@@ -33,14 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Append the bio to the team details
                 teamDetails.appendChild(bioElement);
 
+
                 // Create social media links (you can customize or add more)
                 const socials = document.createElement("div");
                 socials.className = "socials mt-20";
                 socials.innerHTML = `
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-facebook"></i></a>
+                    <a href="#"><i class="fas fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-google-plus"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
                 `;
 
                 // Append the team details and social links to the overlay
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 universityElement.textContent = coach.university + " Alum";
 
                 const prevElement = document.createElement("p");
+                prevElement.className = "coach-prev"
                 prevElement.textContent = coach.prev;
 
                 const bioElementUnder = document.createElement("p");
