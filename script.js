@@ -1,113 +1,83 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            // Render Coaches
-            const teamRow = document.querySelector(".team-row");
-            data.coaches.forEach(coach => {
+    
+    // Define the csvToJson function
+    function csvToJson(csv) {
+        const lines = csv.split("\n");
+        const headers = lines[0].split(",");
+        const jsonData = lines.slice(1).map(line => {
+            const values = line.split(",");
+            return headers.reduce((object, header, index) => {
+                object[header.trim()] = values[index].trim();
+                return object;
+            }, {});
+        });
+        return jsonData;
+    }
+
+    fetch('data.csv')
+    .then(response => response.text())
+    .then(csv => {
+        const data = csvToJson(csv);
+
+        // Get the containers for the director and coaches
+        const directorRow = document.querySelector(".director-row");
+        const teamRow = document.querySelector(".team-row");
+
+        // Loop through each entry in the JSON array
+        data.forEach(person => {
+            // Check if the person is a director or a coach
+            if (person.type === "director") {
+                // Create and append the director's content to the director row
+                const directorWrap = document.createElement("div");
+                directorWrap.className = "col-12 text-center director-wrap";
+
+                directorWrap.innerHTML = `
+                    <div class="team-member text-center">
+                        <div class="team-img">
+                            <img src="${person.imgSrc}" alt="${person.name}">
+                            <div class="overlay">
+                                <div class="team-details text-center">
+                                    <p class="coach-bio">${person.bio}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-light text-coach-data my-3 pb-2">
+                            <h6 class="team-title">${person.name}</h6>
+                            <p class="coach-uni">${person.university} Alum</p>
+                            <p>${person.prev}</p>
+                            <p class="coach-bio">${person.bio}</p>
+                        </div>
+                    </div>
+                `;
+
+                directorRow.appendChild(directorWrap);
+            } else if (person.type === "coach") {
+                // Create and append the coach's content to the team row
                 const teamWrap = document.createElement("div");
                 teamWrap.className = "col-xs-8 col-sm-4 team-wrap";
 
-                const teamMember = document.createElement("div");
-                teamMember.className = "team-member text-center";
-
-                const teamImg = document.createElement("div");
-                teamImg.className = "team-img";
-                teamImg.innerHTML = `<img src="${coach.imgSrc}" alt="${coach.name}">`;
-
-                const overlay = document.createElement("div");
-                overlay.className = "overlay";
-
-                const teamDetails = document.createElement("div");
-                teamDetails.className = "team-details text-center";
-
-                const bioElement = document.createElement("p");
-                bioElement.className = "coach-bio";
-                bioElement.textContent = coach.bio;
-
-                teamDetails.appendChild(bioElement);
-
-                const socials = document.createElement("div");
-                socials.className = "socials mt-20";
-                socials.innerHTML = `
-                    <a href="#"><i class="fas fa-facebook"></i></a>
-                    <a href="#"><i class="fas fa-twitter"></i></a>
-                    <a href="#"><i class="fas fa-google-plus"></i></a>
-                    <a href="#"><i class="fas fa-envelope"></i></a>
+                teamWrap.innerHTML = `
+                    <div class="team-member text-center">
+                        <div class="team-img">
+                            <img src="${person.imgSrc}" alt="${person.name}">
+                            <div class="overlay">
+                                <div class="team-details text-center">
+                                    <p class="coach-bio">${person.bio}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-light text-coach-data my-3 pb-2">
+                            <h6 class="team-title">${person.name}</h6>
+                            <p class="coach-uni">${person.university} Alum</p>
+                            <p>${person.prev}</p>
+                            <p class="coach-bio">${person.bio}</p>
+                        </div>
+                    </div>
                 `;
 
-                overlay.appendChild(teamDetails);
-                overlay.appendChild(socials);
-                teamImg.appendChild(overlay);
-                teamMember.appendChild(teamImg);
-
-                const coachInfo = document.createElement("div");
-                coachInfo.className = "col-12 text-light text-coach-data my-3 pb-2";
-
-                const coachName = document.createElement("h6");
-                coachName.className = "team-title";
-                coachName.textContent = coach.name;
-
-                const universityElement = document.createElement("p");
-                universityElement.className = "coach-uni";
-                universityElement.textContent = coach.university + " Alum";
-
-                const prevElement = document.createElement("p");
-                prevElement.className = "coach-prev";
-                prevElement.textContent = coach.prev;
-
-                const bioElementUnder = document.createElement("p");
-                bioElementUnder.className = "coach-bio";
-                bioElementUnder.textContent = coach.bio;
-
-                coachInfo.appendChild(coachName);
-                coachInfo.appendChild(universityElement);
-                coachInfo.appendChild(prevElement);
-                coachInfo.appendChild(bioElementUnder);
-                teamMember.appendChild(coachInfo);
-                teamWrap.appendChild(teamMember);
                 teamRow.appendChild(teamWrap);
-            });
-
-            // Render Program Director
-            const directorRow = document.querySelector(".director-row");
-            const directorWrap = document.createElement("div");
-            directorWrap.className = "col-12 team-wrap";
-
-            const directorMember = document.createElement("div");
-            directorMember.className = "team-member text-center";
-
-            const directorImg = document.createElement("div");
-            directorImg.className = "team-img";
-            directorImg.innerHTML = `<img src="${data.director.imgSrc}" alt="${data.director.name}">`;
-
-            const directorInfo = document.createElement("div");
-            directorInfo.className = "col-12 text-light text-coach-data my-3 pb-2";
-
-            const directorName = document.createElement("h6");
-            directorName.className = "team-title";
-            directorName.textContent = data.director.name;
-
-            const directorUniversity = document.createElement("p");
-            directorUniversity.className = "coach-uni";
-            directorUniversity.textContent = data.director.university + " Alum";
-
-            const directorPrev = document.createElement("p");
-            directorPrev.className = "coach-prev";
-            directorPrev.textContent = data.director.prev;
-
-            const directorBio = document.createElement("p");
-            directorBio.className = "coach-bio";
-            directorBio.textContent = data.director.bio;
-
-            directorInfo.appendChild(directorName);
-            directorInfo.appendChild(directorUniversity);
-            directorInfo.appendChild(directorPrev);
-            directorInfo.appendChild(directorBio);
-            directorMember.appendChild(directorImg);
-            directorMember.appendChild(directorInfo);
-            directorWrap.appendChild(directorMember);
-            directorRow.appendChild(directorWrap);
-        })
-        .catch(error => console.error("Error fetching JSON data:", error));
+            }
+        });
+    })
+    .catch(error => console.error("Error fetching CSV data:", error));
 });
