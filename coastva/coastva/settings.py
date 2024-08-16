@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +68,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'cart.contexts.cart_components',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
