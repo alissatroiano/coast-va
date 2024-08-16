@@ -2,22 +2,17 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            // Get the container where the team members will be displayed
+            // Render Coaches
             const teamRow = document.querySelector(".team-row");
-
-            // Loop through each coach in the JSON array
-            data.forEach(coach => {
-                // Create a div for each team member
+            data.coaches.forEach(coach => {
                 const teamWrap = document.createElement("div");
                 teamWrap.className = "col-xs-8 col-sm-4 team-wrap";
 
-                // Create the team member card structure
                 const teamMember = document.createElement("div");
                 teamMember.className = "team-member text-center";
 
                 const teamImg = document.createElement("div");
                 teamImg.className = "team-img";
-                // Use the imgSrc from the JSON data
                 teamImg.innerHTML = `<img src="${coach.imgSrc}" alt="${coach.name}">`;
 
                 const overlay = document.createElement("div");
@@ -30,11 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 bioElement.className = "coach-bio";
                 bioElement.textContent = coach.bio;
 
-                // Append the bio to the team details
                 teamDetails.appendChild(bioElement);
 
-
-                // Create social media links (you can customize or add more)
                 const socials = document.createElement("div");
                 socials.className = "socials mt-20";
                 socials.innerHTML = `
@@ -44,21 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="#"><i class="fas fa-envelope"></i></a>
                 `;
 
-                // Append the team details and social links to the overlay
                 overlay.appendChild(teamDetails);
                 overlay.appendChild(socials);
-
-                // Append the overlay to the team image
                 teamImg.appendChild(overlay);
-
-                // Append the team image to the team member div
                 teamMember.appendChild(teamImg);
 
-                // Create a div for the coach's information
                 const coachInfo = document.createElement("div");
                 coachInfo.className = "col-12 text-light text-coach-data my-3 pb-2";
 
-                // Create the coach name and university elements
                 const coachName = document.createElement("h6");
                 coachName.className = "team-title";
                 coachName.textContent = coach.name;
@@ -68,28 +53,61 @@ document.addEventListener("DOMContentLoaded", function () {
                 universityElement.textContent = coach.university + " Alum";
 
                 const prevElement = document.createElement("p");
-                prevElement.className = "coach-prev"
+                prevElement.className = "coach-prev";
                 prevElement.textContent = coach.prev;
 
                 const bioElementUnder = document.createElement("p");
                 bioElementUnder.className = "coach-bio";
                 bioElementUnder.textContent = coach.bio;
 
-                // Append the elements to the coach info div
                 coachInfo.appendChild(coachName);
                 coachInfo.appendChild(universityElement);
                 coachInfo.appendChild(prevElement);
                 coachInfo.appendChild(bioElementUnder);
-
-                // Append the coach info div to the team member div
                 teamMember.appendChild(coachInfo);
-
-                // Append the team member to the team wrap
                 teamWrap.appendChild(teamMember);
-
-                // Append the team wrap to the team row
                 teamRow.appendChild(teamWrap);
             });
+
+            // Render Program Director
+            const directorRow = document.querySelector(".director-row");
+            const directorWrap = document.createElement("div");
+            directorWrap.className = "col-12 team-wrap";
+
+            const directorMember = document.createElement("div");
+            directorMember.className = "team-member text-center";
+
+            const directorImg = document.createElement("div");
+            directorImg.className = "team-img";
+            directorImg.innerHTML = `<img src="${data.director.imgSrc}" alt="${data.director.name}">`;
+
+            const directorInfo = document.createElement("div");
+            directorInfo.className = "col-12 text-light text-coach-data my-3 pb-2";
+
+            const directorName = document.createElement("h6");
+            directorName.className = "team-title";
+            directorName.textContent = data.director.name;
+
+            const directorUniversity = document.createElement("p");
+            directorUniversity.className = "coach-uni";
+            directorUniversity.textContent = data.director.university + " Alum";
+
+            const directorPrev = document.createElement("p");
+            directorPrev.className = "coach-prev";
+            directorPrev.textContent = data.director.prev;
+
+            const directorBio = document.createElement("p");
+            directorBio.className = "coach-bio";
+            directorBio.textContent = data.director.bio;
+
+            directorInfo.appendChild(directorName);
+            directorInfo.appendChild(directorUniversity);
+            directorInfo.appendChild(directorPrev);
+            directorInfo.appendChild(directorBio);
+            directorMember.appendChild(directorImg);
+            directorMember.appendChild(directorInfo);
+            directorWrap.appendChild(directorMember);
+            directorRow.appendChild(directorWrap);
         })
         .catch(error => console.error("Error fetching JSON data:", error));
 });
