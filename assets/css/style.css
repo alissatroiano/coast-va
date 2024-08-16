@@ -548,7 +548,7 @@ a.carousel-button-3:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(#00909e, #5be4f0, #21cbda);
+	background-clip: linear-gradient(#00909e, #5be4f0, #21cbda);
 	clip-path: circle(30% at right 70%);
 }
 
@@ -590,6 +590,7 @@ h2.coaches-title {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(#05353a94, #0b5b6282, #084a504f);
+
 	clip-path: circle(30% at right 70%);
 }
 
@@ -601,6 +602,8 @@ h2.coaches-title {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(#094c5399, #4dabb3ad);
+    z-index: -25000;
+
 	clip-path: circle(20% at 10% 10%);
 }
 
@@ -695,6 +698,22 @@ p.coach-name {
     font-size: 1.15rem;
     font-weight: 400;
     font-family: var(--primary-font);
+}
+
+.coach-uni {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.coach-bio {
+    display: none;
+}
+
+h6.team-title {
+    color: var(--yellow);
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
 }
 
 /*----------------------------------- Misc */

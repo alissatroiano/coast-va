@@ -1,6 +1,31 @@
-{
-    "name": "Alissa Troiano",
-    "university": "Ohio State Alumni Athlete",
-    "prev": "Mt. Carmel Youth Coach",
-    "bio": "Phasellus eget enim eu lectus faucibus vestibulum."
-}
+[
+    {
+        "name": "Alex Michaels",
+        "university": "Adelphi University",
+        "prev": "Ahelphi University Assistant Coach",
+        "bio": "Coaching is unlocking a person's potential to maximize their growth.",
+        "imgSrc": "http://deothemes.com/envato/enigma/html/img/team_1.jpg"
+    },
+    {
+        "name": "Carli Triangle",
+        "university": "Ohio State",
+        "prev": "Mt. Carmel Youth Coach",
+        "bio": "The best way to predict the future is to create it.",
+        "imgSrc": "assets/images/coast-img-4.jpg"
+    },
+    {
+        "name": "Keith Daniels",
+        "university": "Michigan State",
+        "prev": "Mt. Carmel Youth Coach",
+        "bio": "Phasellus eget enim eu lectus faucibus vestibulum.",
+        "imgSrc": "assets/images/coast-img-5.jpg"
+
+    },
+    {
+        "name": "Keith Daniels",
+        "university": "Michigan State",
+        "prev": "Mt. Carmel Youth Coach",
+        "bio": "Phasellus eget enim eu lectus faucibus vestibulum.",
+        "imgSrc": "http://deothemes.com/envato/enigma/html/img/team_3.jpg"
+    }
+]
