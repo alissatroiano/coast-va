@@ -40,5 +40,10 @@
     opacity: 1;
   }
   
-  
-  
+  .director-row .team-member .team-img,
+  .director-row .team-member .team-img > img  {
+    width: 450px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }

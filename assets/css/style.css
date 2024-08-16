@@ -3,6 +3,7 @@
 :root {
     --black: #000000;
     --teal: #00909e;
+    --teal-medium: #29d6e6e9;
     --teal-light: #5be4f0;
     --yellow: #fcde63;
     --background-color: #f3f3f3;
@@ -604,7 +605,6 @@ h2.coaches-title {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(#05353a94, #0b5b6282, #084a504f);
-
 	clip-path: circle(30% at right 70%);
 }
 
@@ -617,7 +617,6 @@ h2.coaches-title {
 	height: 100%;
 	background: linear-gradient(#094c5399, #4dabb3ad);
     z-index: -25000;
-
 	clip-path: circle(20% at 10% 10%);
 }
 
@@ -715,7 +714,13 @@ p.coach-name {
 }
 
 .coach-uni {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.coach-prev {
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-size: 1rem;
 }
@@ -725,7 +730,7 @@ p.coach-name {
 }
 
 h6.team-title {
-    color: var(--yellow);
+    color: var(--teal-medium);
     font-size: 1.2rem;
     letter-spacing: 1.2px;
 }

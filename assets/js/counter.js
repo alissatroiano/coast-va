@@ -1,57 +1,72 @@
-"use strict"
-
 document.addEventListener("DOMContentLoaded", function () {
-    // You can change this class to specify which elements are going to behave as counters.
-    var elements = document.querySelectorAll(".scroll-counter")
-
-    elements.forEach(function (item) {
-        // Add new attributes to the elements with the '.scroll-counter' HTML class
-        item.counterAlreadyFired = false
-        item.counterSpeed = item.getAttribute("data-counter-time") / 45
-        item.counterTarget = +item.innerText
-        item.counterCount = 0
-        item.counterStep = item.counterTarget / item.counterSpeed
-
-        item.updateCounter = function () {
-            item.counterCount = item.counterCount + item.counterStep
-            item.innerText = Math.ceil(item.counterCount)
-
-            if (item.counterCount < item.counterTarget) {
-                setTimeout(item.updateCounter, item.counterSpeed)
-            } else {
-                item.innerText = item.counterTarget
-            }
-        }
-    })
-
-    // Function to determine if an element is visible in the web page
-    var isElementVisible = function isElementVisible(el) {
-        var scroll = window.scrollY || window.pageYOffset
-        var boundsTop = el.getBoundingClientRect().top + scroll
-        var viewport = {
-            top: scroll,
-            bottom: scroll + window.innerHeight,
-        }
-        var bounds = {
-            top: boundsTop,
-            bottom: boundsTop + el.clientHeight,
-        }
-        return (
-            (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-            (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
-        )
-    }
-
-    // Funciton that will get fired uppon scrolling
-    var handleScroll = function handleScroll() {
-        elements.forEach(function (item, id) {
-            if (true === item.counterAlreadyFired) return
-            if (!isElementVisible(item)) return
-            item.updateCounter()
-            item.counterAlreadyFired = true
+    // Step 1: Fetch the counter data from JSON
+    fetch('counter.json')
+        .then(response => response.json())
+        .then(data => {
+            // Update the data-count attributes with values from JSON
+            const counterElements = document.querySelectorAll('.counter-wrap span');
+  
+            counterElements.forEach((element) => {
+                const counterText = element.nextElementSibling.textContent.trim();
+  
+                if (counterText.includes("Programs & Events")) {
+                    element.setAttribute("data-count", data.programs);
+                } else if (counterText.includes("Championship Games")) {
+                    element.setAttribute("data-count", data.championships);
+                } else if (counterText.includes("College Recruits")) {
+                    element.setAttribute("data-count", data.recruits);
+                }
+            });
+  
+            // Step 2: Initialize the counter animation once the data is set
+            document.querySelectorAll('[data-count]').forEach(inViewportCounter);
         })
-    }
-
-    // Fire the function on scroll
-    window.addEventListener("scroll", handleScroll)
-})
+        .catch(error => console.error("Error fetching JSON data:", error));
+  });
+  
+  // Existing counter animation code
+  const easeInOutQuad = (t) => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  
+  const inViewportCounter = (el) => {
+  const duration = +el.dataset.duration || 3000;
+  const start = +el.textContent || 0;
+  const end = +el.dataset.count || 100;
+  let raf;
+  
+  const counterStart = () => {
+    if (start === end) return;
+  
+    const range = end - start;
+    let curr = start;
+    const timeStart = Date.now();
+  
+    const loop = () => {
+      let elaps = Date.now() - timeStart;
+      if (elaps > duration) elaps = duration;
+      const frac = easeInOutQuad(elaps / duration);
+      const step = frac * range;
+      curr = start + step;
+      el.textContent = Math.trunc(curr);
+      if (elaps < duration) raf = requestAnimationFrame(loop);
+    };
+  
+    raf = requestAnimationFrame(loop);
+  };
+  
+  const counterStop = (el) => {
+    cancelAnimationFrame(raf);
+    el.textContent = start;
+  };
+  
+  const inViewport = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) counterStart(entry.target);
+      else counterStop(entry.target);
+    });
+  };
+  
+  const Obs = new IntersectionObserver(inViewport);
+  const obsOptions = {};
+  Obs.observe(el, obsOptions);
+  };
+  
