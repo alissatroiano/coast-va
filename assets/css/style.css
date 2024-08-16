@@ -3,6 +3,7 @@
 :root {
     --black: #000000;
     --teal: #00909e;
+    --teal-medium: #29d6e6e9;
     --teal-light: #5be4f0;
     --yellow: #fcde63;
     --background-color: #f3f3f3;
@@ -713,13 +714,13 @@ p.coach-name {
 }
 
 .coach-uni {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .coach-prev {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     font-weight: 400;
     font-size: 1rem;
 }
@@ -729,7 +730,7 @@ p.coach-name {
 }
 
 h6.team-title {
-    color: var(--yellow);
+    color: var(--teal-medium);
     font-size: 1.2rem;
     letter-spacing: 1.2px;
 }
