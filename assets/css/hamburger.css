@@ -1,0 +1,32 @@
+/* Adjust the original hamburger menu CSS */
+label .menu {
+    top: 20px; /* Adjust top position if necessary */
+    right: 20px; /* Adjust right position if necessary */
+}
+
+label ul.hamburger-nav {
+    font-size: 1.2em; /* Slightly smaller font size for dropdowns */
+    text-transform: none; /* Maintain regular casing */
+}
+
+label ul.hamburger-nav .dropdown-group a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #0a0a0a;
+}
+
+label ul.hamburger-nav .dropdown-menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    opacity: 1;
+    background: #f8f9fa; /* Background color for dropdowns */
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+label ul.hamburger-nav .dropdown-group:hover .dropdown-menu {
+    display: block;
+}

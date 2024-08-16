@@ -176,7 +176,7 @@ nav li,
     font-family: var(--secondary-font);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1rem;
     letter-spacing: 2px;
 }
 
@@ -717,12 +717,14 @@ p.coach-name {
     font-family: var(--secondary-font);
     font-weight: 400;
     font-size: 1.1rem;
+    color: var(--font-color);
 }
 
 .coach-prev {
     font-family: var(--secondary-font);
     font-weight: 400;
     font-size: 1rem;
+    color: var(--font-color);
 }
 
 .coach-bio {
