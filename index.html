@@ -28,10 +28,16 @@
                     <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png"></a>
                 </ul>
                 <ul class="nav my-3">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
-                    <li class="nav-item"><a href="index.html#about" class="nav-link px-2">About Us</a></li>
-                    <li class="nav-item"><a href="coaches.html" class="nav-link px-2">Coaches</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link px-2 text-teal">About Us</a></li>
+                    <li class="nav-item">
+                        <a href="coaches.html" class="nav-link px-2 text-teal">Coaches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link nav-link-cta px-2">Register</a>
+                    </li>
                 </ul>
+
             </div>
         </nav>
         <div class="container-fluid d-flex flex-wrap justify-content-center bg-light w-100 shadow-lg">
@@ -43,11 +49,8 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Teams </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-
+                            <li><a class="dropdown-item" href="#">Teams</a></li>
+                            <li><a class="dropdown-item" href="#">Team Registration</a></li>
                         </ul>
                     </div>
                     <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
@@ -72,9 +75,9 @@
                         Coaches
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
+                        <li><a class="dropdown-item" href="coaches.html">Private Lessons</a></li>
+                        <li><a class="dropdown-item" href="coaches.html">Group Classes</a></li>
                     </ul>
                     </button>
                     <ul class="dropdown-menu">
@@ -102,13 +105,10 @@
                 <div class="carousel-item  carousel-item-1 active">
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p class="opacity-75">Some representative placeholder content for the first
-                                slide of the
-                                carousel.</p>
+                            <h1>Next Level Lacrosse</h1>
+                            <p class="opacity-75">Perform at the highest level with Coast VA lacrosse Clubs.</p>
                             <div class="carousel-item-btn">
-
-                                <a class="btn btn-lg carousel-button-3" href="#">Sign up today</a>
+                                <a href="" class="btn btn-lg carousel-button-1" id="registerCta">Register</a>
                             </div>
                         </div>
                     </div>
@@ -116,8 +116,9 @@
                 <div class="carousel-item carousel-item-2">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.
+                            <h1>Elite and Regional Club Teams</h1>
+                            <p>Club teams provide competitive opportunities for our athletes to grow and showcase
+                                themselves year-round.
                             </p>
                             <div class="carousel-item-btn">
                                 <a class="btn btn-lg carousel-button-1">Learn more</a>
@@ -128,11 +129,11 @@
                 <div class="carousel-item carousel-item-3">
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.
+                            <h1>World Class Coaching</h1>
+                            <p>Coast VA coaches are experienced, inspiring, and hands down the best/
                             </p>
                             <div class="carousel-item-btn">
-                                <a class="btn btn-lg carousel-button-2" href="#">Browse gallery</a>
+                                <a class="btn btn-lg carousel-button-2" href="coaches.html">Meet Our Staff</a>
                             </div>
                         </div>
                     </div>
@@ -165,11 +166,14 @@
                     </div>
                     <hr>
                     <div class="text-about">
-                        <p class="mt-3">From intro camps to a two-hundred team multi-day tournament, Coast VA has the gameplan.
-                            The mission starts on whiteboards and spreadsheets. It starts with a game plan executed by MVPs at every level; from team captains to  coaches. </p>
-                            <br>
-                            <p>
-                                Because what happens on the field can impact a child way beyond childhood. It’s an enormous responsibility that we take very seriously.
+                        <p class="mt-3">From intro camps to a two-hundred team multi-day tournament, Coast VA has the
+                            gameplan.
+                            The mission starts on whiteboards and spreadsheets. It starts with a game plan executed by
+                            MVPs at every level; from team captains to coaches. </p>
+                        <br>
+                        <p>
+                            Because what happens on the field can impact a child way beyond childhood. It’s an enormous
+                            responsibility that we take very seriously.
                             Because when you step off the field, all you truly take with you is the experience.</p>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start py-3 ms-3">
@@ -213,20 +217,21 @@
             <div class="row d-flex my-5 py-5">
                 <div class="col-12 text-center my-3">
                     <h1 class="display-4 mt-5 pt-3 text-light" aria-label="Coast coaches are "> Coast coaches are<h1>
-                       <h2 class="display-3">
-                        &nbsp;
-                        <span class="typewrite" data-period="2000" data-type='[ "Experienced", "Inspiring", "Educated", "Positive", "Fun", "Helpful" ]'>
-                            <span class="wrap"></span>
-                          </span>
-                        <!-- <span class="typewriter"></span> -->
-                      </h2>
+                            <h2 class="display-3">
+                                &nbsp;
+                                <span class="typewrite" data-period="2000"
+                                    data-type='[ "Experienced", "Inspiring", "Educated", "Positive", "Fun", "Helpful" ]'>
+                                    <span class="wrap"></span>
+                                </span>
+                                <!-- <span class="typewriter"></span> -->
+                            </h2>
                 </div>
             </div>
             <div class="row d-flex justify-content-center align-items-center my-0 mx-auto">
                 <div class="col-12">
                     <div class="card glassmorphism-card">
                         <div class="content">
-                    
+
                             <div class="contentBx">
                                 <h3>Lion<br><span>Happy Birthday</span></h3>
                             </div>
@@ -243,79 +248,92 @@
                             </li>
                         </ul>
                     </div>
-                    </div>
-            
                 </div>
-</div>
-</div>
-</section>
+
+            </div>
+        </div>
+    </section>
     <!--./end-coaches-->
 
     <!--Start Footer-->
     <div class="container-fluid" id="footer">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-3 ">
-          <div class="col mb-3">
-            <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo.png"></a>
-            <div class="text-start my-3">
-            <hr class="divider my-1 my-sm-2">
-        </div>  
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mt-3">
-                    <li class="breadcrumb-item active">
-                    Home
-                    </li>
-                  <li class="breadcrumb-item">
-                    <a class="link-font" id="#about">
-                        About Us
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="coaches.html" class="link-font">
-                        Coaches
-                    </a>
-                </li>
-                </ol>
-              </nav>
-          </div>
-      
-          <div class="col mb-3">
-            
-          </div>
-      
-          <div class="col mb-3">
-            <h5>TEAMS</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Teams</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Registration</a></li>
-            </ul>
-          </div>
+            <div class="col mb-3">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo.png"></a>
+                <div class="text-start my-3">
+                    <hr class="divider my-1 my-sm-2">
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-3">
+                        <li class="breadcrumb-item active">
+                            Home
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="link-font" id="#about">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="coaches.html" class="link-font">
+                                Coaches
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
 
-          <div class="col mb-3">
-            <h5>CAMPS & CLINICS</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            </ul>
-          </div>
-      
-          <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-            </ul>
-          </div>
+            <div class="col mb-3">
+
+            </div>
+
+            <div class="col mb-3">
+                <h5>TEAMS</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Teams</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Registration</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>CAMPS & CLINICS</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
         </footer>
-      </div>
+    </div>
     <!--./end-footer-->
 
     <script src="assets/js/counterScript.js"></script>
     <script src="assets/js/txtType.js"></script>
+    <script src="data.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('register.json')
+                .then(response => response.json())
+                .then(links => {
+                    const regsiterBtn = document.getElementById("#registerCta")
+                    regsiterBtn.href = links[1].url;
+                    regsiterBtn.textContent = links[0].label;
+                })
+
+                .catch(error => console.error("Error fetching JSON data:", error));
+        });
+    </script>
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

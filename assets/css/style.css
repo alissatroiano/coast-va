@@ -108,6 +108,10 @@ mark.mark-coaches {
     border-bottom: 1px solid var(--lightest);
 }
 
+.text-teal {
+    color: var(--teal);
+}
+
 /* ---------------- Project Styles ---------------- */
 .text-main {
     color: #515151aa;
@@ -168,18 +172,29 @@ nav {
 }
 
 nav li,
-a.nav-link.px-2 {
+.nav-item > .nav-link.px-2 {
     font-family: var(--secondary-font);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 2px;
-    color: var(--teal);
 }
 
-a.nav-link.px-2:hover {
+a.nav-link.px-2.text-teal:hover {
     color: var(--salmon-light);
+}
+
+a.nav-link-cta {
+    color: #fafafa;
+    background: var(--teal);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+a.nav-link-cta:hover {
+    background: var(--salmon-light);
     font-weight: 400;
+    color: var(--lightest);
 }
 
 .navbar-brand {
