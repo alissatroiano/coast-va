@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
+    fetch('data.csv')
+        .then(response => response.text())
+        .then(csv => {
+            const data = csvToJson(csv);
+            
             // Get the container where the team members will be displayed
             const teamRow = document.querySelector(".team-row");
 
@@ -89,5 +91,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 teamRow.appendChild(teamWrap);
             });
         })
-        .catch(error => console.error("Error fetching JSON data:", error));
+        .catch(error => console.error("Error fetching CSV data:", error));
 });

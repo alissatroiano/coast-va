@@ -1,9 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            // Get the container where the team members will be displayed
-            const teamRow = document.querySelector(".team-row");
+    
+    // Define the csvToJson function
+    function csvToJson(csv) {
+        const lines = csv.split("\n");
+        const headers = lines[0].split(",");
+        const jsonData = lines.slice(1).map(line => {
+            const values = line.split(",");
+            return headers.reduce((object, header, index) => {
+                object[header.trim()] = values[index].trim();
+                return object;
+            }, {});
+        });
+        return jsonData;
+    }
+
+    fetch('data.csv')
+    .then(response => response.text())
+    .then(csv => {
+        const data = csvToJson(csv);
+        const teamRow = document.querySelector(".team-row");
 
             // Loop through each coach in the JSON array
             data.forEach(coach => {
@@ -34,18 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 teamDetails.appendChild(bioElement);
 
                 // Create social media links (you can customize or add more)
-                const socials = document.createElement("div");
-                socials.className = "socials mt-20";
-                socials.innerHTML = `
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-envelope"></i></a>
-                `;
-
+              
                 // Append the team details and social links to the overlay
                 overlay.appendChild(teamDetails);
-                overlay.appendChild(socials);
 
                 // Append the overlay to the team image
                 teamImg.appendChild(overlay);
@@ -89,5 +95,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 teamRow.appendChild(teamWrap);
             });
         })
-        .catch(error => console.error("Error fetching JSON data:", error));
+        .catch(error => console.error("Error fetching CSV data:", error));
 });
