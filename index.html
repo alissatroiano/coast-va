@@ -225,32 +225,15 @@
                                 </span>
                                 <!-- <span class="typewriter"></span> -->
                             </h2>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center align-items-center my-0 mx-auto">
-                <div class="col-12">
-                    <div class="card glassmorphism-card">
-                        <div class="content">
-
-                            <div class="contentBx">
-                                <h3>Lion<br><span>Happy Birthday</span></h3>
+                            <br>
+                            <div class="col-12 text-center my-3">
+                                <h6 class="display-6">
+                                    <a class="link-font" href="coaches.html">Meet Our Coaches <i class="fas  fa-chevron-right"></i>
+                                    </a></h6>
                             </div>
-                        </div>
-                        <ul class="sci">
-                            <li>
-                                <a href="">happy</a>
-                            </li>
-                            <li>
-                                <a href="">birth</a>
-                            </li>
-                            <li>
-                                <a href="">day</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-
             </div>
+  
         </div>
     </section>
     <!--./end-coaches-->
@@ -304,13 +287,17 @@
             </div>
 
             <div class="col mb-3">
-                <h5>Section</h5>
+                <h5>Coaches</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    <li class="nav-item mb-2"><a href="coaches.html" class="nav-link p-0 text-body-secondary">Coaches</a></li>
+                    <li class="nav-item mb-2"
+                    >
+                    <a href="coaches.html" class="nav-link p-0 text-body-secondary">Private Lessons</a>
+                </li>
+                <li class="nav-item mb-2"
+                >
+                <a href="coaches.html" class="nav-link p-0 text-body-secondary">Group Lessons</a>
+            </li>
                 </ul>
             </div>
         </footer>
@@ -321,19 +308,6 @@
     <script src="assets/js/txtType.js"></script>
     <script src="data.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('register.json')
-                .then(response => response.json())
-                .then(links => {
-                    const regsiterBtn = document.getElementById("#registerCta")
-                    regsiterBtn.href = links[1].url;
-                    regsiterBtn.textContent = links[0].label;
-                })
-
-                .catch(error => console.error("Error fetching JSON data:", error));
-        });
-    </script>
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
