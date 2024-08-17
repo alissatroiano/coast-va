@@ -110,7 +110,7 @@
     letter-spacing: 1.52px;
     font-size: 3.8rem;
   }
-  
+
 .bracket { 
 	display: flex;
 	flex-direction: row;
@@ -136,6 +136,10 @@
 
 .playpass p {
   color: var(--light-gray);
+}
+
+div#trainCta {
+  background: #e4e4e4;
 }
 
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }

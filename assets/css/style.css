@@ -189,6 +189,10 @@ mark.mark-coaches {
   margin-bottom: -4rem !important;
 }
 
+.mt-n7 {
+  margin-top: -10rem !important;
+}
+
 .pt-6 {
   padding-top: 3.5rem !important;
 }
@@ -199,6 +203,10 @@ mark.mark-coaches {
 .fs-lg {
   font-family: var(--secondary-font);
   font-size: 1.1rem;
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 /* ---------------- Header ---------------- */
