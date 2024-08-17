@@ -23,12 +23,64 @@
 </head>
 
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg pb-2 bg-black navbar-dark shadow-lg fixed-top">
+    <header class="fixed-top mb-5">
+        <nav class="navbar navbar-expand-lg pb-2 bg-black navbar-dark shadow-lg">
             <div class="container-fluid d-flex flex-wrap">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="#">
                     <img class="logo" src="assets/images/logo-white.png">
                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto my-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                About </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href=about.html>About</a></li>
+                                <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="training.html" class="nav-link px-2 text-teal">Training</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Coaches </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
+                                <li><a class="dropdown-item" href="coaches.html#booking">Private Lessons</a></li>
+                                <li><a class="dropdown-item" href="coaches.html#booking">Group Lessons</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Teams </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Teams</a></li>
+                                <li><a class="dropdown-item" href="#">Team Registration</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="index.html#contact" class="nav-link px-2 text-teal">Contact</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="coaches.html" class="nav-link px-2 text-teal">Contact</a>
+                    </li> -->
+                        <li class="nav-item">
+                            <a href="" class="nav-link nav-link-cta px-2">Register</a>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
         </nav>
     </header>
@@ -38,6 +90,7 @@
         <div class="jumbotron jumbotron-fluid container-fluid" id="training">
             <div class="row mt-5">
                 <div class="col-12 mt-5 pt-5 text-center align-items-center">
+                    
                     <h1 class="display-4 secondary-font mt-5">TRAINING</h1>
                     <hr class="training-hr">
 
@@ -46,21 +99,8 @@
         </div>
         <!--./jumbotron-->
 
-        <!--Schdule Embed-->
-        <section class="schedule-playpass py-0 my-0 mx-auto " id="scheduleEmbed">`
-            <div class="container mt-n7">
-                <div class=" p-4 p-sm-5 my-0 mx-auto">
-                <div class="row position-relative d-flex justify-content-center align-items-center text-center my-0 mx-auto ">
-                    <div class="col-12 my-0 mx-auto">
-            <div class="playpass playpass-widget ">              
-                <script src="https://playpass.com/widgets/RaZNQ8D.js"></script>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        </section>
-        <!--./schedule-embed-->
+
+       
 
         <!-- <div class="google-sheets">
             <div class="row d-flex my-0 mx-auto justify-content-center align-items-center text-center">
@@ -149,10 +189,10 @@
             </div>
         </section>
         <!--end-why-coast-->
-        
+
         <!-- contact & final cta-->
         <section class="position-relative z-index-2 py-0 mb-n7" id="contact">
-            <div class="container position-relative">
+            <div class="container position-relative my-0 mx-auto">
                 <div class="bg-teal rounded position-relative overflow-hidden p-4 p-sm-5">
                     <!-- SVG decoration -->
                     <figure class="position-absolute bottom-0 end-0 mb-n3">
@@ -288,6 +328,7 @@
 
     <!-- <script src="assets/js/schedule.js"></script> -->
     <script src="assets/js/contact.js"></script>
+    <script src="data.js"></script>
 
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
