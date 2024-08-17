@@ -25,57 +25,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Loop through each entry in the JSON array
         data.forEach(person => {
-            // Check if the person is a director or a coach
+            // Determine the person's role
+            const role = person.type === "director" ? "Program Director" : "Coach";
+
+            // Common HTML structure
+            const memberWrap = document.createElement("div");
+            memberWrap.className = person.type === "director" ? "col-12 text-center director-wrap" : "col-xs-8 col-sm-4 team-wrap";
+
+            memberWrap.innerHTML = `
+                <div class="team-member text-center">
+                    <div class="team-img">
+                        <img src="${person.imgSrc}" alt="${person.name}">
+                        <div class="overlay">
+                            <div class="team-details text-center">
+                                <p class="coach-bio">${person.bio}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-light text-coach-data my-3 pb-2">
+                        <h6 class="team-title">${person.name}</h6>
+                        <p class="coach-role">${role}</p>
+                        <p class="coach-uni">${person.university} Alum</p>
+                        <p class="coach-prev">${person.prev}</p>
+                        <p class="coach-bio">${person.bio}</p>
+                    </div>
+                </div>
+            `;
+
+            // Append to the appropriate row
             if (person.type === "director") {
-                // Create and append the director's content to the director row
-                const directorWrap = document.createElement("div");
-                directorWrap.className = "col-12 text-center director-wrap";
-
-                directorWrap.innerHTML = `
-                    <div class="team-member text-center">
-                        <div class="team-img">
-                            <img src="${person.imgSrc}" alt="${person.name}">
-                            <div class="overlay">
-                                <div class="team-details text-center">
-                                    <p class="coach-bio">${person.bio}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-light text-coach-data my-3 pb-2">
-                            <h6 class="team-title">${person.name}</h6>
-                            <p class="coach-uni">${person.university} Alum</p>
-                            <p class="coach-prev">${person.prev}</p>
-                            <p class="coach-bio">${person.bio}</p>
-                        </div>
-                    </div>
-                `;
-
-                directorRow.appendChild(directorWrap);
+                directorRow.appendChild(memberWrap);
             } else if (person.type === "coach") {
-                // Create and append the coach's content to the team row
-                const teamWrap = document.createElement("div");
-                teamWrap.className = "col-xs-8 col-sm-4 team-wrap";
-
-                teamWrap.innerHTML = `
-                    <div class="team-member text-center">
-                        <div class="team-img">
-                            <img src="${person.imgSrc}" alt="${person.name}">
-                            <div class="overlay">
-                                <div class="team-details text-center">
-                                    <p class="coach-bio">${person.bio}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-light text-coach-data my-3 pb-2">
-                            <h6 class="team-title">${person.name}</h6>
-                            <p class="coach-uni">${person.university} Alum</p>
-                            <p class="coach-prev">${person.prev}</p>
-                            <p class="coach-bio">${person.bio}</p>
-                        </div>
-                    </div>
-                `;
-
-                teamRow.appendChild(teamWrap);
+                teamRow.appendChild(memberWrap);
             }
         });
     })
