@@ -155,10 +155,6 @@ h2.coaches-title {
   color: #fff;
 }
 
-p.coach-contact {
-  font-family: var();
-}
-
 .overlay a {
   color: transparent;
   display: none;
@@ -187,8 +183,6 @@ p.coach-contact {
   display: block;
   /* Ensure the contact info is visible */
 }
-
-
 
 #coaches::before {
   content: '';

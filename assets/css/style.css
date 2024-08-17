@@ -181,6 +181,10 @@ mark.mark-coaches {
 .pt-lg-8 {
   padding-top: 8rem !important;
 }
+.fs-lg {
+  font-family: var(--secondary-font);
+  font-size: 1.1rem;
+}
 
 /* ---------------- Header ---------------- */
 header {

@@ -92,3 +92,17 @@
     background-size: cover;
     height: 60vh;
   }
+
+  .title-teams-1 {
+    font-family: var(--secondary-font);
+    letter-spacing: 10px;
+    color: var(--light-gray);
+  }
+
+  .title-teams-2 {
+    font-family: var(--primary-font);
+    color: var(--light-gray);
+    letter-spacing: 1.52px;
+    font-size: 3.8rem;
+
+  }
