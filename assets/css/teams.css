@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #000000;
+    --teal: #00909e;
+    --teal-medium: #29d6e6e9;
+    --teal-light: #5be4f0;
+    --yellow: #fcde63;
+    --background-color: #f3f3f3;
+    --font-color: #202020;
+    --font-color-lt: #f3f3f3;
+    --salmon-light: #f58869;
+    --salmon-dark: #f16054;
+    --lightest: #fafafa;
+    --lighter-gray: #c9c6c6;
+    --light-gray: #999999;
+    --gray: #717171;
+    --darker-gray: #414141;
+    --dark-gray: #414141;
+    --primary-font: 'mont', sans-serif;
+    --secondary-font: 'phenomena', sans-serif;
+
+    /* Card Watermark links */
+    --gh-watermark: url('../images/gh-icon-1.png');
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 20;
+    inherits: false;
+}
+
+@property --num-1 {
+    syntax: "<integer>";
+    initial-value: 4;
+    inherits: false;
+}
+
+@property --num-2 {
+    syntax: "<integer>";
+    initial-value: 8;
+    inherits: false;
+}
+
+.rajdhani-light {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rajdhani-medium {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.rajdhani-semibold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.rajdhani-bold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-mark {
+    padding: 10px;
+    color: var(--teal);
+    letter-spacing: 1.5px;
+}
+
+.fs-lg {
+    font-family: var(--secondary-font);
+    font-size: 1.1rem;
+}
+
+.jumbotron {
+    position: relative;
+    color: white;
+    background-image: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
