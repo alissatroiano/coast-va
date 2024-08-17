@@ -913,20 +913,20 @@ svg.svg-close {
   }
 
   .coach-role {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
     font-family: var(--primary-font);
     color: var(--darker-gray);
     text-transform: uppercase;
     line-height: 1;
-    margin: 15px auto;
+    margin: 5px auto;
   }
 
   .coach-uni {
     font-family: var(--secondary-font);
     font-weight: 400;
-    font-size: 1.1rem;
-    margin: 10px auto;
+    font-size: 1rem;
+    margin: 2.235px auto;
     color: var(--darker-gray);
   }
 
@@ -934,14 +934,14 @@ svg.svg-close {
     font-family: var(--secondary-font);
     font-weight: 400;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--darker-gray);
     font-style: italic;
   }
 
   h6.team-title {
     color: var(--teal);
-    font-size: 1.425rem;
+    font-size: 1.225rem;
     letter-spacing: 2.25px;
     font-weight: 600;
   }

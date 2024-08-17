@@ -89,6 +89,8 @@
 .team-img {
   position: relative;
   overflow: hidden;
+  max-width: 100%;
+  height: fit-content;
 }
 
 #coaches {
@@ -318,15 +320,15 @@ p.coach-name {
   color: var(--darker-gray);
   text-transform: uppercase;
   line-height: 1;
-  margin: 7.5px auto;
+  margin: 5px auto;
 }
 
 .coach-uni {
   font-family: var(--secondary-font);
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--font-color);
-  margin: 7.5px auto;
+  margin: 2.5px auto;
 }
 
 .coach-prev {
@@ -344,7 +346,7 @@ p.coach-name {
   font-size: 1rem;
   color: var(--lightest);
   font-style: italic;
-  margin-top: 25px;
+  margin: 50px;
 }
 
 h6.team-title {
