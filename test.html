@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracket Layout</title>
+    <style>
+.bracket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bracket-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bracket-cell {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.empty-cell {
+    flex-grow: 1; /* Flex-grow to maintain the spacing */
+    border: none;
+}
+
+.bracket-cell:not(.empty-cell) {
+    border: 4px solid #000;
+}
+        .bracket-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .bracket-row {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bracket"></div>
+
+    <script>
+        // Function to parse CSV data
+        function parseCSV(data) {
+            const rows = data.split('\n');
+            return rows.map(row => row.split(','));
+        }
+
+        // Function to create HTML structure from CSV data
+        function generateBracketLayout(csvData) {
+            const bracketDiv = document.getElementById('bracket');
+            const parsedData = parseCSV(csvData);
+
+            parsedData.forEach((row, rowIndex) => {
+                const bracketRowDiv = document.createElement('div');
+                bracketRowDiv.classList.add('bracket-row');
+
+                row.forEach((cell, cellIndex) => {
+                    const cellDiv = document.createElement('div');
+                    cellDiv.textContent = cell.trim(); // Trim spaces
+
+                    // Add flex classes dynamically based on some logic if needed
+                    // Example: Add 'bracket-column' class to non-empty cells
+                    if (cell.trim()) {
+                        cellDiv.classList.add('bracket-column');
+                    }
+
+                    bracketRowDiv.appendChild(cellDiv);
+                });
+
+                bracketDiv.appendChild(bracketRowDiv);
+            });
+        }
+
+        // Fetch CSV file and generate bracket layout
+        fetch('schedule.csv')
+            .then(response => response.text())
+            .then(data => generateBracketLayout(data))
+            .catch(error => console.error('Error loading CSV file:', error));
+    </script>
+</body>
+</html>

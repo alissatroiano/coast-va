@@ -93,7 +93,22 @@ a {
   text-decoration: none;
 }
 
+hr.training-hr {
+  margin: 20px auto;
+  width: 40%;
+  color: var(--teal-light);
+  border: 1px solid var(--teal-light);
+}
+
 /* ---------------- Project Styles ---------------- */
+.primary-font {
+  font-family: var(--primary-font);
+}
+
+.secondary-font {
+  font-family: 'phenomena', sans-serif;
+}
+
 .text-main {
   color: #515151aa;
 }
