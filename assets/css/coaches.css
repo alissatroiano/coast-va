@@ -1,49 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-  .our-team .container-fluid {
-    padding: 0 50px;
-  }
-  
-  .team-img img {
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .team-member,
-  .team-img {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    background-color: rgba(1, 12, 24, 0.857);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  }
+:root {
+  --black: #000000;
+  --teal: #00909e;
+  --teal-medium: #29d6e6e9;
+  --teal-light: #5be4f0;
+  --yellow: #fcde63;
+  --background-color: #f3f3f3;
+  --font-color: #202020;
+  --font-color-lt: #f3f3f3;
+  --salmon-light: #f58869;
+  --salmon-dark: #f16054;
+  --lightest: #fafafa;
+  --lighter-gray: #c9c6c6;
+  --light-gray: #999999;
+  --gray: #717171;
+  --darker-gray: #414141;
+  --dark-gray: #414141;
+  --primary-font: 'mont', sans-serif;
+  --secondary-font: 'phenomena', sans-serif;
 
-  .overlay a {
-    color: transparent;
-    display: none;
-  }
-  
-  .team-img:hover .overlay {
-    opacity: 1;
-  }
-  
-  .director-row .team-member .team-img,
-  .director-row .team-member .team-img > img  {
-    width: 450px;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
-  }
+  /* Card Watermark links */
+  --gh-watermark: url('../images/gh-icon-1.png');
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 20;
+  inherits: false;
+}
+
+@property --num-1 {
+  syntax: "<integer>";
+  initial-value: 4;
+  inherits: false;
+}
+
+@property --num-2 {
+  syntax: "<integer>";
+  initial-value: 8;
+  inherits: false;
+}
+
+.rajdhani-light {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rajdhani-regular {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rajdhani-medium {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rajdhani-semibold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rajdhani-bold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.our-team .container-fluid {
+  padding: 0 50px;
+}
+
+.team-img img {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+}
+
+.team-member,
+.team-img {
+  position: relative;
+  overflow: hidden;
+}
+
+#coaches {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#coaches::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-clip: linear-gradient(#00909e, #5be4f0, #21cbda);
+  clip-path: circle(30% at right 70%);
+}
+
+.coaches {
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  background-color: var(--teal);
+}
+
+.coaches-container .row .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+
+
+h2.coaches-title {
+  font-size: 9vmin;
+  color: #8bf;
+  text-align: left;
+  font-weight: 700;
+  margin: 1rem 0 1rem 2rem;
+}
+
+.typewrite {
+  color: var(--teal);
+  font-family: var(--primary-font);
+  letter-spacing: 2px;
+  font-size: 4.12rem;
+  font-weight: 700;
+}
+
+.overlay {
+  background-color: rgba(1, 12, 24, 0.857);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.overlay p.coach-contact {
+  color: #fff;
+}
+
+p.coach-contact {
+  font-family: var();
+}
+
+.overlay a {
+  color: transparent;
+  display: none;
+}
+
+.team-img:hover .overlay {
+  opacity: 1;
+}
+
+.director-row .team-member .team-img,
+.director-row .team-member .team-img>img {
+  width: 450px;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.overlay a {
+  color: #fff;
+  display: block;
+  /* Ensure the link is visible */
+}
+
+.overlay p.coach-contact {
+  color: #fff;
+  display: block;
+  /* Ensure the contact info is visible */
+}
+
+
+
+#coaches::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#05353a94, #0b5b6282, #084a504f);
+  clip-path: circle(30% at right 70%);
+}
+
+#coaches::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#094c5399, #4dabb3ad);
+  z-index: -25000;
+  clip-path: circle(20% at 10% 10%);
+}
+
+#coaches {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#coaches .card.glassmorphism-card,
+.team-member {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.contentBx {
+  max-width: 250px;
+  height: 150px;
+}
+
+#coaches .card.glassmorphism-card .content,
+.team-member {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+#coaches .card.glassmorphism-card:hover .content {
+  transform: translateY(-20px);
+}
+
+.team-member,
+#coaches .card .content .imgBx {
+  position: relative;
+  max-width: fit-content;
+  height: 100%x;
+  overflow: hidden;
+}
+
+.coach-contact {
+  font-family: var(--secondary-font);
+}
+
+#coaches .card.glassmorphism-card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#coaches .card.glassmorphism-card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+
+#coaches .card.glassmorphism-card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+#coaches .card.glassmorphism-card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+#coaches .card.glassmorphism-card .sci li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+#dataDisplay>p {
+  margin: 5px auto;
+}
+
+p.coach-name {
+  color: var(--teal);
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-family: var(--primary-font);
+}
+
+.coach-role {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--primary-font);
+  color: var(--darker-gray);
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 7.5px auto;
+}
+
+.coach-uni {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--font-color);
+  margin: 7.5px auto;
+}
+
+.coach-prev {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--dark-gray);
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.coach-bio {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--lightest);
+  font-style: italic;
+  margin-top: 25px;
+}
+
+h6.team-title {
+  color: var(--teal);
+  font-size: 1.245rem;
+  letter-spacing: 2.25px;
+  font-weight: 600;
+}
+
+
+a.coach-contact {
+  color: var(--teal);
+}

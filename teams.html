@@ -22,77 +22,66 @@
 </head>
 
 <body>
-    <header class="fixed-top">
-        <nav class="pb-2 bg-black shadow-lg">
+    <header class="fixed-top mb-5">
+        <nav class="navbar navbar-expand-lg pb-2 bg-black navbar-dark shadow-lg">
             <div class="container-fluid d-flex flex-wrap">
-                <ul class="nav me-auto mb-3">
-                    <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png"></a>
-                </ul>
-                <ul class="nav my-3">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
-                    <li class="nav-item"><a href="index.html#about" class="nav-link px-2 text-teal">About Us</a></li>
-                    <li class="nav-item">
-                        <a href="coaches.html" class="nav-link px-2 text-teal">Coaches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link nav-link-cta px-2">Register</a>
-                    </li>
-                </ul>
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="assets/images/logo-white.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto my-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
 
-            </div>
-        </nav>
-        <div class="container-fluid d-flex flex-wrap justify-content-center bg-light w-100 shadow-lg mb-5">
-            <!-- Example single danger button -->
-            <div class="row">
-                <div class="btn-group my-2">
-                    <div class="dropdown-group">
-                        <a type="button" class="link-font dropdown-toggle dropdown-toggle-split"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Teams </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Teams</a></li>
-                            <li><a class="dropdown-item" href="#">Team Registration</a></li>
-                        </ul>
-                    </div>
-                    <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Camps & Clinics </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                About </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href=about.html>About</a></li>
+                                <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
+                            </ul>
                         </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
 
-                    <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Coaches
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
-                        <li><a class="dropdown-item" href="coaches.html">Private Lessons</a></li>
-                        <li><a class="dropdown-item" href="coaches.html">Group Classes</a></li>
-                    </ul>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Coaches </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
+                                <li><a class="dropdown-item" href="coaches.html#booking">Private Lessons</a></li>
+                                <li><a class="dropdown-item" href="coaches.html#booking">Group Lessons</a></li>
 
+                            </ul>
                         </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Teams </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Teams</a></li>
+                                <li><a class="dropdown-item" href="#">Team Registration</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="index.html#contact" class="nav-link px-2 text-teal">Contact</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="coaches.html" class="nav-link px-2 text-teal">Contact</a>
+                    </li> -->
+                        <li class="nav-item">
+                            <a href="" class="nav-link nav-link-cta px-2">Register</a>
+                        </li>
                     </ul>
+
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
-
     <div class="container-fluid bg-light py-5 my-5">
         <div class="row">
             <div class="col-12">
