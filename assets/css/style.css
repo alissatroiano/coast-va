@@ -740,7 +740,8 @@ p.coach-name {
     font-family: var(--secondary-font);
     font-weight: 400;
     font-size: 1rem;
-    color: var(--font-color);
+    color: var(--dark-gray);
+    font-style: italic;
 }
 
 .coach-bio {

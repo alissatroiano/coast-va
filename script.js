@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="col-12 text-light text-coach-data my-3 pb-2">
                             <h6 class="team-title">${person.name}</h6>
                             <p class="coach-uni">${person.university} Alum</p>
-                            <p>${person.prev}</p>
+                            <p class="coach-prev">${person.prev}</p>
                             <p class="coach-bio">${person.bio}</p>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="col-12 text-light text-coach-data my-3 pb-2">
                             <h6 class="team-title">${person.name}</h6>
                             <p class="coach-uni">${person.university} Alum</p>
-                            <p>${person.prev}</p>
+                            <p class="coach-prev">${person.prev}</p>
                             <p class="coach-bio">${person.bio}</p>
                         </div>
                     </div>
