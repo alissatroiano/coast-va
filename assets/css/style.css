@@ -521,6 +521,14 @@ a.carousel-button-3:hover {
   min-height: 40vh;
 }
 
+.about-text,
+.text-about {
+  font-family: var(--primary-font);
+}
+
+.faq {
+  font-family: var(--primary-font);
+}
 
 /* -------------------- Testimonials */
 
@@ -906,7 +914,6 @@ svg.svg-close {
   }
 
 }
-
 
 @media screen and (min-width: 1024px) {
   .carousel-item {
