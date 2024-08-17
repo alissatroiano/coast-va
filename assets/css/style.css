@@ -812,19 +812,6 @@ a.carousel-button-3:hover {
   opacity: 100%;
 }
 
-
-
-/* .img-wrapper.mt-1.mt-sm-3.mt-md-4 {
-    background: url('../images/coast-img-3.jpg');   
-    min-height: 350px;
-    min-width: fit-content;
-    height: 100%;
-    max-width: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
 .text-feature-icon-1 {
   color: var(--teal);
   text-shadow: 2px 1px 6px #999999;
@@ -841,7 +828,6 @@ a.carousel-button-3:hover {
 }
 
 /*----------------------------- Counter */
-
 [data-count] {
   margin: 15vh 0;
   font-size: 5rem;
@@ -849,8 +835,6 @@ a.carousel-button-3:hover {
   font-weight: 700;
   color: var(--yellow);
   text-shadow: 0px 0px 6px #e69d9d;
-
-  /* text-shadow: 2px 2px 0px var(--salmon-light), 4px 4px 0px var(--salmon-dark); */
 }
 
 .counter-txt {
@@ -863,8 +847,15 @@ a.carousel-button-3:hover {
 }
 
 
-/*----------------------------- Coaches */
+/*----------------------------- CTA */
 
+.typewrite {
+  color: var(--teal);
+  font-family: var(--primary-font);
+  letter-spacing: 2px;
+  font-size: 4.12rem;
+  font-weight: 700;
+}
 
 /*-----------------------------------Footer */
 
