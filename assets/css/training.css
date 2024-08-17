@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #000000;
+    --teal: #00909e;
+    --teal-medium: #29d6e6e9;
+    --teal-light: #5be4f0;
+    --yellow: #fcde63;
+    --background-color: #f3f3f3;
+    --font-color: #202020;
+    --font-color-lt: #f3f3f3;
+    --salmon-light: #f58869;
+    --salmon-dark: #f16054;
+    --lightest: #fafafa;
+    --lighter-gray: #c9c6c6;
+    --light-gray: #999999;
+    --gray: #717171;
+    --darker-gray: #414141;
+    --dark-gray: #414141;
+    --primary-font: 'mont', sans-serif;
+    --secondary-font: 'phenomena', sans-serif;
+    --match-height: 16px;
+    --match-spacing: 24px;
+    --match-width: 240px;
+    --border-size: 1px;
+    --border-radius: 2px;
+
+    /* Card Watermark links */
+    --gh-watermark: url('../images/gh-icon-1.png');
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 20;
+    inherits: false;
+}
+
+@property --num-1 {
+    syntax: "<integer>";
+    initial-value: 4;
+    inherits: false;
+}
+
+@property --num-2 {
+    syntax: "<integer>";
+    initial-value: 8;
+    inherits: false;
+}
+
+.rajdhani-light {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rajdhani-medium {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.rajdhani-semibold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.rajdhani-bold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-mark {
+    padding: 10px;
+    color: var(--teal);
+    letter-spacing: 1.5px;
+}
+
+.fs-lg {
+    font-family: var(--secondary-font);
+    font-size: 1.1rem;
+}
+
+.jumbotron {
+    position: relative;
+    color: white;
+    background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+  }
+
+  .title-teams-1 {
+    font-family: var(--secondary-font);
+    letter-spacing: 10px;
+    color: var(--light-gray);
+  }
+
+  .title-teams-2 {
+    font-family: var(--primary-font);
+    color: var(--light-gray);
+    letter-spacing: 1.52px;
+    font-size: 3.8rem;
+
+  }
+
+
+  
+.bracket { 
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.column { 
+	display: flex; 
+	flex-direction: column;
+	min-height: 100%;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.match { 
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: var(--match-width);
+	max-width: var(--match-width); 
+	height: var(--match-height);
+	margin: var(--match-spacing) / 2 var(--match-spacing)  var(--match-spacing) / 2 0;
+}
+    
+    .match-top { border-radius: var(--border-radius) var(--border-radius) 0 0; }
+	.match-bottom { border-radius: 0 0 var(--border-radius) var(--border-radius); }
+	
+	.team {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		border: var(--border-size) solid black;
+		position: relative;
+    }
+
+
+    span { 
+        padding-left: $font-size / 2; 
+        &:last-child { padding-right: $font-size / 2; }
+    } 
+    .score { margin-left: auto; } // Sets score to right
+    &:first-child { margin-bottom: $border-size * -1; } // Sets borders on top of eachother
+}
+}
+
+.match-lines {
+display: block;
+position: absolute;
+top: 50%;
+bottom: 0;
+margin-top: ($border-size - 1) * -1;
+right: $border-size * -1;
+.line {
+    background: red;
+    position: absolute;
+    &.one { 
+        height: $border-size; 
+        width: (var(--match-spacing) / 2); 
+    }
+    &.two { 
+        height: ($match-height + var(--match-spacing)) / 2 + $border-size;
+        width: $border-size; 
+        left: (var(--match-spacing) / 2) - $border-size; 
+    }
+}
+// Controls the line left-side line of a match
+&.alt { left: ((var(--match-spacing) / 2))* -1; }
+}
+
+// Make the line go upwards on even-lined matches
+.match:nth-child(even) .match-lines .line.two { transform: translate(0,-100%); }
+
+// Make the left-side line disappear on the first column
+.column:first-child .match-lines.alt { display: none; }
+
+// Make the right-side lines disappear on the final column (but keep left-side)
+.column:last-child .match-lines { 
+display: none; 
+&.alt { display: block; }
+}
+
+// Adds additional height for each column out, the math should support any changes to match height, match spacing, or border size. 
+// Don't love this, but percentages / flexbox can't really solve this.
+// Up to 5 columns supported by default
+.column:nth-child(2) { .match-lines .line.two {	height: ($match-height + var(--match-spacing)) + $border-size * 2; } }
+.column:nth-child(3) { .match-lines .line.two {	height: ($match-height + var(--match-spacing)) * 2 + $border-size * 3; } }
+.column:nth-child(4) { .match-lines .line.two {	height: ($match-height + var(--match-spacing)) * 3 + $border-size * 4; } }
+.column:nth-child(5) { .match-lines .line.two {	height: ($match-height + var(--match-spacing)) * 4 + $border-size * 5; } }
+
+// Themes 
+
+// Light Theme
+$light-background: #f9fafd;
+$light-border-main: #dadfe3;
+$light-border-alt: #dadfe3; 
+$light-winning-team-background: #fff;
+$light-losing-team-background: #fff;
+$light-winning-team-color: #272f36;
+$light-losing-team-color: #708392; 
+// If you want these colors to be different, this will override the main border color.
+$light-line-color-override: null; // For the connecting lines, so they don't match above border-main color.
+$light-seed-color-override: #9fafbf; 
+$light-score-color-override: #9fafbf; 
+
+.theme-light {
+// Coloring
+background: $light-background;
+border-color: darken($light-background,5%); 
+
+.match-lines .line { 
+    background: $light-border-main; 
+    background: $light-line-color-override;
+}
+
+.team { 
+    background: $light-losing-team-background;
+    border-color: $light-border-alt;
+    color: $light-losing-team-color;
+}
+.winner-top .match-top,
+.winner-bottom .match-bottom { 
+    background: $light-winning-team-background;
+    color: $light-winning-team-color;
+    border-color: $light-border-main;
+    z-index: 1;
+}
+.match {
+    .seed { color: $light-seed-color-override; }
+    .score { color: $light-score-color-override; }
+}
+
+
+// Sizing
+.match {
+    .seed { font-size: 12px; min-width: 10px; }
+    .score { font-size: 14px;  }
+}
+}
+
+// Dark Theme
+$dark-background: #0e1217;
+$dark-border-main: #36404e;
+$dark-border-alt: #232c36; 
+$dark-winning-team-background: #232c36;
+$dark-losing-team-background: #182026;
+$dark-winning-team-color: #e3e8ef;
+$dark-losing-team-color: #6b798c;
+// If you want these colors to be different, this will override the main border color.
+$dark-line-color-override: null; // For the connecting lines, so they don't match above border-main color.
+$dark-seed-color-override: null; 
+$dark-score-color-override: null; 
+$dark-score-winner-color-override: #03d9ce;
+
+.theme-dark {
+
+// Coloring
+background: $dark-background;
+border-color: darken($dark-background,5%); 
+
+.match-lines .line { 
+    background: $dark-border-main; 
+    background: $dark-line-color-override;
+}
+
+.team { 
+    background: $dark-losing-team-background;
+    border-color: $dark-border-alt;
+    color: $dark-losing-team-color;
+}
+.winner-top .match-top,
+.winner-bottom .match-bottom { 
+    background: $dark-winning-team-background;
+    color: $dark-winning-team-color;
+    border-color: $dark-border-main;
+    z-index: 1;
+    .score { color: $dark-score-winner-color-override; }
+}
+.match {
+    .seed { color: $dark-seed-color-override; }
+    .score { color: $dark-score-color-override; }
+}
+
+
+// Sizing
+.match {
+    .seed { font-size: 12px; min-width: 10px; }
+    .score { font-size: 14px;  }
+}
+}
+
+// Note: this theme is kinda hacky / improvised compared to the other themes, but it gives an idea of what a more branded look can do using the above template as a starting point.
+
+.theme-dark-trendy {
+
+// Coloring
+background: #2b5876;
+background: -webkit-linear-gradient(to right, #171721, #122b29);
+background: linear-gradient(to right, #171721, #122b29);
+border-color: darken($dark-background,5%); 
+
+.match-lines .line { 
+    background: $dark-border-main; 
+    background: $dark-line-color-override;
+}
+
+.team { 
+    background: transparentize(#323641,.6);
+    color: $dark-losing-team-color;
+    border: 2px solid transparent; 
+    &:first-child { margin-bottom: 2px; }
+    &:last-child { margin-top: 2px; }
+}
+.winner-top .match-top,
+.winner-bottom .match-bottom { 
+    background: #323641;
+    color: $dark-winning-team-color;
+    z-index: 1;
+    .score { color: $dark-score-winner-color-override; }
+}
+.match {
+    text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; }
+    .seed { display: none; 
+    margin-right: var(--match-spacing) * 2;
+    .match-top { border-radius:0; }
+    .match-bottom { border-radius: 0; }
+}
+
+.match-lines {
+    opacity: 0.75;
+    .line { background: $dark-score-winner-color-override; }
+    right: (var(--match-spacing)/2) * -1;
+    &.alt { left: (var(--match-spacing)) * -1; }
+}
+.team { overflow: hidden; }
+.score:before {
+    opacity: .25;
+    position: absolute;
+    z-index: 1;
+    content: '';
+    display: block;
+    background: black;
+    min-height: 50px;
+    min-width: 70px;
+    transform: translate(-12px,0) rotate(25deg);
+}
+}
+
+// "disabled" classed for the main bracket. include these in the bracket div to disable elements in the match (or, i recommend just delete the spans you don't want)
+.disable-image .image,
+.disable-seed .seed,
+.disable-name .name,
+.disable-score .score { display: none !important; }
+
+.disable-borders { 
+border-width: 0px !important; 
+}
+
+.team { border-width: 0px !important;}
+
+
+.disable-seperator {
+.match-top { border-bottom: 0px !important; }
+.match-bottom { border-top: 0px !important; }
+.team:first-child { margin-bottom: 0px; }
+}
+
+
+h2 { 
+    color: #e1e8ef;
+    text-transform: uppercase; 
+    font-size: 12px; 
+    margin: 0 0 12px 0; 
+}
+
+button { 
+    line-height: 1em; 
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: #6b798c;
+    color: #ccc;
+    border: 1px solid #eee;
+}
+
+
+.theme-light .theme-switcher #theme-light,
+.theme-dark .theme-switcher #theme-dark,
+.theme-dark-trendy .theme-switcher #theme-dark-trendy,
+.theme-none .theme-switcher #theme-none { 
+background: darken(#6b798c,12%);
+border-color: darken(#6b798c,15%);
+}
+
