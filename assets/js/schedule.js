@@ -31,5 +31,29 @@ SAT 5 PM (4,,W-4,,0,,,,,,,
 ,,,,,,,,,,,
 Team8,,0,,,,,,,,,
 `.trim().split('\n');
+const container = document.createElement('div');
+container.className = 'bracket-container';
 
-generateBracketLayout(csvData.join('\n'));
+csvData.forEach((line) => {
+    const row = document.createElement('div');
+    row.className = 'bracket-row d-flex';
+
+    const cells = line.split(',');
+
+    cells.forEach(cell => {
+        const cellElement = document.createElement('div');
+        cellElement.className = 'bracket-cell';
+        
+        if (cell.trim()) { // Only create cells with content
+            cellElement.textContent = cell.trim();
+        } else {
+            cellElement.classList.add('empty-cell');
+        }
+
+        row.appendChild(cellElement);
+    });
+
+    container.appendChild(row);
+});
+
+document.body.appendChild(container);
