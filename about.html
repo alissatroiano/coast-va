@@ -21,143 +21,282 @@
 </head>
 
 <body>
-    <header class="fixed-top mb-3">
-        <nav class="pb-2 bg-black shadow-lg">
+    <header class="fixed-top mb-5">
+        <nav class="navbar navbar-expand-lg pb-2 bg-black navbar-dark shadow-lg">
             <div class="container-fluid d-flex flex-wrap">
-                <ul class="nav me-auto mb-3">
-                    <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png"></a>
-                </ul>
-                <ul class="nav my-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link px-2">About Us</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container-fluid d-flex flex-wrap justify-content-center bg-white w-100 mb-5">
-            <!-- Example single danger button -->
-            <div class="row">
-                <div class="btn-group my-2">
-                    <div class="dropdown-group">
-                        <a type="button" class="link-font dropdown-toggle dropdown-toggle-split"
+                    <a class="navbar-brand" href="#">
+                        <img class="logo" src="assets/images/logo-white.png">
+                    </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+                <ul class="navbar-nav ms-auto my-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
+                     
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                About </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About</a></li>
+                                <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
+                            </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Coaches </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
+                            <li><a class="dropdown-item" href="coaches.html#booking">Private Lessons</a></li>
+                            <li><a class="dropdown-item" href="coaches.html#booking">Group Lessons</a></li>
+
+                        </ul>
+                </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Teams </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-
+                            <li><a class="dropdown-item" href="#">Teams</a></li>
+                            <li><a class="dropdown-item" href="#">Team Registration</a></li>
                         </ul>
-                    </div>
-                    <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Camps & Clinics </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                </li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link px-2 text-teal">Contact</a></li>
+                    <!-- <li class="nav-item">
+                        <a href="coaches.html" class="nav-link px-2 text-teal">Contact</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="" class="nav-link nav-link-cta px-2">Register</a>
+                    </li>
+                </ul>
 
-                        </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-
-                    <a type="button" class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Coaches
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-
-                        </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                </div>
             </div>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <div class="container pt-5 mt-5">
-        <div class="row d-flex justify-content-center-sm pt-5">
-            <div class="col-12 col-sm-6">
-                <div class="py-3 py-md-4 py-lg-5 text-hero mx-3">
-                    <h1 class="display-3 text-body-emphasis lh-1 mt-5 mb-md-4 section-title">About Us</h1>
-                    <p class="lead mp-3">Quickly design and customize responsive mobile-first sites with Bootstrap,
-                        the world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                        responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a class="link-text"
-                            href="about.html">Learn More</a></button>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 my-0 mx-auto">
-                <div class="img-wrapper mt-5">
-                    <img src="assets/images/coast-img-3.jpg" class="img-fluid img-about">
-                </div>
-            </div>
-        </div>
+        <div class="row">
+            <div class="col-lg-6">             
+              <!-- Breadcrumb -->
+              <nav class="pt-md-2 pt-lg-3 pb-4 pb-md-5 mb-xl-4" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item">
+                    <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">About v.1</li>
+                </ol>
+              </nav>
 
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 my-5">
-            <div class="feature col-12">
-                <h4 class="display-3">
-                    <div class="text-center text-sm-start my-0 mx-auto text-feature-icon-2">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
-                </h4>
-                <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                    sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link">
-                    Call to action
-                    <svg class="bi">
-                        <use xlink:href="#chevron-right"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="feature col">
-                <div
-                    class="feature-icon d-inline-flex align-items-center justify-content-center text-feature-icon-1 fs-2 mb-3">
-                    <i class="fa-solid fa-medal fa-2x"></i>
+              <!-- Text -->
+              <h1 class="pb-2 pb-md-3">About Silicon</h1>
+              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">From intro camps to a two-hundred team multi-day tournament, Coast VA has the gameplan. The mission starts on whiteboards and spreadsheets. It starts with a game plan executed by MVPs at every level; from team captains to coaches.       
+                </p>
+                <p class="text-about sub-about">
+                    Because what happens on the field can impact a child way beyond childhood. It’s an enormous responsibility that we take very seriously. Because when you step off the field, all you truly take with you is the experience.
+                </p>
+              <img src="assets/img/about/clutch-dark.png" class=" d-dark-mode-none" width="175" alt="Clutch">
+              <img src="assets/img/about/clutch-light.png" class="d-none d-dark-mode-block" width="175" alt="Clutch">
+              <div class="row row-cols-3 pt-4 pt-md-5 mt-2 mt-xl-4">
+                <div class="col">
+                  <h3 class="h2 mb-2">2,480</h3>
+                  <p class="mb-0"><strong>Remote</strong> Sales Experts</p>
                 </div>
-                <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                    sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link">
-                    Call to action
-                    <svg class="bi">
-                        <use xlink:href="#chevron-right"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="feature col">
-                <div
-                    class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3 text-feature-icon-3">
-                    <i class="fa-solid fa-ranking-star fa-2x"></i>
+                <div class="col">
+                  <h3 class="h2 mb-2">760</h3>
+                  <p class="mb-0"><strong>New Clients</strong> per Month</p>
                 </div>
-                <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                    sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link">
-                    Call to action
-                    <svg class="bi">
-                        <use xlink:href="#chevron-right"></use>
-                    </svg>
-                </a>
+                <div class="col">
+                  <h3 class="h2 mb-2">1,200</h3>
+                  <p class="mb-0"><strong>Requests</strong> per Week</p>
+                </div>
+              </div>
             </div>
-        </div>
+
+            <!-- Images -->
+            <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
+              <div class="row row-cols-2 gx-3 gx-lg-4">
+                <div class="col pt-lg-5 mt-lg-1">
+                  <img src="assets/img/about/hero/01.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                  <img src="assets/img/about/hero/02.jpg" class="d-block rounded-3" alt="Image">
+                </div>
+                <div class="col">
+                  <img src="assets/img/about/hero/03.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                  <img src="assets/img/about/hero/04.jpg" class="d-block rounded-3" alt="Image">
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
-</body>
 
+    <!--FAQ-->
+    <section class="pt-0" id="faq">
+        <div class="container-fluid py-3">
+            <div class="row mt-3">
+                <div class="col-lg-7 mx-auto">
+                    <h2 class="text-center mb-5">You have questions we have answers</h2>
+                    <!-- Accordion START -->
+                    <div class="accordion accordion-icon accordion-bg-light" id="accordionFaq">
+                        <!-- Item -->
+                        <div class="accordion-item mb-3">
+                            <div class="accordion-header font-base" id="heading-1">
+                                <button class="accordion-button fw-semibold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                    How many items are there on this list?
+                                </button>
+                            </div>
+                            <!-- Body -->
+                            <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionFaq" style="">
+                                <div class="accordion-body mt-3 pb-0">
+                                    Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child. The bore of true of no be deal. Drawings offended yet answered Jennings perceive laughing six did far. Rooms oh fully taken by worse do. Points afraid but may end law lasted.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Item -->
+                        <div class="accordion-item mb-3">
+                            <div class="accordion-header font-base" id="heading-2">
+                                <button class="accordion-button fw-semibold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                    Can you describe Mizzle in just one sentence?
+                                </button>
+                            </div>
+                            <!-- Body -->
+                            <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body mt-3 pb-0">
+                                    September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale. Subjects he prospect elegance followed no overcame possible it on. Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage Mr be.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Item -->
+                        <div class="accordion-item mb-3">
+                            <div class="accordion-header font-base" id="heading-3">
+                                <button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                    Can I use this template for my client?
+                                </button>
+                            </div>
+                            <!-- Body -->
+                            <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body mt-3 pb-0">
+                                    How men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale. Subjects he prospect elegance followed no overcame possible it on. Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage Mr be. Hold do at tore in park feet near my case. Invitation at understood occasional sentiments insipidity inhabiting in. Off melancholy alteration principles old. Is do speedily kindness properly oh. Respect article painted cottage he is offices parlors.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Item -->
+                        <div class="accordion-item mb-3">
+                            <div class="accordion-header font-base" id="heading-4">
+                                <button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                                    Do you offer templates in other categories?
+                                </button>
+                            </div>
+                            <!-- Body -->
+                            <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body mt-3 pb-0">
+                                    But her ready least set lived spite solid. September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale. Subjects he prospect elegance followed no overcame possible it on. Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage Mr be.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Item -->
+                        <div class="accordion-item mb-3">
+                            <div class="accordion-header font-base" id="heading-5">
+                                <button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                                    Do I need to credit you when I use this template?
+                                </button>
+                            </div>
+                            <!-- Body -->
+                            <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body mt-3 pb-0">
+                                    But her ready least set lived spite solid. September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale. Subjects he prospect elegance followed no overcame possible it on. Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage Mr be.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion END -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FAQ-->
+
+        <!--Start Footer-->
+        <div class="container-fluid bg-black text-light" id="footer">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-3 pt-6 pt-lg-8">
+                <div class="col mb-3">
+                    <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png"></a>
+                    <div class="text-start my-3">
+                        <hr class="divider my-1 my-sm-2">
+                    </div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mt-3">
+                            <li class="breadcrumb-item active text-light">
+                                Home
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a class="link-font" id="#about">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="coaches.html" class="link-font">
+                                    Coaches
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+    
+                <div class="col mb-3">
+    
+                </div>
+    
+                <div class="col mb-3">
+                    <h5>TEAMS</h5>
+                    <ul class="nav flex-column text-light">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Teams</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Registration</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col mb-3">
+                    <h5>CAMPS & CLINICS</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Pricing</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col mb-3">
+                    <h5>Coaches</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="coaches.html"
+                                class="nav-link p-0 link-font">Coaches</a></li>
+                        <li class="nav-item mb-2">
+                            <a href="coaches.html" class="nav-link p-0 link-font">Private Lessons</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="coaches.html" class="nav-link p-0 link-font">Group Lessons</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <!--./end-footer-->
+
+<script src="data.js"></script>
+
+<!--Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
 </html>

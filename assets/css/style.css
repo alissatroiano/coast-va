@@ -92,27 +92,6 @@ a {
     text-decoration: none;
 }
 
-mark.mark-coaches {
-    padding: .1875em;
-    color: #fcde64;
-    background-color: transparent;
-}
-
-.mark-text {
-    font-family: 'Phenomena', sans-serif;
-    font-weight: 400;
-}
-
-.divider {
-    width: 75%;
-    color: var(--light-gray);
-    border-bottom: 1px solid var(--lightest);
-}
-
-.text-teal {
-    color: var(--teal);
-}
-
 /* ---------------- Project Styles ---------------- */
 .text-main {
     color: #515151aa;
@@ -160,6 +139,43 @@ a.link-font:hover {
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
     0px -5px 35px rgba(255,255,255,0.3);
 }
+
+mark.mark-coaches {
+    padding: .1875em;
+    color: #fcde64;
+    background-color: transparent;
+}
+
+.mark-text {
+    font-family: 'Phenomena', sans-serif;
+    font-weight: 400;
+}
+
+.divider {
+    width: 75%;
+    color: var(--light-gray);
+    border-bottom: 1px solid var(--lightest);
+}
+
+.text-teal {
+    color: var(--teal);
+}
+
+.mb-n3 {
+    margin-bottom: -1rem !important;
+}
+
+.mb-n7 {
+    margin-bottom: -4rem !important;
+}
+
+.pt-6 {
+    padding-top: 3.5rem !important;
+}
+
+.pt-lg-8 {
+    padding-top: 8rem !important;
+  }
 
 /* ---------------- Header ---------------- */
 header {
@@ -213,7 +229,7 @@ button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 1px;
-    color: var(--black);
+    color: var(--teal);
     text-decoration: none;
     font-weight: 600;
 }
@@ -589,10 +605,10 @@ h2.coaches-title {
   }
   
   .typewrite {
-    color: var(--yellow);
+    color: var(--teal);
     font-family: var(--primary-font);
     letter-spacing: 2px;
-    font-size: 4rem;
+    font-size: 4.12rem;
     font-weight: 700;
   }
   
@@ -737,6 +753,16 @@ h6.team-title {
     letter-spacing: 1.2px;
 }
 
+/*-----------------------------------Footer */
+
+/* --- final cta */
+
+.list-group-borderless .list-group-item {
+    border: none !important;
+    padding: 0.425rem 0;
+    background-color: transparent;
+}
+
 /*----------------------------------- Misc */
 svg.svg-close {
     max-height: 350px;
@@ -746,6 +772,7 @@ svg.svg-close {
 #graphic {
     padding: 40px 0;
 }
+
 /*----------------------------------- Media Queries */
 
 @media screen and (min-width: 768px) {
@@ -758,7 +785,7 @@ svg.svg-close {
     a.dropdown-toggle.dropdown-toggle-split,
     button.btn.btn-none.dropdown-toggle.dropdown-toggle-split {
         text-transform: uppercase;
-        font-size: 1.175rem;
+        font-size: 1rem;
         letter-spacing: 1.25px;
         margin: 0 7.5px;
     }
