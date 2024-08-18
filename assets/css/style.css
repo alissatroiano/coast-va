@@ -861,12 +861,13 @@ a.carousel-button-3:hover {
 /*----------------------------- Counter */
 [data-count] {
   margin: 15vh 0;
-  font-size: 6rem;
-  font-family: var(--secondary-font);
-  font-weight: 800;
+  font-size: 5.5rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: var(--lightest);
-  text-shadow: 0px 0px 6px #e69d9d;
-  letter-spacing: 10px;
+  text-shadow: 0px 0px 6px #808080;
+  letter-spacing: 6px;
 }
 
 .counter-txt {
@@ -882,10 +883,10 @@ a.carousel-button-3:hover {
 
 .typewrite {
   color: var(--teal);
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
   letter-spacing: 2px;
-  font-size: 4.12rem;
-  font-weight: 700;
+  font-size: 5.12rem;
+  font-weight: 800;
   text-shadow: 6px 6px 0px rgba(6, 33, 53, 0.139);
 }
 
@@ -940,6 +941,15 @@ svg.svg-close {
     line-height: 3;
     margin: 10px auto;
   }
+  [data-count] {
+    margin: 15vh 0;
+    font-size: 6.5rem;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    color: var(--lightest);
+    text-shadow: 0px 0px 6px #e69d9d;
+    letter-spacing: 6px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -985,5 +995,14 @@ svg.svg-close {
     font-family: var(--primary-font);
     line-height: 4;
     margin: 10px auto;
+  }
+  [data-count] {
+    margin: 15vh 0;
+    font-size: 6.95rem;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 900;
+    color: var(--lightest);
+    text-shadow: 0px 2px 6px #e1e1e1;
+    letter-spacing: 6px;
   }
 }
