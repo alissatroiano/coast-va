@@ -19,6 +19,7 @@
   --dark-gray: #414141;
   --primary-font: 'mont', sans-serif;
   --secondary-font: 'phenomena', sans-serif;
+  --scoreboard-font: 'Rajdhani', sans-serif;
 
   /* Card Watermark links */
   --gh-watermark: url('../images/gh-icon-1.png');
@@ -881,11 +882,11 @@ a.carousel-button-3:hover {
 /*----------------------------- CTA */
 .typewrite {
   color: var(--teal);
-  font-family: var(--secondary-font);
+  font-family: var(--scoreboard-font);
   letter-spacing: 2px;
   font-size: 5.12rem;
-  font-weight: 800;
-  text-shadow: 6px 6px 0px rgba(6, 33, 53, 0.139);
+  font-weight: 950;
+  text-shadow: 6px 0px 6px rgba(6, 33, 53, 0.139);
 }
 
 /*-----------------------------------Footer */
