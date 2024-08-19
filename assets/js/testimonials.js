@@ -19,13 +19,16 @@ async function loadTestimonialsData() {
             const isActive = index === 0 ? 'active show' : '';
             const ariaSelected = index === 0 ? 'true' : 'false';
 
+            // Cap the rating at 5
+            const cappedRating = Math.min(testimonial.rating, 5);
+
             // Tab content
             const contentHTML = `
                 <div class="tab-pane fade ${isActive}" id="testi-${index + 1}" role="tabpanel" aria-labelledby="testi-${index + 1}-tab" tabindex="0">
                     <div class="icon-lg bg-dark text-white rounded-circle mb-3 mb-lg-4"><i class="bi bi-quote fa-xl"></i></div>
                     <ul class="list-inline mb-3 mb-lg-4">
-                        ${'<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>'.repeat(Math.floor(testimonial.rating))}
-                        ${testimonial.rating % 1 ? '<li class="list-inline-item me-0"><i class="fas fa-star-half-alt text-warning"></i></li>' : ''}
+                        ${'<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>'.repeat(Math.floor(cappedRating))}
+                        ${cappedRating % 1 ? '<li class="list-inline-item me-0"><i class="fas fa-star-half-alt text-warning"></i></li>' : ''}
                     </ul>
                     <h6 class="mb-2">${testimonial.title}</h6>
                     <p class="heading-color">${testimonial.content}</p>
@@ -56,4 +59,3 @@ async function loadTestimonialsData() {
 
 // Load testimonials data when the page loads
 document.addEventListener('DOMContentLoaded', loadTestimonialsData);
-
