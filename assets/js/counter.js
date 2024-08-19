@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     element.setAttribute("data-count", data.programs);
                 } else if (counterText.includes("Championship Games")) {
                     element.setAttribute("data-count", data.championships);
-                } else if (counterText.includes("College Recruits")) {
-                    element.setAttribute("data-count", data.recruits);
                 }
             });
   
