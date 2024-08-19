@@ -1,51 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bracket Layout</title>
+    <!--mont font-->
+    <link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet">
+    <!-- phenomena cdn -->
+    <link href="https://fonts.cdnfonts.com/css/phenomena" rel="stylesheet">
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap 5 CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/ico" href="assets/images/icon.png">
+    <!--Custom Stylesheet-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/carousel.css" rel="stylesheet">
+
+    <title>Coast VA</title>
+
     <style>
-.bracket-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.bracket-row {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.bracket-cell {
-    padding: 5px 10px;
-    text-align: center;
-}
-
-.empty-cell {
-    flex-grow: 1; /* Flex-grow to maintain the spacing */
-    border: none;
-}
-
-.bracket-cell:not(.empty-cell) {
-    border: 4px solid #000;
-}
-        .bracket-column {
+        .bracket-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            align-items: center;
+            justify-content: center;
         }
+
         .bracket-row {
+            display: flex;
+            max-width: 100%;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .bracket-cell {
+            padding: 5px 10px;
+            text-align: center;
+            border-left: 5px solid pink;
+        }
+        .empty-cell {
+            flex-grow: 1;
+            /* Flex-grow to maintain the spacing */
+        }
+
+        .bracket-cell:not(.empty-cell) {
+            border: 4px solid #000;
+        }
+
+        .bracket-column {
+            display: flex;
+            border-left: 5px solid pink;
+            max-width: 100%;
+            width: fit-content;
+            height: 20px;
+            flex-direction: column;
+        }
+
+        .bracket-column:after {
+            content: "";
+            position: absolute;
+            width: .5px;
+            height: 20%;
+            background-color: red;
+        }
+
+        .bracket-row:nth-child(12),
+        .bracket-row:nth {
             display: flex;
             flex-direction: row;
             gap: 5px;
         }
+
+        div.cell-data {
+        }
+
+        div.cell-data {
+            margin-left: 50px;
+            font-family: 'Phenomena', sans-serif;
+
+        }
+
     </style>
 </head>
+
+
 <body>
     <div id="bracket"></div>
+
+    <div class="container-fluid py-5 mt-5">
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+    </div>
 
     <script>
         // Function to parse CSV data
@@ -66,7 +120,9 @@
                 row.forEach((cell, cellIndex) => {
                     const cellDiv = document.createElement('div');
                     cellDiv.textContent = cell.trim(); // Trim spaces
-
+                    const textData = document.createElement('p');
+                    textData.className = ('bracket-text');
+                    cellDiv.className = ('cell-data');
                     // Add flex classes dynamically based on some logic if needed
                     // Example: Add 'bracket-column' class to non-empty cells
                     if (cell.trim()) {
@@ -75,6 +131,7 @@
 
                     bracketRowDiv.appendChild(cellDiv);
                 });
+                
 
                 bracketDiv.appendChild(bracketRowDiv);
             });
@@ -87,4 +144,5 @@
             .catch(error => console.error('Error loading CSV file:', error));
     </script>
 </body>
+
 </html>

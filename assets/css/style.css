@@ -863,10 +863,9 @@ a.carousel-button-3:hover {
   margin: 15vh 0;
   font-size: 5.5rem;
   font-family: "Rajdhani", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 800;
   color: var(--lightest);
-  text-shadow: 0px 0px 6px #808080;
+  text-shadow: 0px 0px 6px #e69d9d;
   letter-spacing: 6px;
 }
 
@@ -880,7 +879,6 @@ a.carousel-button-3:hover {
 
 
 /*----------------------------- CTA */
-
 .typewrite {
   color: var(--teal);
   font-family: var(--secondary-font);
@@ -1002,7 +1000,7 @@ svg.svg-close {
     font-family: "Rajdhani", sans-serif;
     font-weight: 900;
     color: var(--lightest);
-    text-shadow: 0px 2px 6px #e1e1e1;
+    text-shadow: 0px 0px 6px #494949;
     letter-spacing: 6px;
   }
 }
