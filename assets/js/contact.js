@@ -8,19 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // Build the HTML content
         const contactHTML = `
             <ul class="list-group list-group-borderless mb-0">
+             <li class="list-group-item text-white fw-normal mb-0">
+                    <i class="fas fa-clock me-1"></i> ${contactInfo.name}
+                </li>
                 <li class="list-group-item mb-0">
                     <a href="${contactInfo.phone.link}" class="text-white fw-normal">
-                        <i class="fas fa-headset me-1"></i> Call on: ${contactInfo.phone.number}
+                        <i class="fas fa-headset me-1"></i> ${contactInfo.phone.number}
                     </a>
                 </li>
                 <li class="list-group-item mb-0">
                     <a href="${contactInfo.email.link}" class="text-white fw-normal">
-                        <i class="fas fa-envelope me-1"></i> Email: ${contactInfo.email.address}
+                        <i class="fas fa-envelope me-1"></i> ${contactInfo.email.address}
                     </a>
                 </li>
-                <li class="list-group-item text-white fw-normal mb-0">
-                    <i class="fas fa-clock me-1"></i> Time: ${contactInfo.time}
-                </li>
+               
             </ul>
         `;
 
