@@ -1,188 +1,390 @@
-/* Colours */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --espn-red: #00909e;
-    --bg: #00909e;
-    --content-bg: #fff;
-    --bg-text: #252525;
-    --text: #fff;
-    --bg-blue: #00909e;
-    --bg-red: var(--espn-red);
-    --accent: var(--espn-red);
-    --text-accent: #00909e;
-    --grey: #999999;
-    --dark-grey: #414141;
-    --border-grey: #c9c6c6;
-    --easing: cubic-bezier(.8, 0, .2, 1);
+    --black: #000000;
+    --teal: #00909e;
+    --teal-medium: #29d6e6e9;
+    --teal-light: #5be4f0;
+    --yellow: #fcde63;
+    --background-color: #f3f3f3;
+    --font-color: #202020;
+    --font-color-lt: #f3f3f3;
+    --salmon-light: #f58869;
+    --salmon-dark: #f16054;
+    --lightest: #fafafa;
+    --lighter-gray: #c9c6c6;
+    --light-gray: #999999;
+    --gray: #717171;
+    --darker-gray: #414141;
+    --dark-gray: #414141;
+    --primary-font: 'mont', sans-serif;
+    --secondary-font: 'phenomena', sans-serif;
+    --scoreboard-font: 'Rajdhani', sans-serif;
+
+    /* Card Watermark links */
+    --gh-watermark: url('../images/gh-icon-1.png');
 }
 
-/* Animations */
-.animation {
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: var(--easing);
+@property --num {
+    syntax: "<integer>";
+    initial-value: 20;
+    inherits: false;
 }
 
-@keyframes scalewidth-zero-half {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(0.5);
-    }
+@property --num-1 {
+    syntax: "<integer>";
+    initial-value: 4;
+    inherits: false;
 }
 
-@keyframes slide-up {
-    0% {
-        transform: translateY(100vh);
-    }
-    100% {
-        transform: translateY(0vh);
-    }
+@property --num-2 {
+    syntax: "<integer>";
+    initial-value: 8;
+    inherits: false;
 }
 
-@keyframes slide-up-text-offset {
-    0% {
-        transform: translateY(112.5%);
-    }
-    100% {
-        transform: translateY(12.5%);
-    }
+.rajdhani-light {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-@keyframes slide-up-fade-in {
-    0% {
-        transform: translateY(3.5vh);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.rajdhani-medium {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-/* Base */
-*, *::before, *::after {
+.rajdhani-semibold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.rajdhani-bold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+}
+
+html,
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    letter-spacing: 0.1em;
-    font-family: Raleway;
-    overflow-x: hidden;
+    height: 100%;
+    background: #fafafa;
 }
 
 a {
-    color: var(--text-accent);
     text-decoration: none;
 }
 
-/* Helpers */
-.allcaps {
+hr.training-hr {
+    margin: 20px auto;
+    width: 40%;
+    color: var(--teal-light);
+    border: 1px solid var(--teal-light);
+}
+
+/* ---------------- Project Styles ---------------- */
+.primary-font {
+    font-family: var(--primary-font);
+}
+
+.secondary-font {
+    font-family: 'phenomena', sans-serif;
+}
+
+.text-main {
+    color: #515151aa;
+}
+
+.bg-darker {
+    background: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mont', sans-serif;
+    font-weight: 900;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
 }
 
-.separator {
-    display: inline-block;
-    vertical-align: middle;
-    width: 2em;
-    height: 0.05em;
-    background-color: var(--text);
-    opacity: 0.15;
-    margin: 0 0.5em;
+.bg-teal {
+    background-color: var(--teal);
 }
 
-.underline-bar {
-    content: '';
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-dark-grey {
+    background: #666666;
+}
+
+a.link-font {
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    color: var(--teal);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+a.link-font:hover {
+    color: var(--salmon-dark)
+}
+
+.section-title {
+    font-family: 'Mont', sans-serif;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+        0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+mark.mark-coaches {
+    padding: .1875em;
+    color: #fcde64;
+    background-color: transparent;
+}
+
+.mark-text {
+    font-family: 'Phenomena', sans-serif;
+    font-weight: 400;
+}
+
+.divider {
+    width: 75%;
+    color: var(--light-gray);
+    border-bottom: 1px solid var(--lightest);
+}
+
+.text-teal {
+    color: var(--teal);
+}
+
+.mb-n3 {
+    margin-bottom: -1rem !important;
+}
+
+.mb-n7 {
+    margin-bottom: -4rem !important;
+}
+
+.mt-n7 {
+    margin-top: -10rem !important;
+}
+
+.pt-6 {
+    padding-top: 3.5rem !important;
+}
+
+.pt-lg-8 {
+    padding-top: 8rem !important;
+}
+
+.fs-lg {
+    font-family: var(--secondary-font);
+    font-size: 1.1rem;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+/*----- Grid *-------*/
+
+.grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 100%;
+    height: 100%;
+    max-height: max-content;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption>a {
     position: absolute;
-    bottom: -1em;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 0.075em;
-    background-color: var(--accent);
+    height: 100%;
 }
 
-/* Icons */
-.icon-dropdown {
-    border: 0.35em solid transparent;
-    border-top: 0.35em solid var(--text);
-    display: inline-block;
-    vertical-align: bottom;
-    margin-left: 0.5em;
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption>a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
 }
 
-/*------------------------------
-  Main
-------------------------------*/
-header {
-    display: flex;
-    justify-content: space-between;
-    max-width: 85em;
-    margin: 0 auto;
-    padding: 1em;
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
 }
 
-header a {
-    color: var(--text);
+.grid figure h2 span {
+    font-weight: 800;
 }
 
-.logo {
-    height: 1.3em;
-    width: 5.2em;
+.grid figure h2,
+.grid figure p {
+    margin: 0;
 }
 
-.logo svg {
-    transform: scale(0.15);
-    transform-origin: top left;
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
 }
 
-.logo path {
-    fill: var(--espn-red);
+
+/*---------------*/
+/***** Romeo *****/
+/*---------------*/
+
+figure.effect-romeo {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
 }
 
-.share {
-    font-size: 0.9em;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0;
+figure.effect-romeo img {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 0, 300px);
+    transform: translate3d(0, 0, 300px);
 }
 
-.share a {
-    padding: 0.5em;
-    vertical-align: middle;
+figure.effect-romeo:hover img {
+    opacity: 0.6;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
-.share .twitter {
-    font-size: 1.1em;
+figure.effect-romeo figcaption::before,
+figure.effect-romeo figcaption::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
 }
 
-main {
-    position: relative;
+figure.effect-romeo:hover figcaption::before {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+figure.effect-romeo:hover figcaption::after {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+
+figure.effect-romeo h2,
+figure.effect-romeo p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.effect-romeo h2 {
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -150%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -150%, 0);
+}
+
+figure.effect-romeo p {
+    padding: 0.25em 2em;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, 150%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, 150%, 0);
+}
+
+figure.effect-romeo:hover h2 {
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -100%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -100%, 0);
+}
+
+figure.effect-romeo:hover p {
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
 }
 
 .underlay-text {
     position: absolute;
+    font-family: 'Rajdhani', sans-serif;
     left: 50%;
     top: 0.75rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    font-family: Teko;
-    font-size: 20vw;
-    font-weight: 800;
+    font-size: 25vw;
+    font-weight: 900;
     letter-spacing: 0;
     white-space: nowrap;
     opacity: 0.05;
@@ -190,171 +392,25 @@ main {
     pointer-events: none;
     overflow: hidden;
     line-height: 0.65;
+
+    span {
+        display: inline-block;
+        position: relative;
+        animation-name: slide-up-text-offset;
+        animation-delay: 0.4s;
+    }
 }
 
-.underlay-text span {
-    display: inline-block;
-    position: relative;
-    animation-name: slide-up-text-offset;
-    animation-delay: 0.4s;
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: var(--easing);
-}
+/*----------------------------------- Media Queries */
 
-.page-container {
-    font-size: 1rem;
-    max-width: 75em;
-    margin: 6em auto;
+@media screen and (min-width: 768px) {
+    .underlay-text {
+        font-size: 26.5rem;
+    }
 }
-
-.main-title {
-    position: relative;
-    display: inline-block;
-    font-size: 1.35em;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    margin-bottom: 3.5em;
-    animation-name: slide-up;
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: var(--easing);
-}
-
-.main-title::after {
-    content: '';
-    position: absolute;
-    bottom: -1em;
-    left: 0;
-    width: 100%;
-    height: 0.075em;
-    background-color: var(--accent);
-}
-
-.content {
-    position: relative;
-    background-color: var(--content-bg);
-    color: var(--dark-grey);
-    animation-name: slide-up;
-    animation-delay: 0.15s;
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: var(--easing);
-}
-
-.grid {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-}
-
-.card {
-    position: relative;
-    display: flex;
-    width: 25%;
-    font-size: 1rem;
-    flex-flow: column;
-    justify-content: center;
-}
-
-.card-team {
-    padding: 4em;
-    align-items: center;
-    position: relative;
-    border: 1px solid var(--border-grey);
-    cursor: pointer;
-}
-
-.card-team::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.2em;
-    background-color: var(--accent);
-    transform: scaleX(0.5);
-    animation-name: scalewidth-zero-half;
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: var(--easing);
-}
-
-.card-team__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-color: var(--bg-blue);
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0 0.5em 3em rgba(16, 16, 30, 0.4);
-    opacity: 0;
-    transition: 1s var(--easing);
-    z-index: 1;
-}
-
-.card-team__logo {
-    position: relative;
-    color: var(--grey);
-    margin: 1em 1em 4em;
-    transition: 1s var(--easing);
-    z-index: 1;
-    animation-name: slide-up-fade-in;
-    animation-delay: 1s;
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.7s;
-}
-
-.card-team__logo .fas {
-    font-size: 3em;
-}
-
-.card-team__number {
-    position: relative;
-    display: inline-block;
-    font-family: Teko;
-    color: var(--text-accent);
-    font-size: 2em;
-    margin-bottom: 1em;
-    transform: scaleX(0.7);
-    font-weight: 600;
-    transition: 1s var(--easing);
-    z-index: 1;
-    animation-name: slide-up-fade-in;
-    animation-delay: 1s;
-    animation-fill-mode: both;
-    animation-duration: 1.25s;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.7s;
-}
-
-.card-team__number::after {
-    content: '';
-    position: absolute;
-    bottom: -0.2em;
-    left: 12.5%;
-    width: 75%;
-    height: 0.05em;
-    background-color: #D6DDE0;
-}
-
-.card-team__name {
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    font-size: 1.5em;
-    font-weight: 800;
-    letter-spacing: 
+  
+  @media screen and (min-width: 1024px) {
+    .underlay-text {
+        font-size: 28rem;
+    }
+  }
