@@ -214,7 +214,10 @@ mark.mark-coaches {
 /*----- Grid *-------*/
 
 .grid {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     padding: 1em 0 4em;
     max-width: 100%;
@@ -222,6 +225,47 @@ mark.mark-coaches {
     text-align: center;
 }
 
+.card {
+    position: relative;
+    max-width: 100%; /* Adjust the card size as needed */
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.card:hover img {
+    opacity: 0.6;
+    transform: translate3d(0, 0, 0);
+}
+
+.card .card-body {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    background: #3085a3;
+}
+
+.card h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.card h2 span {
+    font-weight: 800;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
 
 /*---------------------Jumbotron */
 
@@ -252,17 +296,68 @@ mark.mark-coaches {
 
 
 /*----------------------- Team Grid */
-
 .grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers the items horizontally */
-    align-items: center; /* Centers the items vertically */
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     padding: 1em 0 4em;
     max-width: 100%;
     list-style: none;
     text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 18rem; /* Adjust the card size as needed */
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    transition: transform 0.35s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(48, 133, 163, 0.8); /* Overlay color */
+    opacity: 0;
+    transition: opacity 0.35s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.text h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.text h2 span {
+    font-weight: 800;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.img-container:hover .card-img-top {
+    transform: scale(1.1);
 }
 
 .grid figure {
@@ -401,6 +496,25 @@ figure.effect-romeo p {
 figure.effect-romeo h2 {
     -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -150%, 0);
     transform: translate3d(0, -50%, 0) translate3d(0, -150%, 0);
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    opacity: 0.8;
+}
+
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 1%;
+    width: 100%;
+    height: auto;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
 }
 
 figure.effect-romeo p {
