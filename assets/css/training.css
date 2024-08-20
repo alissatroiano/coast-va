@@ -146,6 +146,44 @@ div#trainCta {
   background: #e4e4e4;
 }
 
+/* ------------------- PRACTICE */
+.practice-section {
+  background-color: #00796b; /* Custom teal background color */
+  color: white;
+  padding: 60px 0;
+}
+
+.practice-card {
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto; /* Center the card horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.practice-card .card-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.practice-card .list-group-item {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  padding: 5px 0;
+  list-style-type: none; /* Removes bullet points */
+}
+
+@media (min-width: 768px) {
+  .practice-card {
+      margin-top: 30px;
+  }
+}
+
+
+
 .pattern-overlay-2::before {
   content: "";
   background: url('../images/pattern.png');
@@ -163,7 +201,7 @@ div#trainCta {
 .pattern-overlay-2 {
   position: relative;
   z-index: 1;
-  height: 30vh;
+  height: auto;
 }
 
 .tournament-cards {
