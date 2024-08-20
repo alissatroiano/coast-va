@@ -217,18 +217,46 @@ mark.mark-coaches {
     position: relative;
     margin: 0 auto;
     padding: 1em 0 4em;
-    max-width: 1000px;
+    max-width: 100%;
     list-style: none;
     text-align: center;
 }
 
-/* Common style */
+
+/*---------------------Jumbotron */
+
+.jumbotron {
+    position: relative;
+    color: white;
+    background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+  }
+
+
+  .title-teams-1 {
+    font-family: var(--secondary-font);
+    letter-spacing: 10px;
+    color: var(--light-gray);
+
+  }
+
+  .title-teams-2 {
+    font-family: var(--primary-font);
+    color: var(--light-gray);
+    letter-spacing: 1.52px;
+    font-size: 8rem;
+  }
+
+
+/*----------------------- Team Grid */
 .grid figure {
     position: relative;
     float: left;
     overflow: hidden;
     margin: 10px 1%;
-    min-width: 320px;
     max-width: 100%;
     height: 100%;
     max-height: max-content;
@@ -379,16 +407,17 @@ figure.effect-romeo:hover p {
 }
 
 .underlay-text {
-    position: absolute;
+    position: relative;
     font-family: 'Rajdhani', sans-serif;
     left: 50%;
-    top: 0.75rem;
-    font-size: 25vw;
+    top: 0.85rem;
+    font-size: 23vw;
     font-weight: 900;
-    letter-spacing: 0;
+    letter-spacing: 1.2px;
     white-space: nowrap;
     opacity: 0.05;
     transform: translateX(-50%) translateY(-22.5%) scaleX(0.75) scaleY(1.1);
+    overflow: hidden;
     pointer-events: none;
     overflow: hidden;
     line-height: 0.65;

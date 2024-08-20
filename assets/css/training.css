@@ -91,11 +91,15 @@
 .jumbotron {
     position: relative;
     color: white;
-    background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/bg.png");
+    background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/training.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 40vh;
+  }
+
+  .title-text {
+    font-family: "Rajdhani", sans-serif;
   }
 
   .title-teams-1 {
