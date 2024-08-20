@@ -20,7 +20,6 @@
     --primary-font: 'mont', sans-serif;
     --secondary-font: 'phenomena', sans-serif;
     --scoreboard-font: 'Rajdhani', sans-serif;
-
     /* Card Watermark links */
     --gh-watermark: url('../images/gh-icon-1.png');
 }
@@ -270,10 +269,9 @@ mark.mark-coaches {
     float: left;
     overflow: hidden;
     margin: 10px 1%;
-    max-width: 100%;
+    max-width: 450px; /* Adjust to desired size */
     height: 100%;
     max-height: max-content;
-    background: #3085a3;
     text-align: center;
     cursor: pointer;
 }
@@ -283,12 +281,16 @@ mark.mark-coaches {
     display: block;
     min-height: 100%;
     max-width: 100%;
-    opacity: 0.8;
+    opacity: 0.438;
+    backdrop-filter: blur(20px);
+    backdrop-filter: sepia(90%);
 }
 
 .grid figure figcaption {
     padding: 2em;
-    color: #fff;
+    color: #000000;
+    font-weight: 900;
+    font-family: var(--scoreboard-font);
     text-transform: uppercase;
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
@@ -353,6 +355,8 @@ figure.effect-romeo img {
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(0, 0, 300px);
     transform: translate3d(0, 0, 300px);
+    -webkit-filter: blur(1px);
+    
 }
 
 figure.effect-romeo:hover img {
@@ -368,7 +372,7 @@ figure.effect-romeo figcaption::after {
     left: 50%;
     width: 80%;
     height: 1px;
-    background: #fff;
+    background: #000000;
     content: '';
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;

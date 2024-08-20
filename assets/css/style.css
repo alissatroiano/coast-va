@@ -463,7 +463,7 @@ section.hero {
 }
 
 .carousel-item-1 {
-  background: linear-gradient(rgba(0, 7, 10, 0.864), rgba(0, 10, 14, 0.919)), url('../images/bg2.png') no-repeat center center;
+  background: linear-gradient(rgba(0, 7, 10, 0.788), rgba(0, 10, 14, 0.837)), url('../images/bg2.png') no-repeat center center;
   background-size: cover;
   max-width: 100%;
   /* height: 100%; */
