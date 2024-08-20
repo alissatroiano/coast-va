@@ -252,6 +252,19 @@ mark.mark-coaches {
 
 
 /*----------------------- Team Grid */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
 .grid figure {
     position: relative;
     float: left;

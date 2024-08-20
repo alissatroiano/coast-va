@@ -36,6 +36,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto my-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,8 +46,17 @@
                                 <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="training.html" class="nav-link px-2 text-teal">Training</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Training </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="training.html">Training</a></li>
+                                <li><a class="dropdown-item" href="training.html#tournaments">Tournaments</a></li>
+                                <li><a class="dropdown-item" href="practice.html">Practice</a></li>
+                            </ul>
+                        </li>       
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,15 +74,12 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Teams </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="teams.html">Teams</a></li>
-                                <li><a class="dropdown-item" href="teams.html#contact">Team Registration</a></li>
+                                <li><a class="dropdown-item" href="#">Teams</a></li>
+                                <li><a class="dropdown-item" href="#">Team Registration</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a href="index.html#contact" class="nav-link px-2 text-teal">Contact</a>
                         </li>
-                        <!-- <li class="nav-item">
-                        <a href="coaches.html" class="nav-link px-2 text-teal">Contact</a>
-                    </li> -->
                         <li class="nav-item">
                             <a href="" class="nav-link nav-link-cta px-2">Register</a>
                         </li>
@@ -82,12 +89,13 @@
             </div>
         </nav>
     </header>
+
     <main>
         <!--Jumbotron-->
         <div class="jumbotron jumbotron-fluid container-fluid" id="training">
             <div class="row mt-5">
                 <div class="col-12 mt-5 pt-5 text-center align-items-center">
-                    
+
                     <h1 class="display-4 secondary-font mt-5">TRAINING</h1>
                     <hr class="training-hr">
 
@@ -96,18 +104,34 @@
         </div>
         <!--./jumbotron-->
 
-
-       
-
-        <!-- <div class="google-sheets">
-            <div class="row d-flex my-0 mx-auto justify-content-center align-items-center text-center">
-                <div class="col-12">
-                    <div class="table-wrapper ratio ratio-16x16">
-                        <iframe src="https://docs.google.com/spreadsheets/d/1E4iJNk38x8e2i2uTW62X7RgsGS_Hsb4pcF5VyVo-u4A/pubhtml?widget=true&amp;headers=false"></iframe>                    </div>
+        <!-- Tournaments -->
+        <section class="container-fluid" id="tournaments">
+            <div class="google-sheets">
+                <div class="row d-flex my-0 mx-auto justify-content-center align-items-center text-center">
+                    <div class="col-12">
+                        <div class="table-wrapper ratio ratio-16x16">
+                            <iframe
+                                src="https://docs.google.com/spreadsheets/d/1E4iJNk38x8e2i2uTW62X7RgsGS_Hsb4pcF5VyVo-u4A/pubhtml?widget=true&amp;headers=false"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> -->
-       
+        </section>
+
+        <!--Practice-->
+        <section class="bg-teal all-text-white pattern-overlay-2" id="practice">
+            <div class="container">
+                <div class="col-md-12 col-lg-9 mx-auto p-4 p-sm-5 position-relative">
+                    <div class="text-center px-0 px-sm-5">
+                        <h2 class="secondary-font fw-bold display-3 text-light">Practice</h2>
+                        <hr>
+                        <p class="mb-3 h6 text-light"></p>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--Why Coast VA-->
         <section class="py-3 py-xl-5 border-0">
             <div class="container-fluid">
@@ -123,7 +147,8 @@
                                     class="fas fa-check fa-2x text-info"></i>
                             </div>
                             <div>
-                                <p class="fs-lg">Train your body & your mind with Coast VA specialized training programs.
+                                <p class="fs-lg">Train your body & your mind with Coast VA specialized training
+                                    programs.
                                 </p>
                             </div>
                         </div>
@@ -156,7 +181,8 @@
                                     class="fas fa-check fa-2x text-info"></i>
                             </div>
                             <div>
-                                <p class="fs-lg">Group classes & programs are designed to foster teammwork and sportsmanship</p>
+                                <p class="fs-lg">Group classes & programs are designed to foster teammwork and
+                                    sportsmanship</p>
                             </div>
                         </div>
                     </div>
@@ -166,7 +192,8 @@
                                     class="fas fa-check fa-2x text-info"></i>
                             </div>
                             <div>
-                                <p class="fs-lg">1 on 1 training is available upon request for those athletes that want to benefit from our experienced staff
+                                <p class="fs-lg">1 on 1 training is available upon request for those athletes that want
+                                    to benefit from our experienced staff
                                 </p>
                             </div>
                         </div>

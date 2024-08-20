@@ -146,25 +146,6 @@ div#trainCta {
   background: #e4e4e4;
 }
 
-.pattern-overlay-2::before {
-  content: "";
-  background: url('../images/pattern.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 0;
-}
-
-.pattern-overlay-2 {
-  position: relative;
-  z-index: 1;
-}
-
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
 .hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}
 .hero p {font-family: 'Abel', sans-serif;text-transform: uppercase; color: #5CCA87; letter-spacing: 6px;text-shadow:0 0 12px rgba(0, 0, 0, 0.5);font-size: 1.2em;}
