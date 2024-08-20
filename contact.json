@@ -1,12 +1,12 @@
 {
     "contact": {
       "phone": {
-        "number": "914 505 0151",
-        "link": "tel:50500555"
+        "number": "",
+        "link": ""
       },
       "email": {
-        "address": "coastva.contact@gmail.com",
-        "link": "mailto:coastva.contact@gmail.com?subject=Coast VA Website Contact"
+        "address": "kirstyn.atkinson@gmail.com",
+        "link": "mailto:kirstyn.atkinson@gmail.com?subject=Coast VA Website Contact"
       },
       "name": "Kirstyn Atkinson Norris"
     }

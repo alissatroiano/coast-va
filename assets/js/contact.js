@@ -12,11 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <i class="fas fa-clock me-1"></i> ${contactInfo.name}
                 </li>
                 <li class="list-group-item mb-0">
-                    <a href="${contactInfo.phone.link}" class="text-white fw-normal">
-                        <i class="fas fa-headset me-1"></i> ${contactInfo.phone.number}
-                    </a>
-                </li>
-                <li class="list-group-item mb-0">
                     <a href="${contactInfo.email.link}" class="text-white fw-normal">
                         <i class="fas fa-envelope me-1"></i> ${contactInfo.email.address}
                     </a>
