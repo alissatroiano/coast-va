@@ -156,11 +156,13 @@ div#trainCta {
 .practice-card {
   border: none;
   border-radius: 8px;
-  margin: 0 auto; /* Center the card horizontally */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
+  background-color: #ffffff; /* Light background for better readability */
+  color: #000000; /* Dark text for readability */
+  padding: 20px; /* Adds padding inside the card */
+  max-width: 90%;
+  font-family: var(--primary-font);
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
 
 .practice-card .card-title {
@@ -172,17 +174,35 @@ div#trainCta {
   background-color: transparent;
   border: none;
   font-size: 1.1rem;
-  padding: 5px 0;
+  padding: 10px 0;
   list-style-type: none; /* Removes bullet points */
+}
+
+.practice-card .list-group-item strong {
+  font-weight: 700; /* Bold font weight */
+}
+
+.practice-card .list-group-item span {
+  font-weight: 400; /* Normal font weight */
+}
+
+@media (min-width: 576px) {
+  .practice-card {
+      max-width: 90%; /* Adjust the max-width for small screens */
+  }
 }
 
 @media (min-width: 768px) {
   .practice-card {
-      margin-top: 30px;
+      max-width: 80%; /* Adjust the max-width for medium screens */
   }
 }
 
-
+@media (min-width: 992px) {
+  .practice-card {
+      max-width: 70%; /* Adjust the max-width for large screens */
+  }
+}
 
 .pattern-overlay-2::before {
   content: "";
