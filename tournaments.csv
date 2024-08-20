@@ -1,0 +1,49 @@
+<table class="tournament-table">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Tournament</th>
+      <th>Location</th>
+      <th>Date</th>
+      <td><a href="mylacrossetournaments.com/event/lucky-draw/">More Info</a></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coast VA 2026</td>
+      <td>Lucky Draw</td>
+      <td>Richmond, VA</td>
+      <td>19-20 OCT</td>
+      <td><a href="mylacrossetournaments.com/event/lucky-draw/">More Info</a></td>
+    </tr>
+    <tr>
+      <td>Coast VA 2026</td>
+      <td>Rivalry Challenge</td>
+      <td>Annapolis, MD</td>
+      <td>10 NOV</td>
+      <td><a href="mylacrossetournaments.com/event/lucky-draw/">More Info</a></td>
+    </tr>
+    <tr>
+      <td>Coast VA 2027/28</td>
+      <td>Lucky Draw</td>
+      <td>Richmond, VA</td>
+      <td>19-20 OCT</td>
+      <td><a href="mylacrossetournaments.com/event/lucky-draw/">More Info</a></td>
+    </tr>
+    <tr>
+      <td>Coast VA 2027/28</td>
+      <td>Rivalry Challenge</td>
+      <td>Annapolis, MD</td>
+      <td>10 NOV</td>
+      <td><a href="mylacrossetournaments.com/event/lucky-draw/">More Info</a></td>
+    </tr>
+     <tr>
+      <td>Coast VA 2027/28</td>
+      <td>Rivalry Challenge</td>
+      <td>Annapolis, MD</td>
+      <td>10 NOV</td>
+      <td><a href="mylacrossetournaments.com/event/lucky-draw/">More Info</a></td>
+    </tr>
+    <!-- Add more rows for each team and tournament -->
+  </tbody>
+</table>

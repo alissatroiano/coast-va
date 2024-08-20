@@ -166,6 +166,46 @@ div#trainCta {
   height: 30vh;
 }
 
+.tournament-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.card h3 {
+  font-family: var(--primary-font);
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  color: var(--salmon-dark);
+  text-decoration: underline;
+}
+
+.card a:hover {
+  color: var(--teal);
+}
+
+
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
 .hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}
 .hero p {font-family: 'Abel', sans-serif;text-transform: uppercase; color: #5CCA87; letter-spacing: 6px;text-shadow:0 0 12px rgba(0, 0, 0, 0.5);font-size: 1.2em;}
