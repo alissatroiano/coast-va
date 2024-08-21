@@ -201,6 +201,7 @@ mark.mark-coaches {
 .pt-lg-8 {
   padding-top: 8rem !important;
 }
+
 .fs-lg {
   font-family: var(--secondary-font);
   font-size: 1.1rem;
@@ -445,8 +446,10 @@ section.hero {
 
 .lead {
   font-family: var(--primary-font);
-  line-height: 2;
+  line-height: 3;
   margin: 10px auto;
+  font-size: 1.1rem;
+  color: #717171;
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -553,6 +556,9 @@ a.carousel-button-3:hover {
   min-height: 40vh;
 }
 
+.about-img {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;}
+
 .about-text,
 .text-about {
   font-family: var(--primary-font);
@@ -644,6 +650,14 @@ a.carousel-button-3:hover {
     width: 11rem;
     height: 11rem;
   }
+
+  .lead {
+    font-family: var(--primary-font);
+    line-height: 3;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    color: #717171;
+  }
 }
 
 .nav-pills .nav-link {
@@ -664,6 +678,14 @@ a.carousel-button-3:hover {
     overflow-x: scroll;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+  }
+
+  .lead {
+    font-family: var(--primary-font);
+    line-height: 3;
+    margin: 10px auto;
+    font-size: 1.12rem;
+    color: #717171;
   }
 }
 
@@ -935,11 +957,13 @@ svg.svg-close {
     line-height: 1;
     margin: 15px auto;
   }
+
   .lead {
     font-family: var(--primary-font);
     line-height: 3;
     margin: 10px auto;
   }
+
   [data-count] {
     margin: 15vh 0;
     font-size: 6.5rem;
@@ -990,11 +1014,13 @@ svg.svg-close {
     letter-spacing: 2.25px;
     font-weight: 600;
   }
+
   .lead {
     font-family: var(--primary-font);
     line-height: 4;
     margin: 10px auto;
   }
+
   [data-count] {
     margin: 15vh 0;
     font-size: 6.95rem;
