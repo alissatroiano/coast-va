@@ -27,12 +27,7 @@
   .card ul li {
     margin-bottom: 0.5rem;
   }
-  
-  .card a {
-    color: var(--salmon-dark);
-    text-decoration: underline;
-  }
-  
+ 
   .card a:hover {
     color: var(--teal);
   }

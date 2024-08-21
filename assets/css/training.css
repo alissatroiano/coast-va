@@ -255,8 +255,8 @@ div#trainCta {
 }
 
 .card a {
-  color: var(--salmon-dark);
-  text-decoration: underline;
+  color: var(--teal);
+  text-decoration: none;
 }
 
 .card a:hover {
