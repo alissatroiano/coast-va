@@ -109,7 +109,7 @@
   }
 
   .title-teams-2 {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     color: var(--light-gray);
     letter-spacing: 1.52px;
     font-size: 3.8rem;
@@ -156,7 +156,6 @@ div#trainCta {
 .practice-card {
   border: none;
   border-radius: 8px;
-  background-color: #ffffff; /* Light background for better readability */
   color: #000000; /* Dark text for readability */
   padding: 20px; /* Adds padding inside the card */
   max-width: 90%;
@@ -229,20 +228,30 @@ div#trainCta {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  background-color: #fafafaa4;
+}
+
+#tournaments {
+  background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
+  max-width: 100%;
 }
 
 .card {
-  background-color: #f3f3f3;
+  background-color: #fafafa71;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  max-width: 100%;
+  padding: 20px;
 }
 
 .card h3 {
-  font-family: var(--primary-font);
+  font-family: var(--scoreboard-font);
   color: var(--teal);
+  font-size: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .card ul {
