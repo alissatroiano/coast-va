@@ -122,6 +122,21 @@
 }
 
 
+.jumbotron {
+  position: relative;
+  color: white;
+  background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/training.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35vh;
+}
+
+.title-text {
+  font-family: "Rajdhani", sans-serif;
+}
+
+
 h2.coaches-title {
   font-size: 9vmin;
   color: #8bf;
@@ -182,29 +197,6 @@ h2.coaches-title {
   color: #fff;
   display: block;
   /* Ensure the contact info is visible */
-}
-
-#coaches::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#05353a94, #0b5b6282, #084a504f);
-  clip-path: circle(30% at right 70%);
-}
-
-#coaches::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#094c5399, #4dabb3ad);
-  z-index: -25000;
-  clip-path: circle(20% at 10% 10%);
 }
 
 #coaches {
