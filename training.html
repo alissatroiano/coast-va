@@ -19,6 +19,8 @@
     <!--Custom Stylesheet-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/training.css" rel="stylesheet">
+    <!-- <link href="assets/css/tournaments.css" rel="stylesheet"> -->
+
     <title>Coast VA</title>
 </head>
 
@@ -27,7 +29,7 @@
         <nav class="navbar navbar-expand-lg pb-2 bg-black navbar-dark shadow-lg">
             <div class="container-fluid d-flex flex-wrap">
                 <a class="navbar-brand" href="#">
-                    <img class="logo" src="assets/images/logo-white.png">
+                    <img class="logo" src="assets/images/logo-white.png" alt="coast logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -39,7 +41,7 @@
                         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-teal">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" href="about.html">
                                 About </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href=about.html>About</a></li>
@@ -49,17 +51,17 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" href="training.html">
                                 Training </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="training.html">Training</a></li>
                                 <li><a class="dropdown-item" href="training.html#tournaments">Tournaments</a></li>
                                 <li><a class="dropdown-item" href="training.html#practice">Practice</a></li>
                             </ul>
-                        </li>       
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" href="coaches.html">
                                 Coaches </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
@@ -71,7 +73,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" href="teams.html">
                                 Teams </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="teams.html">Teams</a></li>
@@ -104,32 +106,101 @@
         <!--./jumbotron-->
 
         <!-- Tournaments -->
-        <section class="container-fluid" id="tournaments">
-            <div class="google-sheets">
-                <div class="row d-flex my-0 mx-auto justify-content-center align-items-center text-center">
-                    <div class="col-12">
-                        <div class="table-wrapper ratio ratio-16x16">
-                            <iframe
-                                src="https://docs.google.com/spreadsheets/d/1E4iJNk38x8e2i2uTW62X7RgsGS_Hsb4pcF5VyVo-u4A/pubhtml?widget=true&amp;headers=false"></iframe>
+        <section class="container-fluid my-3" id="tournaments">
+            <div
+                class="row d-flex my-0 mx-auto justify-content-center align-items-center text-center tournament-section p-3">
+                <div class="col-12 secondary-font my-4 text-start">
+                    <h1 class="display-3 my-3 secondary-font">Tournaments</h1>
+                    <hr class="my-3 pb-3">
+                </div>
+            </div>
+            <div class="row py-3">
+                <div class="col-12 secondary-font py-3 mb-3">
+                    <div class="tournament-cards">
+                        <div class="card">
+                            <h3>Coast VA 2026</h3>
+                            <ul>
+                                <li>Lucky Draw - Richmond, VA (19-20 OCT) <a href="#">More Info</a></li>
+                                <li>Rivalry Challenge - Annapolis, MD (10 NOV)</li>
+                            </ul>
                         </div>
+
+                        <div class="card">
+                            <h3>Coast VA 2027/28</h3>
+                            <ul>
+                                <li>Lucky Draw - Richmond, VA (19-20 OCT) <a href="#">Website</a></li>
+                                <li>Rivalry Challenge - Annapolis, MD (10 NOV)</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>Coast VA 2029/30</h3>
+                            <ul>
+                                <li>Lucky Draw - Richmond, VA (19-20 OCT) <a href="#">Website</a></li>
+                                <li>Rivalry Challenge - Annapolis, MD (9 NOV)</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>Coast VA 2031/32</h3>
+                            <ul>
+                                <li>Lucky Draw - Richmond, VA (19-20 OCT) <a href="#">Website</a></li>
+                                <li>Rivalry Challenge - Annapolis, MD (9 NOV)</li>
+                            </ul>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!--Practice-->
-        <section class="bg-teal all-text-white pattern-overlay-2" id="practice">
-            <div class="container">
+        <!------------------- Practice -->
+        <section class="bg-teal all-text-white pattern-overlay-2 practice-section" id="practice">
+            <div class="container-fluid">
+                <div class="row d-flex p-3 g-2">
                 <div class="col-md-12 col-lg-9 mx-auto p-4 p-sm-5 position-relative">
                     <div class="text-center px-0 px-sm-5">
-                        <h2 class="secondary-font fw-bold display-3 text-light">Practice</h2>
+                        <h2 class="secondary-font fw-bold display-3 text-light mt-3">Practice</h2>
                         <hr>
-                        <p class="mb-3 h6 text-light"></p>
-                    
+                    </div>
+                    <div class="practice-card card mx-auto">
+                        <div class="row d-flex  align-items-center justify-content-center my-0 mx-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Norfolk Academy</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>7SEP</strong> <span>(9-11AM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>14SEP</strong> <span>(9-11AM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>21SEP</strong> <span>(9-11AM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>28SEP</strong> <span>(9-11AM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>5OCT</strong> <span>(11AM-1PM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>12OCT</strong> <span>(11AM-1PM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>26OCT</strong> <span>(11AM-1PM)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>2NOV</strong> <span>(11AM-1PM)</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+            </div>
+            </section>
 
         <!--Why Coast VA-->
         <section class="py-3 py-xl-5 border-0">
@@ -213,7 +284,7 @@
         </section>
         <!--end-why-coast-->
 
-        <!-- contact & final cta-->
+       <!--------------------contact & final cta-->
         <section class="position-relative z-index-2 py-0 mb-n7" id="contact">
             <div class="container position-relative my-0 mx-auto">
                 <div class="bg-teal rounded position-relative overflow-hidden p-4 p-sm-5">
@@ -275,14 +346,14 @@
                 </div>
             </div>
         </section>
-        <!--./final-cta-->
+          <!--------------------./final-cta-->
     </main>
 
-    <!--Start Footer-->
+    <!-------------------- Start Footer-->
     <div class="container-fluid bg-black text-light" id="footer">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-3 pt-6 pt-lg-8">
             <div class="col mb-3">
-                <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png"></a>
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo-white.png" alt="coast va logo"></a>
                 <div class="text-start my-3">
                     <hr class="divider my-1 my-sm-2">
                 </div>
@@ -309,11 +380,8 @@
                     </ol>
                 </nav>
             </div>
-
             <div class="col mb-3">
-
             </div>
-
             <div class="col mb-3">
                 <h5>TEAMS</h5>
                 <ul class="nav flex-column text-light">
@@ -321,7 +389,6 @@
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Registration</a></li>
                 </ul>
             </div>
-
             <div class="col mb-3">
                 <h5>CAMPS & CLINICS</h5>
                 <ul class="nav flex-column">
@@ -330,7 +397,6 @@
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-font">Pricing</a></li>
                 </ul>
             </div>
-
             <div class="col mb-3">
                 <h5>Coaches</h5>
                 <ul class="nav flex-column">
@@ -347,7 +413,83 @@
             </div>
         </footer>
     </div>
-    <!--./end-footer-->
+     <!-------------------- ./end-footer-->
+    <script>
+        // Function to generate the cards
+        function generateTournamentCards(data) {
+            const container = document.querySelector('.tournament-cards');
+            container.innerHTML = ''; // Clear any existing content
+
+            data.forEach(team => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+
+                const title = document.createElement('h3');
+                title.textContent = team.team;
+                card.appendChild(title);
+
+                const subtitle = document.createElement('p');
+                subtitle.textContent = 'Tournaments:';
+                card.appendChild(subtitle);
+
+                const list = document.createElement('ul');
+
+                team.tournaments.forEach(tournament => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `${tournament.name} - ${tournament.location} (${tournament.date})` + `<br>` + `<a class="link-font" href="${tournament.website}" target="_blank">Learn More</a>`;
+                    list.appendChild(listItem);
+                });
+
+                card.appendChild(list);
+                container.appendChild(card);
+            });
+        }
+
+        // Fetch the data from the JSON file
+        fetch('tournaments.json')
+            .then(response => response.json())
+            .then(data => {
+                generateTournamentCards(data);
+            })
+            .catch(error => {
+                console.error('Error fetching tournament data:', error);
+            });
+
+    </script>
+
+    <script>
+        // Function to generate the practice schedule
+        function generatePracticeSchedule(data) {
+            const container = document.getElementById('practice-schedule');
+            container.innerHTML = ''; // Clear any existing content
+
+            const locationElement = document.createElement('h3');
+            locationElement.textContent = data.location;
+            container.appendChild(locationElement);
+
+            const list = document.createElement('ul');
+            list.classList.add('practice-dates');
+
+            data.dates.forEach(practice => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${practice.date} (${practice.time})`;
+                list.appendChild(listItem);
+            });
+
+            container.appendChild(list);
+        }
+
+        // Fetch the data from the JSON file
+        fetch('practice.json')
+            .then(response => response.json())
+            .then(data => {
+                generatePracticeSchedule(data);
+            })
+            .catch(error => {
+                console.error('Error fetching practice schedule data:', error);
+            });
+    </script>
+
 
     <!-- <script src="assets/js/schedule.js"></script> -->
     <script src="assets/js/contact.js"></script>

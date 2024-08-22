@@ -91,7 +91,7 @@
 .jumbotron {
     position: relative;
     color: white;
-    background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/training.png");
+    background: linear-gradient(rgba(0, 7, 10, 0.703), rgba(0, 10, 14, 0.666)), url("../images/banner.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,7 +109,7 @@
   }
 
   .title-teams-2 {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     color: var(--light-gray);
     letter-spacing: 1.52px;
     font-size: 3.8rem;
@@ -146,6 +146,63 @@ div#trainCta {
   background: #e4e4e4;
 }
 
+/* ------------------- PRACTICE */
+.practice-section {
+  background-color: #00796b; /* Custom teal background color */
+  color: white;
+  padding: 60px 0;
+}
+
+.practice-card {
+  border: none;
+  border-radius: 8px;
+  color: #000000; /* Dark text for readability */
+  padding: 20px; /* Adds padding inside the card */
+  max-width: 90%;
+  font-family: var(--primary-font);
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.practice-card .card-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.practice-card .list-group-item {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  list-style-type: none; /* Removes bullet points */
+}
+
+.practice-card .list-group-item strong {
+  font-weight: 700; /* Bold font weight */
+}
+
+.practice-card .list-group-item span {
+  font-weight: 400; /* Normal font weight */
+}
+
+@media (min-width: 576px) {
+  .practice-card {
+      max-width: 90%; /* Adjust the max-width for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .practice-card {
+      max-width: 80%; /* Adjust the max-width for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .practice-card {
+      max-width: 70%; /* Adjust the max-width for large screens */
+  }
+}
+
 .pattern-overlay-2::before {
   content: "";
   background: url('../images/pattern.png');
@@ -163,7 +220,59 @@ div#trainCta {
 .pattern-overlay-2 {
   position: relative;
   z-index: 1;
+  height: auto;
 }
+
+.tournament-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  background-color: #fafafaa4;
+}
+
+#tournaments {
+  background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
+  max-width: 100%;
+}
+
+.card {
+  background-color: #fafafa71;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  max-width: 100%;
+  width: 550px;
+  padding: 20px;
+}
+
+.card h3 {
+  font-family: var(--scoreboard-font);
+  color: var(--teal);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--teal);
+}
+
 
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
 .hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}

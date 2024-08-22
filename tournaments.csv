@@ -1,0 +1,42 @@
+<table class="tournament-table">
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Tournament</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coast VA 2026</td>
+      <td>Lucky Draw</td>
+      <td>Richmond, VA</td>
+      <td>19-20 OCT</td>
+      <td><a href="#">Website</a></td>
+    </tr>
+    <tr>
+      <td>Coast VA 2026</td>
+      <td>Rivalry Challenge</td>
+      <td>Annapolis, MD</td>
+      <td>10 NOV</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Coast VA 2027/28</td>
+      <td>Lucky Draw</td>
+      <td>Richmond, VA</td>
+      <td>19-20 OCT</td>
+      <td><a href="#">Website</a></td>
+    </tr>
+    <tr>
+      <td>Coast VA 2027/28</td>
+      <td>Rivalry Challenge</td>
+      <td>Annapolis, MD</td>
+      <td>10 NOV</td>
+      <td></td>
+    </tr>
+    <!-- Add more rows for each team and tournament -->
+  </tbody>
+</table>
