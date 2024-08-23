@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const contactHTML = `
             <ul class="list-group list-group-borderless mb-0">
              <li class="list-group-item text-white fw-normal mb-0">
-                    <i class="fas fa-clock me-1"></i> ${contactInfo.name}
+                  <i class="fa-solid fa-signature"></i> ${contactInfo.name}
                 </li>
                 <li class="list-group-item mb-0">
                     <a href="${contactInfo.email.link}" class="text-white fw-normal">
