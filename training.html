@@ -471,7 +471,7 @@
     <script>
         // Function to generate the practice schedule
         function generatePracticeSchedule(data) {
-            const container = document.getElementById('practice-schedule');
+            const container = document.getElementById('practice');
             container.innerHTML = ''; // Clear any existing content
 
             const locationElement = document.createElement('h3');
@@ -491,7 +491,7 @@
         }
 
         // Fetch the data from the JSON file
-        fetch('practice.json')
+        fetch('assets/data/practice.json')
             .then(response => response.json())
             .then(data => {
                 generatePracticeSchedule(data);
@@ -503,7 +503,7 @@
 
     <!-- <script src="assets/js/schedule.js"></script> -->
     <script src="assets/js/contact.js"></script>
-    <script src="data.js"></script>
+    <script src="assets/js/data.js"></script>
 
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
