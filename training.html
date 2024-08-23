@@ -168,7 +168,7 @@
                         <div class="practice-card card mx-auto">
                             <div class="row d-flex  align-items-center justify-content-center my-0 mx-auto">
                                 <div class="card-body">
-                                    <h5 class="card-title">Norfolk Academy</h5>
+                                    <h5 class="card-title"></h5>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
                                             <strong>7SEP</strong> <span>(9-11AM)</span>
@@ -474,20 +474,42 @@
             const container = document.getElementById('practice');
             container.innerHTML = ''; // Clear any existing content
 
-            const locationElement = document.createElement('h3');
-            locationElement.textContent = data.location;
-            container.appendChild(locationElement);
+            // Create a map to group practice sessions by location
+            const locationMap = new Map();
+            
+            data.forEach(practice => {
+                const location = practice.Location;
+                const date = practice.Date;
+                const time = practice.Time;
 
-            const list = document.createElement('ul');
-            list.classList.add('practice-dates');
+                // If the location is not in the map, add it with an empty list
+                if (!locationMap.has(location)) {
+                    locationMap.set(location, []);
+                }
 
-            data.dates.forEach(practice => {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${practice.date} (${practice.time})`;
-                list.appendChild(listItem);
+                // Add the practice date and time to the location's list
+                locationMap.get(location).push(`${date} (${time})`);
             });
 
-            container.appendChild(list);
+            // Create HTML content based on the map
+            locationMap.forEach((practices, location) => {
+                const locationElement = document.createElement('h3');
+                locationElement.textContent = location;
+                container.appendChild(locationElement);
+                container.classList.add('practice-container');
+
+                const list = document.createElement('ul');
+                list.classList.add('practice-dates');
+
+                practices.forEach(practice => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = practice;
+                    list.appendChild(listItem);
+                    listItem.classList.add('list-font');
+                });
+
+                container.appendChild(list);
+            });
         }
 
         // Fetch the data from the JSON file
@@ -500,6 +522,7 @@
                 console.error('Error fetching practice schedule data:', error);
             });
     </script>
+
 
     <!-- <script src="assets/js/schedule.js"></script> -->
     <script src="assets/js/contact.js"></script>
