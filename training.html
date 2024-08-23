@@ -495,7 +495,8 @@
             // Create HTML content based on the map
             locationMap.forEach((practices, location) => {
                 const locationElement = document.createElement('h3');
-                locationElement.textContent = location;
+                locationElement.innerHTML = location + '<br><h4 class="practice-address">1585 Wesleyan Dr, Norfolk, VA 23502</h4>';
+                locationElement.classList.add('practice-location');
                 container.appendChild(locationElement);
                 container.classList.add('practice-container');
 
