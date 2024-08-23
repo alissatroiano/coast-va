@@ -1,14 +1,14 @@
 [
     {
-        "Label": "Fall 2024 Registration",
-        "URL": "https://calendly.com/alissa-troiano/30min"
+        "label": "Fall 2024 Registration",
+        "url": "index.html#contact"
     },
     {
-        "Label": "Winter 2024 Registration",
-        "URL": "https://example.com/register/carli"
+        "label": "Winter 2024 Register",
+        "url": "https://example.com/register/carli"
     },
     {
-        "Label": "Register for Keith Daniels",
-        "URL": "https://example.com/register/keith"
+        "label": "Register for Keith Daniels",
+        "url": "https://example.com/register/keith"
     }
 ]
