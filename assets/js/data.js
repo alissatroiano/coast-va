@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('register.json')
+    fetch('assets/data/register.json')
         .then(response => response.json())
         .then(links => {
             // Assuming you want to update a single link with the first entry in the JSON

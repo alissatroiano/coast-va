@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return jsonData;
     }
 
-    fetch('data.csv')
+    fetch('../../data.csv')
         .then(response => response.text())
         .then(csv => {
             const data = csvToJson(csv);
