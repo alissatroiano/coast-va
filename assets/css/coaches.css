@@ -90,7 +90,12 @@
   position: relative;
   overflow: hidden;
   max-width: 100%;
-  height: fit-content;
+  height: 195px;
+}
+
+.team-img img {
+  max-width: 100%;
+  height: ;
 }
 
 #coaches {
@@ -182,7 +187,7 @@ h2.coaches-title {
 .director-row .team-member .team-img,
 .director-row .team-member .team-img>img {
   width: 450px;
-  height: auto;
+  height: fit-content;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -332,7 +337,7 @@ p.coach-name {
   font-size: 1rem;
   color: var(--lightest);
   font-style: italic;
-  margin: 5px;
+  margin: 35px;
 }
 
 h6.team-title {
