@@ -294,36 +294,36 @@ h2.coaches-title {
 
 p.coach-name {
   color: var(--teal);
-  font-size: 1.15rem;
+  font-size: .875rem;
   font-weight: 400;
   font-family: var(--primary-font);
 }
 
 .coach-role {
-  font-size: 1rem;
+  font-size: .875rem;
   font-weight: 400;
   font-family: var(--primary-font);
   color: var(--darker-gray);
   text-transform: uppercase;
   line-height: 1;
-  margin: 5px auto;
+  margin: 2px auto;
 }
 
 .coach-uni {
   font-family: var(--secondary-font);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: .75rem;
   color: var(--font-color);
-  margin: 2.5px auto;
+  margin: 1.25px auto;
 }
 
 .coach-prev {
   font-family: var(--secondary-font);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: .75rem;
   color: var(--dark-gray);
   font-style: italic;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .coach-bio {
@@ -332,17 +332,18 @@ p.coach-name {
   font-size: 1rem;
   color: var(--lightest);
   font-style: italic;
-  margin: 50px;
+  margin: 5px;
 }
 
 h6.team-title {
   color: var(--teal);
-  font-size: 1.245rem;
-  letter-spacing: 2.25px;
+  font-size: 1rem;
+  letter-spacing: 2px;
   font-weight: 600;
 }
 
-
 a.coach-contact {
   color: var(--teal);
+  font-size: .75rem;
+  margin: 0 auto;
 }

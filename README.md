@@ -1,10 +1,12 @@
 # coast-va
 
+
+
+
 ## Credits
 
-### Image Storage 
+### Links
 
-#  [https://im.ge/](im.ge) Image Cloud 
-
-# [https://www.jaredwhalen.com/blog/deploy-gh-action-from-sheets](Google Sheets GitHub Actions) 
+- [https://im.ge/](im.ge) Image Cloud 
+- [https://www.jaredwhalen.com/blog/deploy-gh-action-from-sheets](Google Sheets GitHub Actions) 
 
