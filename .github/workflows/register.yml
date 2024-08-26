@@ -1,0 +1,32 @@
+name: Download data
+
+on:
+  repository_dispatch:
+    types: [Run flat.yaml from Google Sheets]
+  workflow_dispatch: {}
+  
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Write JSON data to file
+        run: |
+          echo '${{ github.event.client_payload.json_data }}' > register.json
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "Alissa Troiano"
+          git config --local user.email "alissatroianonyc@gmail.com"
+          git add register.json
+          git commit -m "Update register.json from Google Sheets"
+          git push origin master
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Assumes your site files are in the root directory
