@@ -18,16 +18,12 @@ jobs:
           http_url:         https://docs.google.com/spreadsheets/d/17_JsydEbCgWRR5tjIjfuUQTA-U7BXw85nUtzvH1ObJQ/pub?gid=199751147&single=true&output=csv
           downloaded_filename: register.csv
 
-      - name: Write JSON data to file
-        run: |
-          echo '${{ github.event.client_payload.json_data }}' > register.json
-
       - name: Commit changes
         run: |
           git config --local user.name "Alissa Troiano"
           git config --local user.email "alissatroianonyc@gmail.com"
-          git add register.json
-          git commit -m "Update register.json from Google Sheets"
+          git add register.csv
+          git commit -m "Update register.csv from Google Sheets"
           git push origin master
 
       - name: Deploy to GitHub Pages
