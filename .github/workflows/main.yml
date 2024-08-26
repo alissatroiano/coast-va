@@ -20,13 +20,13 @@ jobs:
         uses: githubocto/flat@v2
         with:
           http_url: https://docs.google.com/spreadsheets/d/1_MiyCK6R8eBrvJ7-UbK3ZD7sM_-1fse0bC3DL_XjKFw/pub?output=csv
-          downloaded_filename: public/data.csv
+          downloaded_filename: data.csv
 
       - name: Commit changes
         run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add public/data.csv
+          git config --local user.name "Alissa Troiano"
+          git config --local user.email "alissatroianonyc@gmail.com"
+          git add data.csv
           git commit -m "Update data.csv from Google Sheets"
           git push origin master
 
