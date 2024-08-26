@@ -12,6 +12,12 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
 
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url:         https://docs.google.com/spreadsheets/d/17_JsydEbCgWRR5tjIjfuUQTA-U7BXw85nUtzvH1ObJQ/pub?gid=199751147&single=true&output=csv
+          downloaded_filename: register.csv
+
       - name: Write JSON data to file
         run: |
           echo '${{ github.event.client_payload.json_data }}' > register.json
