@@ -1,4 +1,4 @@
-name: Download data
+name: Registration
 
 on:
   repository_dispatch:
