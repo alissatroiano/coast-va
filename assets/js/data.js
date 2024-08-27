@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (navItem) {
                     navItem.href = links[0].url;
                     navItem.textContent = links[0].label;
+                    navItem.target = "_blank"; // Open link in a new tab
                 }
 
                 // Update the register button in the carousel
