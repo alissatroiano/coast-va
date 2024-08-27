@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('assets/data/register.csv')
+    fetch('https://coastva.github.io/coast-va/register.csv')
         .then(response => response.text())
         .then(data => {
             const lines = data.split("\n").filter(line => line.trim() !== ""); // Split CSV into lines and filter out empty lines
