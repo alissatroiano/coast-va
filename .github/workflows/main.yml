@@ -1,9 +1,9 @@
+
 name: Download data
 
 on:
   repository_dispatch:
   workflow_dispatch: {}
-  
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -12,27 +12,10 @@ jobs:
         uses: denoland/setup-deno@main
         with:
           deno-version: v1.x
-
       - name: Check out repo
         uses: actions/checkout@v2
-
       - name: Fetch data
         uses: githubocto/flat@v2
         with:
           http_url: https://docs.google.com/spreadsheets/d/1_MiyCK6R8eBrvJ7-UbK3ZD7sM_-1fse0bC3DL_XjKFw/pub?output=csv
           downloaded_filename: data.csv
-
-      - name: Commit changes
-        run: |
-          git config --local user.name "Alissa Troiano"
-          git config --local user.email "alissatroianonyc@gmail.com"
-          git add data.csv
-          git commit -m "Update data.csv from Google Sheets"
-          git push origin master
-
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/master'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Assumes your site files are in the root directory
