@@ -16,13 +16,13 @@ jobs:
         uses: githubocto/flat@v2
         with:
           http_url: https://docs.google.com/spreadsheets/d/1DWXiZqqBKgWH5HSCoazpvoyuM3bbvKpdGdvEtkJXMW4/pub?output=csv
-          downloaded_filename: register.csv
+          downloaded_filename: practice.csv
 
       - name: Commit changes
         run: |
           git config --local user.name "Alissa Troiano"
           git config --local user.email "alissatroianonyc@gmail.com"
-          git add register.csv
+          git add practice.csv
           git commit -m "Update register.csv from Google Sheets"
           git push origin master
 
