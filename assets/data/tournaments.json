@@ -1,0 +1,71 @@
+[
+    {
+      "team": "Coast VA 2026",
+      "tournaments": [
+        {
+          "name": "Lucky Draw",
+          "location": "Richmond, VA",
+          "date": "19-20 OCT",
+          "website": "https://mylacrossetournaments.com/event/lucky-draw/"
+        },
+        {
+          "name": "Rivalry Challenge",
+          "location": "Annapolis, MD",
+          "date": "10 NOV",
+          "website": "https://mylacrossetournaments.com/event/rivalry-challenge/"
+        }
+      ]
+    },
+    {
+      "team": "Coast VA 2027/28",
+      "tournaments": [
+        {
+          "name": "Lucky Draw",
+          "location": "Richmond, VA",
+          "date": "19-20 OCT",
+          "website": "https://mylacrossetournaments.com/event/lucky-draw/"
+        },
+        {
+          "name": "Rivalry Challenge",
+          "location": "Annapolis, MD",
+          "date": "10 NOV",
+          "website": "https://mylacrossetournaments.com/event/rivalry-challenge/"
+        }
+      ]
+    },
+    {
+      "team": "Coast VA 2029/30",
+      "tournaments": [
+        {
+          "name": "Lucky Draw",
+          "location": "Richmond, VA",
+          "date": "19-20 OCT",
+          "website": "https://mylacrossetournaments.com/event/lucky-draw/"
+        },
+        {
+          "name": "Rivalry Challenge",
+          "location": "Annapolis, MD",
+          "date": "9 NOV",
+          "website": "https://mylacrossetournaments.com/event/rivalry-challenge/"
+        }
+      ]
+    },
+    {
+      "team": "Coast VA 2031/32",
+      "tournaments": [
+        {
+          "name": "Lucky Draw",
+          "location": "Richmond, VA",
+          "date": "19-20 OCT",
+          "website": "https://mylacrossetournaments.com/event/lucky-draw/"
+        },
+        {
+          "name": "Rivalry Challenge",
+          "location": "Annapolis, MD",
+          "date": "9 NOV",
+          "website": "https://mylacrossetournaments.com/event/rivalry-challenge/"
+        }
+      ]
+    }
+  ]
+  

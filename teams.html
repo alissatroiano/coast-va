@@ -370,6 +370,8 @@
         </footer>
     </div>
     <!--./end-footer-->
+
+    <!-- Tournament Cards-->
     <script>
         // Function to generate the cards
         function generateTournamentCards(data) {
@@ -402,7 +404,7 @@
         }
 
         // Fetch the data from the JSON file
-        fetch('tournaments.json')
+        fetch('assets/data/tournaments.json')
             .then(response => response.json())
             .then(data => {
                 generateTournamentCards(data);
@@ -410,11 +412,10 @@
             .catch(error => {
                 console.error('Error fetching tournament data:', error);
             });
-
     </script>
-
+    <!--./ end tournament cards script-->
+    
     <script src="assets/js/practice.js"></script>
-
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/data.js"></script>
 
