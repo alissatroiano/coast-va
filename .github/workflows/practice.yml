@@ -16,14 +16,14 @@ jobs:
         uses: githubocto/flat@v2
         with:
           http_url: https://docs.google.com/spreadsheets/d/1DWXiZqqBKgWH5HSCoazpvoyuM3bbvKpdGdvEtkJXMW4/pub?output=csv
-          downloaded_filename: practice.csv
+          downloaded_filename: assets/data/practice.csv  # Save to the correct directory
 
       - name: Commit changes
         run: |
           git config --local user.name "Alissa Troiano"
           git config --local user.email "alissatroianonyc@gmail.com"
-          git add practice.csv
-          git commit -m "Update register.csv from Google Sheets"
+          git add assets/data/practice.csv  # Specify the correct path
+          git commit -m "Update practice.csv from Google Sheets"
           git push origin master
 
       - name: Deploy to GitHub Pages
@@ -31,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./assets/data
+          publish_dir: ./  # Assumes your site files are in the root directory
