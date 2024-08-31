@@ -210,6 +210,25 @@ div#trainCta {
   line-height: 2;
 }
 
+.camp-clinic-card {
+  margin: 10px auto;
+}
+
+/* h5.card-title {
+  font-size: 1.5rem;
+} */
+
+p.card-text {
+  font-family: var(--scoreboard-font);
+  font-size: 1.1rem;
+  font-weight: 550;
+  line-height: 2.5;
+}
+
+.row.camp-clinic-row.justify-content-center {
+  margin: 30px auto;
+}
+
 @media (min-width: 576px) {
   .practice-card {
       max-width: 90%; /* Adjust the max-width for small screens */
@@ -277,9 +296,9 @@ div#trainCta {
   border-radius: 8px;
   box-shadow: rgba(88, 88, 88, 0.125) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   max-width: 100%;
-  width: 350px;
   border-color: transparent;
   padding: 20px;
+  margin: 20px auto;
 }
 
 .card h3 {

@@ -182,6 +182,28 @@ mark.mark-coaches {
   color: var(--teal);
 }
 
+.btn-primary {
+  background-color: var(--teal);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--salmon-dark);
+}
+
+a.btn.btn-primary {
+  color: #fafafa;
+  font-family: var(--scoreboard-font);
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+a.btn.btn-primary:hover {
+  color: #fafafa;
+}
+
 .mb-n3 {
   margin-bottom: -1rem !important;
 }
@@ -1066,7 +1088,8 @@ z-index: 1;
 height: auto;
 }
 
-.tournament-cards {
+.tournament-cards,
+.camp-cards {
 display: flex;
 flex-wrap: wrap;
 gap: 1.5rem;
@@ -1074,11 +1097,12 @@ justify-content: center;
 background-color: #fafafaa4;
 }
 
-.tournament-card {
+.tournament-card,
+.camp-card {
 background-color: #fafafaa4;
-
 }
 
+#campsAndClinics,
 #tournaments {
 background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
 max-width: 100%;
