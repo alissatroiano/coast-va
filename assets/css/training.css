@@ -147,6 +147,12 @@ div#trainCta {
 }
 
 /* ------------------- PRACTICE */
+.practice-container{
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
 .practice-section {
   background-color: #00796b; /* Custom teal background color */
   color: white;
@@ -172,7 +178,6 @@ div#trainCta {
 .practice-card .list-group-item {
   background-color: transparent;
   border: none;
-  font-size: 1.1rem;
   padding: 10px 0;
   list-style-type: none; /* Removes bullet points */
 }
@@ -183,6 +188,26 @@ div#trainCta {
 
 .practice-card .list-group-item span {
   font-weight: 400; /* Normal font weight */
+}
+
+.practice-container {
+  margin-top: 20px;
+}
+
+.practice-location {
+  font-size: 2rem;
+  margin: 20px auto;
+}
+
+.practice-address {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  line-height: 2;
+  margin: 20px auto;
+}
+
+.practice-dates {
+  line-height: 2;
 }
 
 @media (min-width: 576px) {
@@ -217,6 +242,11 @@ div#trainCta {
   z-index: 0;
 }
 
+.list-font {
+  font-size: 1.25rem;
+  font-family: var(--scoreboard-font);
+}
+
 .pattern-overlay-2 {
   position: relative;
   z-index: 1;
@@ -245,9 +275,10 @@ div#trainCta {
   background-color: #fafafa71;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(88, 88, 88, 0.125) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   max-width: 100%;
-  width: 550px;
+  width: 350px;
+  border-color: transparent;
   padding: 20px;
 }
 
@@ -258,6 +289,10 @@ div#trainCta {
   margin-bottom: 0.5rem;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+.list-font {
+  list-style: none;
 }
 
 .card ul {

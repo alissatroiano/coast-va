@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Step 1: Fetch the counter data from JSON
-  fetch('counter.json')
+  fetch('../../counter.json')
       .then(response => response.json())
       .then(data => {
           // Update the data-count attributes with values from JSON

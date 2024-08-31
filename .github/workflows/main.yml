@@ -1,0 +1,21 @@
+
+name: Download data
+
+on:
+  repository_dispatch:
+  workflow_dispatch: {}
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: v1.x
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://docs.google.com/spreadsheets/d/1_MiyCK6R8eBrvJ7-UbK3ZD7sM_-1fse0bC3DL_XjKFw/pub?output=csv
+          downloaded_filename: data.csv
