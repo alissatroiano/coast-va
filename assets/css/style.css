@@ -911,6 +911,222 @@ a.carousel-button-3:hover {
   text-shadow: 6px 0px 6px rgba(6, 33, 53, 0.139);
 }
 
+.title-text {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.title-teams-1 {
+  font-family: var(--secondary-font);
+  letter-spacing: 10px;
+  color: var(--light-gray);
+}
+
+.title-teams-2 {
+  font-family: var(--secondary-font);
+  color: var(--light-gray);
+  letter-spacing: 1.52px;
+  font-size: 3.8rem;
+}
+
+.bracket { 
+display: flex;
+flex-direction: row;
+position: relative;
+}
+
+.column { 
+display: flex; 
+flex-direction: column;
+min-height: 100%;
+justify-content: space-around;
+align-content: center;
+}
+
+.table-wrapper {
+max-width: 100%;
+min-height: 40vh;
+}
+
+.playpass {
+margin: 0 auto;
+}
+
+.playpass p {
+color: var(--light-gray);
+}
+
+div#trainCta {
+background: #e4e4e4;
+}
+
+/*----------------------------------- Practice */
+.practice-container{
+margin: 0 auto;
+align-items: center;
+text-align: center;
+}
+
+.practice-section {
+background-color: #00796b; /* Custom teal background color */
+color: white;
+padding: 60px 0;
+}
+
+.practice-card {
+border: none;
+border-radius: 8px;
+color: #000000; /* Dark text for readability */
+padding: 20px; /* Adds padding inside the card */
+max-width: 90%;
+font-family: var(--primary-font);
+letter-spacing: 2px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.practice-card .card-title {
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+.practice-card .list-group-item {
+background-color: transparent;
+border: none;
+padding: 10px 0;
+list-style-type: none; /* Removes bullet points */
+}
+
+.practice-card .list-group-item strong {
+font-weight: 700; /* Bold font weight */
+}
+
+.practice-card .list-group-item span {
+font-weight: 400; /* Normal font weight */
+}
+
+.practice-container {
+margin-top: 20px;
+}
+
+.practice-location {
+font-size: 2rem;
+margin: 20px auto;
+}
+
+.practice-address {
+font-family: var(--primary-font);
+font-weight: 400;
+line-height: 2;
+margin: 20px auto;
+}
+
+.practice-dates {
+line-height: 2;
+}
+
+@media (min-width: 576px) {
+.practice-card {
+    max-width: 90%; /* Adjust the max-width for small screens */
+}
+}
+
+@media (min-width: 768px) {
+.practice-card {
+    max-width: 80%; /* Adjust the max-width for medium screens */
+}
+}
+
+@media (min-width: 992px) {
+.practice-card {
+    max-width: 70%; /* Adjust the max-width for large screens */
+}
+}
+
+.pattern-overlay-2::before {
+content: "";
+background: url('../images/pattern.png');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+z-index: 0;
+}
+
+.list-font {
+font-size: 1.25rem;
+font-family: var(--scoreboard-font);
+}
+
+.pattern-overlay-2 {
+position: relative;
+z-index: 1;
+height: auto;
+}
+
+.tournament-cards {
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+justify-content: center;
+background-color: #fafafaa4;
+}
+
+.tournament-card {
+background-color: #fafafaa4;
+
+}
+
+#tournaments {
+background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
+max-width: 100%;
+min-height: 80vh;
+}
+
+.card {
+background-color: #fafafa71;
+padding: 1.5rem;
+border-radius: 8px;
+box-shadow: rgba(88, 88, 88, 0.125) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+max-width: 100%;
+width: 350px;
+border-color: transparent;
+padding: 20px;
+}
+
+.card h3 {
+font-family: var(--scoreboard-font);
+color: var(--teal);
+font-size: 2rem;
+margin-bottom: 0.5rem;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.list-font {
+list-style: none;
+}
+
+.card ul {
+list-style: none;
+padding: 0;
+}
+
+.card ul li {
+margin-bottom: 0.5rem;
+}
+
+.card a {
+color: var(--teal);
+text-decoration: none;
+}
+
+.card a:hover {
+color: var(--teal);
+}
+
 /*-----------------------------------Footer */
 
 /* --- final cta */
