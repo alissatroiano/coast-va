@@ -1,14 +1,9 @@
-{
-    "contact": {
-      "phone": {
-        "number": "",
-        "link": ""
-      },
-      "email": {
-        "address": "kirstyn.atkinson@gmail.com",
-        "link": "mailto:kirstyn.atkinson@gmail.com?subject=Coast VA Website Contact"
-      },
-      "name": "Kirstyn Atkinson Norris"
-    }
+[
+  {
+      "contact_phone_number": null,
+      "contact_phone_link": null,
+      "contact_email_address": "kirstyn.atkinson@gmail.com",
+      "contact_email_link": "mailto:kirstyn.atkinson@gmail.com?subject=Coast VA Website Contact",
+      "contact_name": "Kirstyn Atkinson Norris"
   }
-  
+]
