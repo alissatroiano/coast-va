@@ -15,7 +15,7 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v2
         with:
-          http_url: https://docs.google.com/spreadsheets/d/1DEdQ7Ote96pPL_ICYayJvd5nxunLqf3Q492i0AVRiuU/pub?gid=353377522&single=true&output=csv
+          http_url: https://docs.google.com/spreadsheets/d/1pKv0Tj0l2J3Ik0dEOr8RYnFZxfmZPUXIEc-HfrnO5xE/pub?gid=195602459&single=true&output=csv
           downloaded_filename: assets/data/faq.csv 
 
       - name: Commit changes
