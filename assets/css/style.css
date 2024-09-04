@@ -910,7 +910,7 @@ a.carousel-button-3:hover {
   color: var(--teal);
   font-family: var(--scoreboard-font);
   letter-spacing: 2px;
-  font-size: 5.12rem;
+  font-size: 3.12rem;
   font-weight: 950;
   text-shadow: 6px 0px 6px rgba(6, 33, 53, 0.139);
 }
@@ -1036,6 +1036,9 @@ line-height: 2;
 @media (min-width: 768px) {
 .practice-card {
     max-width: 80%; /* Adjust the max-width for medium screens */
+}
+.typewrite {
+  font-size: 4rem;
 }
 }
 
@@ -1251,5 +1254,8 @@ svg.svg-close {
     color: var(--lightest);
     text-shadow: 0px 0px 6px #494949;
     letter-spacing: 6px;
+  }
+  .typewrite {
+    font-size: 5rem;
   }
 }

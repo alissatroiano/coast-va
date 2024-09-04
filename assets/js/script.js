@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="coach-uni">${person.university} Alum</p>
                     <p class="coach-prev">${person.prev}</p>
                 </div>
-                <div class="row d-flex contact-txt text-coach-data my-0 mx-auto">
-                   <div class="col-12 col-sm-6">
+                <div class="row d-flex contact-txt text-coach-data my-0 mx-auto justify-content-center align-items-center text-center">
+                   <div class="col-12 col-sm-6 text-center">
                    <a class="coach-contact" href="tel:${person.number}">
                    <div class="text-center">
                  <i class="fas fa-phone"></i> 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="coach-contact"> 
 ${person.number}</p></a>
                     </div>
-                  <div class="col-12 col-sm-6">
+                  <div class="col-12 col-sm-6 text-center">
                      <a class="coach-contact" href="mailto:${person.email}">
                                             <div class="text-center">
                        <i class="fas fa-envelope"></i>
