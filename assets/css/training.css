@@ -29,24 +29,6 @@
     --gh-watermark: url('../images/gh-icon-1.png');
 }
 
-@property --num {
-    syntax: "<integer>";
-    initial-value: 20;
-    inherits: false;
-}
-
-@property --num-1 {
-    syntax: "<integer>";
-    initial-value: 4;
-    inherits: false;
-}
-
-@property --num-2 {
-    syntax: "<integer>";
-    initial-value: 8;
-    inherits: false;
-}
-
 .rajdhani-light {
     font-family: "Rajdhani", sans-serif;
     font-weight: 300;
