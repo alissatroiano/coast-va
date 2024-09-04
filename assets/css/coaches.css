@@ -24,24 +24,6 @@
   --gh-watermark: url('../images/gh-icon-1.png');
 }
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 20;
-  inherits: false;
-}
-
-@property --num-1 {
-  syntax: "<integer>";
-  initial-value: 4;
-  inherits: false;
-}
-
-@property --num-2 {
-  syntax: "<integer>";
-  initial-value: 8;
-  inherits: false;
-}
-
 .rajdhani-light {
   font-family: "Rajdhani", sans-serif;
   font-weight: 300;
@@ -72,61 +54,7 @@
   font-style: normal;
 }
 
-.our-team .container-fluid {
-  padding: 0 50px;
-}
-
-.team-img img {
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  overflow: hidden;
-  width: 100%;
-}
-
-.team-member,
-.team-img {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  height: 195px;
-}
-
-.team-img img {
-  max-width: 100%;
-  height: ;
-}
-
-#coaches {
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-#coaches::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-clip: linear-gradient(#00909e, #5be4f0, #21cbda);
-  clip-path: circle(30% at right 70%);
-}
-
-.coaches {
-  max-width: 100%;
-  height: auto;
-  background-size: cover;
-  background-color: var(--teal);
-}
-
-.coaches-container .row .col-lg-4 {
-  display: flex;
-  justify-content: center;
-}
-
-
+/* ----------------- Jumbotron */
 .jumbotron {
   position: relative;
   color: white;
@@ -140,7 +68,6 @@
 .title-text {
   font-family: "Rajdhani", sans-serif;
 }
-
 
 h2.coaches-title {
   font-size: 9vmin;
@@ -180,16 +107,47 @@ h2.coaches-title {
   display: none;
 }
 
-.team-img:hover .overlay {
-  opacity: 1;
+
+/* ----------------------- coaches grid */
+.team-member,
+.team-img {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 195px;
 }
 
-.director-row .team-member .team-img,
-.director-row .team-member .team-img>img {
-  width: 450px;
-  height: fit-content;
+#coaches {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.coaches {
   max-width: 100%;
-  margin: 0 auto;
+  height: auto;
+  background-size: cover;
+  background-color: var(--teal);
+}
+
+.coaches-container .row .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.team-img img {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  max-width: 100%;
+  background-position: center center;
+  height: auto;
+}
+
+
+.team-img:hover .overlay {
+  opacity: 1;
 }
 
 .overlay a {
@@ -228,6 +186,7 @@ h2.coaches-title {
   backdrop-filter: blur(10px);
 }
 
+
 .contentBx {
   max-width: 250px;
   height: 150px;
@@ -251,7 +210,7 @@ h2.coaches-title {
 #coaches .card .content .imgBx {
   position: relative;
   max-width: fit-content;
-  height: 100%x;
+  height: auto;
   overflow: hidden;
 }
 
@@ -267,7 +226,6 @@ h2.coaches-title {
   height: 100%;
   object-fit: cover;
 }
-
 
 #coaches .card.glassmorphism-card .sci {
   position: absolute;
@@ -349,6 +307,6 @@ h6.team-title {
 
 a.coach-contact {
   color: var(--teal);
-  font-size: .75rem;
+  font-size: .725rem;
   margin: 0 auto;
 }

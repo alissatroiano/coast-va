@@ -1,8 +1,47 @@
+function parseCSV(csvText) {
+    const rows = csvText.trim().split('\n');
+    const headers = rows[0].split(',').map(header => header.trim());
+
+    return rows.slice(1).map(row => {
+        const values = parseCSVRow(row);
+        return headers.reduce((obj, header, index) => {
+            obj[header] = values[index];
+            return obj;
+        }, {});
+    });
+}
+
+function parseCSVRow(row) {
+    const values = [];
+    let currentField = '';
+    let inQuotes = false;
+
+    for (let char of row) {
+        if (char === '"') {
+            inQuotes = !inQuotes; // Toggle quotes status
+        } else if (char === ',' && !inQuotes) {
+            // End of field
+            values.push(currentField.trim());
+            currentField = '';
+        } else {
+            // Regular character
+            currentField += char;
+        }
+    }
+
+    // Push the last field
+    values.push(currentField.trim());
+
+    return values;
+}
+
 async function loadFAQData() {
     try {
-        const response = await fetch('assets/data/faq.json'); // Update the path to your JSON file
-        console.log(response);
-        const faqs = await response.json();
+        const response = await fetch('assets/data/faq.csv'); // Update the path to your CSV file
+        const csvText = await response.text();
+
+        // Parse the CSV data
+        const faqs = parseCSV(csvText);
 
         const accordion = document.getElementById('accordionFaq');
         accordion.innerHTML = ''; // Clear existing content

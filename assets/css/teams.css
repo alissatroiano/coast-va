@@ -24,24 +24,6 @@
     --gh-watermark: url('../images/gh-icon-1.png');
 }
 
-@property --num {
-    syntax: "<integer>";
-    initial-value: 20;
-    inherits: false;
-}
-
-@property --num-1 {
-    syntax: "<integer>";
-    initial-value: 4;
-    inherits: false;
-}
-
-@property --num-2 {
-    syntax: "<integer>";
-    initial-value: 8;
-    inherits: false;
-}
-
 .rajdhani-light {
     font-family: "Rajdhani", sans-serif;
     font-weight: 300;
@@ -438,13 +420,13 @@ figure.effect-romeo:hover p {
     pointer-events: none;
     overflow: hidden;
     line-height: 0.65;
+}
 
-    span {
-        display: inline-block;
-        position: relative;
-        animation-name: slide-up-text-offset;
-        animation-delay: 0.4s;
-    }
+span {
+    display: inline-block;
+    position: relative;
+    animation-name: slide-up-text-offset;
+    animation-delay: 0.4s;
 }
 
 /*----------------------------------- Media Queries */

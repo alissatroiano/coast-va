@@ -25,24 +25,6 @@
   --gh-watermark: url('../images/gh-icon-1.png');
 }
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 20;
-  inherits: false;
-}
-
-@property --num-1 {
-  syntax: "<integer>";
-  initial-value: 4;
-  inherits: false;
-}
-
-@property --num-2 {
-  syntax: "<integer>";
-  initial-value: 8;
-  inherits: false;
-}
-
 .rajdhani-light {
   font-family: "Rajdhani", sans-serif;
   font-weight: 300;
@@ -456,7 +438,7 @@ a.dropdown-item:hover {
   color: var(--salmon-dark);
   font-weight: 705;
   font-size: 1.057rem;
-  letter-spacing: 1.35;
+  letter-spacing: 1.35px;
   background: transparent;
 }
 
@@ -536,7 +518,7 @@ a.carousel-button-1 {
 }
 
 a.carousel-button-1:hover {
-  background-color: none;
+  background-color: transparent;
   color: var(--salmon-light);
   text-decoration: line-through;
   font-size: 1.4258rem;
@@ -551,7 +533,7 @@ a.carousel-button-2 {
 }
 
 a.carousel-button-2:hover {
-  background-color: none;
+  background-color: transparent;
   color: #fcdd63da;
   text-decoration: line-through;
   font-size: 1.457rem;
@@ -566,7 +548,7 @@ a.carousel-button-3 {
 }
 
 a.carousel-button-3:hover {
-  background-color: none;
+  background-color: transparent;
   color: #059aa8;
   text-decoration: line-through;
   font-size: 1.468rem;
@@ -928,7 +910,7 @@ a.carousel-button-3:hover {
   color: var(--teal);
   font-family: var(--scoreboard-font);
   letter-spacing: 2px;
-  font-size: 5.12rem;
+  font-size: 3.12rem;
   font-weight: 950;
   text-shadow: 6px 0px 6px rgba(6, 33, 53, 0.139);
 }
@@ -1055,6 +1037,9 @@ line-height: 2;
 .practice-card {
     max-width: 80%; /* Adjust the max-width for medium screens */
 }
+.typewrite {
+  font-size: 4rem;
+}
 }
 
 @media (min-width: 992px) {
@@ -1102,11 +1087,17 @@ background-color: #fafafaa4;
 background-color: #fafafaa4;
 }
 
-#campsAndClinics,
 #tournaments {
-background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
+  max-width: 100%;
+  min-height: 80vh;
+  padding-bottom: 50px;
+}
+
+#campsAndClinics {
+/* background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center; */
 max-width: 100%;
 min-height: 80vh;
+overflow: hidden;
 }
 
 .card {
@@ -1269,5 +1260,8 @@ svg.svg-close {
     color: var(--lightest);
     text-shadow: 0px 0px 6px #494949;
     letter-spacing: 6px;
+  }
+  .typewrite {
+    font-size: 5rem;
   }
 }
