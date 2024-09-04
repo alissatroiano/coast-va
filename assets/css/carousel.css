@@ -94,12 +94,7 @@
   &:hover .btn-next {
     opacity: 1 !important; // stylelint-disable-line declaration-no-important
   }
-}
 
-
-// Pagination
-
-// Bullets
 
 .swiper-pagination {
   --#{$prefix}carousel-pagination-bullet-width: #{$carousel-bullet-width};
