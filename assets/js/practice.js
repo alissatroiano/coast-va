@@ -1,6 +1,6 @@
 // Function to generate the practice schedule
 function generatePracticeSchedule(data) {
-    const container = document.getElementById('practice');
+    const container = document.getElementById('practiceSchedule');
     container.innerHTML = ''; // Clear any existing content
 
     // Create a map to group practice sessions by location

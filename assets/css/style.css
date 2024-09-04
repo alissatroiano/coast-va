@@ -1087,11 +1087,17 @@ background-color: #fafafaa4;
 background-color: #fafafaa4;
 }
 
-#campsAndClinics,
 #tournaments {
+  max-width: 100%;
+  min-height: 80vh;
+  padding-bottom: 50px;
+}
+
+#campsAndClinics {
 background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
 max-width: 100%;
 min-height: 80vh;
+overflow: hidden;
 }
 
 .card {
