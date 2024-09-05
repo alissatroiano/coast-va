@@ -1,4 +1,5 @@
 imageClass,title,description,buttonText,buttonLink,captionClass,backgroundImage
-carousel-item-1,Next Level Lacrosse,Perform at the highest level with Coast VA lacrosse Clubs.,Register Now,#register,text-start,assets/images/bg2.png
+carousel-item-1,Next Level Lacrosse,Perform at the highest level with Coast VA lacrosse Clubs.,Register Now,teams.html#contact,text-start,assets/images/bg2.png
 carousel-item-2,Regional Club Teams,Club teams provide competitive opportunities for our athletes to grow and showcase themselves year-round.,Learn more,#learnMore,text-center,assets/images/coast-img-3.jpg
-carousel-item-3,World Class Coaching,"Coast VA coaches are experienced, inspiring, and hands down the best.",Meet Our Staff,coaches.html#coaches,text-end,assets/images/coast-img-7.jpg
+carousel-item-3,World Class Coaching,"Coast VA coaches are experienced, inspiring, and hands down the best.",Meet Our Staff,coaches.html#coaches,text-end,https://i.im.ge/2024/09/06/f8ia5D.net.png
+carousel-item-4,Team Building,Coast VA fosters  team building and friendship ,Our Teams,teams.html,,assets/images/coast-img-7.jpg

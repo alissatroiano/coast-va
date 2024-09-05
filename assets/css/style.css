@@ -504,6 +504,21 @@ section.hero {
   margin: 20px auto;
 }
 
+a.btn.btn-lg.carousel-button-4 {
+  background: var(--teal-medium);
+  width: fit-content;
+}
+
+a.btn.btn-lg.carousel-button-5 {
+  background-color: var(--yellow);
+  width: fit-content;
+}
+
+a.btn.btn-lg.carousel-button-6 {
+  background: var(--salmon-dark);
+  width: fit-content;
+}
+
 a.btn.btn-lg.btn-primary {
   border: none;
   color: var(--font-color-lt);
