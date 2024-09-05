@@ -19,7 +19,7 @@
     <!--Custom Stylesheet-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/teams.css" rel="stylesheet">
-    <title>Coast VA</title>
+    <title>Coast VA - Teams</title>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="training.html" class="nav-link link-font ">Camps & Clinics</a>
+                            <a href="camps-and-clinics.html" class="nav-link link-font ">Camps & Clinics</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
@@ -159,7 +159,7 @@
                     <div class="tournament-cards secondary-font">
                         <div class="col-12 secondary-font py-3 mb-3">
 
-                        <div class="card h-100 tournament-card">
+                        <div class="card tournament-card">
                             <h3>Coast VA 2026</h3>
                             <ul>
                                 <li>Lucky Draw - Richmond, VA (19-20 OCT) <a href="#">More Info</a></li>
@@ -317,7 +317,7 @@
             <div class="col mb-3">
                 <h5>Camps & Clinics</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="training.html" class="nav-link p-0 link-font">Camps & Clinics</a>
+                    <li class="nav-item mb-2"><a href="camps-and-clinics.html" class="nav-link p-0 link-font">Camps & Clinics</a>
                     </li>
                 </ul>
             </div>
@@ -339,52 +339,9 @@
         </footer>
     </div>
     <!--./end-footer-->
-
-    <!-- Tournament Cards-->
-    <script>
-        // Function to generate the cards
-        function generateTournamentCards(data) {
-            const container = document.querySelector('.tournament-cards');
-            container.innerHTML = ''; // Clear any existing content
-
-            data.forEach(team => {
-                const card = document.createElement('div');
-                card.classList.add('card');
-
-                const title = document.createElement('h3');
-                title.textContent = team.team;
-                card.appendChild(title);
-
-                const subtitle = document.createElement('p');
-                subtitle.textContent = 'Tournaments:';
-                card.appendChild(subtitle);
-
-                const list = document.createElement('ul');
-
-                team.tournaments.forEach(tournament => {
-                    const listItem = document.createElement('li');
-                    listItem.innerHTML = `${tournament.name} - ${tournament.location} (${tournament.date})` + `<br>` + `<a class="link-font" href="${tournament.website}" target="_blank">Learn More</a>`;
-                    list.appendChild(listItem);
-                });
-
-                card.appendChild(list);
-                container.appendChild(card);
-            });
-        }
-
-        // Fetch the data from the JSON file
-        fetch('assets/data/tournaments.json')
-            .then(response => response.json())
-            .then(data => {
-                generateTournamentCards(data);
-            })
-            .catch(error => {
-                console.error('Error fetching tournament data:', error);
-            });
-    </script>
-    <!--./ end tournament cards script-->
     
     <script src="assets/js/practice.js"></script>
+    <script src="assets/js/tournaments.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/data.js"></script>
 

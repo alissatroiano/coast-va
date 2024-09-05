@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 cardWrap.innerHTML = `
                     <div class="card camp-clinic-card text-center">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">${item.name}</h5>
+                            <h5 class="card-title fw-bold display-7">${item.name}</h5>
                             <p class="card-text">${item.location}</p>
                             <p class="card-text">${item.start} - ${item.end}</p>
                             <a href="${item.registration}" class="btn btn-primary" target="_blank">Register</a>
