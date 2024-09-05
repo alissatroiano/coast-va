@@ -271,3 +271,45 @@ p.card-text {
   background: linear-gradient(rgba(255, 255, 255, 0.91), rgba(250, 253, 255, 0.783)), url('../images/lax-sticks.png') no-repeat center center;
   max-width: 100%;
 }
+
+.card {
+  background-color: #fafafaae;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: rgba(88, 88, 88, 0.125) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  max-width: 100%;
+  border-color: transparent;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.card h3 {
+  font-family: var(--scoreboard-font);
+  color: var(--teal);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.list-font {
+  list-style: none;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--teal);
+}
