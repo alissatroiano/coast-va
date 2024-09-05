@@ -16,7 +16,7 @@ jobs:
         uses: githubocto/flat@v2
         with:
           http_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2apVfwQi9CKl9xuMoP0XOng6l_mMLBHuHIbHKOdpKRLwuvFJNgMo6c20F8zM45TzJiCEdvI-5Qd/pub?gid=1391037033&single=true&output=csv
-          downloaded_filename: assets/data/training_points.csv 
+          downloaded_filename: assets/data/training_points.csv
 
       - name: Commit changes
         run: |
