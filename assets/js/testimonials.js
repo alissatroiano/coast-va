@@ -1,11 +1,16 @@
 async function loadTestimonialsData() {
     try {
-        const response = await fetch('assets/data/alumni.json'); // Update the path to your JSON file
-        const data = await response.json();
+        const response = await fetch('assets/data/testimonials.csv'); // Update the path to your CSV file
+        const csvText = await response.text();
 
-        // Update title and description
-        document.querySelector('.testimonials h2').innerText = data.title;
-        document.querySelector('.testimonials p').innerText = data.description;
+        const data = Papa.parse(csvText, {
+            header: true,
+            skipEmptyLines: true,
+        }).data;
+
+        // Update title and description from the first row
+        document.querySelector('.testimonials h2').innerText = data[0].title;
+        document.querySelector('.testimonials p').innerText = data[0].description;
 
         // Elements for tabs and content
         const tabContent = document.getElementById('pills-tabContent');
@@ -15,7 +20,7 @@ async function loadTestimonialsData() {
         navPills.innerHTML = ''; // Clear existing nav-pills
 
         // Populate tabs and content dynamically
-        data.testimonials.forEach((testimonial, index) => {
+        data.forEach((testimonial, index) => {
             const isActive = index === 0 ? 'active show' : '';
             const ariaSelected = index === 0 ? 'true' : 'false';
 
@@ -30,7 +35,7 @@ async function loadTestimonialsData() {
                         ${'<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>'.repeat(Math.floor(cappedRating))}
                         ${cappedRating % 1 ? '<li class="list-inline-item me-0"><i class="fas fa-star-half-alt text-warning"></i></li>' : ''}
                     </ul>
-                    <h6 class="mb-2">${testimonial.title}</h6>
+                    <h6 class="mb-2">${testimonial.testimonial_title}</h6>
                     <p class="heading-color">${testimonial.content}</p>
                 </div>`;
             tabContent.insertAdjacentHTML('beforeend', contentHTML);
