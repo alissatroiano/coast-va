@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('https://coastva.github.io/coast-va/register.csv')
+    // Fetch the register.csv file
+    fetch('assets/data/register.csv')
         .then(response => response.text())
         .then(data => {
             const lines = data.split("\n").filter(line => line.trim() !== ""); // Split CSV into lines and filter out empty lines
@@ -25,12 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     navItem.target = "_blank"; // Open link in a new tab
                 }
 
-                // Update the register button in the carousel
-                const registerCta = document.getElementById("registerCta");
-                if (registerCta) {
-                    registerCta.href = links[0].url;
-                    registerCta.textContent = links[0].label;
-                }
+                // Wait for the carousel to finish loading and update the register button
+                document.addEventListener('DOMContentLoaded', function () {
+                    const registerCta = document.getElementById("registerCta");
+                    if (registerCta) {
+                        registerCta.href = links[0].url;
+                        registerCta.textContent = links[0].label;
+                    }
+                });
             } else {
                 console.error("No valid links found in the CSV data.");
             }
