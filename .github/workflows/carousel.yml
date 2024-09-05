@@ -1,0 +1,34 @@
+name: Carousel Update
+
+on:
+  repository_dispatch:
+    types: [Run flat.yaml from Google Sheets]
+  workflow_dispatch: {}
+  
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSYipDNJhoixOAu0446MmeFQhI_yr-1Fks1oNV5GgSYnrKo3D6HCdjx4gNjVnqfxsPlNDM6gJrag-BL/pub?gid=1089902194&single=true&output=csv
+          downloaded_filename: assets/data/carousel.csv
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "Alissa Troiano"
+          git config --local user.email "alissatroianonyc@gmail.com"
+          git add assets/data/carousel.csv  # Specify the correct path
+          git commit -m "Update carousel.csv from Google Sheets"
+          git push origin master
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Assumes your site files are in the root directory
