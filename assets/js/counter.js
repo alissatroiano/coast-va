@@ -1,31 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Step 1: Fetch the counter data from JSON
-  fetch('counter.json')
-      .then(response => response.json())
-      .then(data => {
-          // Check if data is an array and get the first object if it is
-          if (Array.isArray(data)) {
-              data = data[0];
-          }
+  // Step 1: Fetch the counter data from CSV
+  fetch('assets/data/counter.csv')
+      .then(response => response.text())
+      .then(csvText => {
+          // Parse the CSV text into an array of objects
+          const data = parseCSV(csvText);
 
-          // Update the data-count attributes with values from JSON
+          // Update the data-count attributes with values from CSV
           const counterElements = document.querySelectorAll('.counter-wrap span');
 
           counterElements.forEach((element) => {
               const counterText = element.nextElementSibling.textContent.trim();
 
               if (counterText.includes("Programs & Events")) {
-                  element.setAttribute("data-count", data.programs);
+                  element.setAttribute("data-count", data[0].programs);
               } else if (counterText.includes("Championship Games")) {
-                  element.setAttribute("data-count", data.championships);
+                  element.setAttribute("data-count", data[0].championships);
               }
           });
 
           // Step 2: Initialize the counter animation once the data is set
           document.querySelectorAll('[data-count]').forEach(inViewportCounter);
       })
-      .catch(error => console.error("Error fetching JSON data:", error));
+      .catch(error => console.error("Error fetching CSV data:", error));
 });
+
+// CSV parsing function
+function parseCSV(csvText) {
+  const lines = csvText.trim().split('\n');
+  const headers = lines[0].split(',');
+  const values = lines[1].split(',');
+
+  const dataObj = {};
+  headers.forEach((header, index) => {
+      dataObj[header.trim()] = values[index].trim();
+  });
+
+  return [dataObj]; // Return as an array of objects
+}
 
 // Existing counter animation code
 const easeInOutQuad = (t) => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
