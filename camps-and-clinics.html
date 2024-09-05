@@ -50,15 +50,22 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="camps-and-clinics.html" class="nav-link link-font ">Camps & Clinics</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="camps-and-clinics.html">
+                                Camps & Clinics </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="camps-and-clinics.html#campsAndClinics">Upcoming Programs</a></li>
+                                <li><a class="dropdown-item" href="camps-and-clinics.html#trainingPoints">Training</a></li>
+                            </ul>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link link-font dropdown-toggle dropdown-toggle-split"
                                 data-bs-toggle="dropdown" aria-expanded="false" href="coaches.html">
                                 Coaches </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="coaches.html">Coaches</a></li>
+                                <li><a class="dropdown-item" href="coaches.html#coaches">Coaches</a></li>
                                 <li><a class="dropdown-item" href="coaches.html#contact">Private Lessons</a></li>
                                 <li><a class="dropdown-item" href="coaches.html#contact">Group Lessons</a></li>
 
@@ -114,7 +121,7 @@
         </section>
 
         <!--Why Coast VA-->
-        <section class="p-3 p-md-4 p-xl-5 border-0">
+        <section class="p-3 p-md-4 p-xl-5 border-0" id="trainingPoints">
             <div class="container p-2">
                 <div class="row mb-10">
                     <div class="col-lg-6 my-3">
@@ -339,7 +346,7 @@
 
     <script src="assets/js/campsAndClinics.js"></script>
     <script src="assets/js/trainingPoints.js"></script>
-
+    <script src="assets/js/autoCloseNav.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/data.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
