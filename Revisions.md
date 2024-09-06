@@ -1,6 +1,6 @@
 # COAST VA
 
-## MILESTONE 1 REVISIONS
+## Revisions
 
 ### HOMEPAGE
 - [x] Wrote Google App script, developed GitHub Workflow, and constructed new data file for Homepage Carousel, making it possible for client to edit carousel data (text, images, links) right from Google Sheets.
