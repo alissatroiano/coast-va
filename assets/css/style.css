@@ -1139,7 +1139,7 @@ div#trainCta {
 }
 
 #campsAndClinics {
-  background: linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.51), rgba(255, 255, 255, 0.685)), url('../images/coast-logo.png') no-repeat;
+  background: linear-gradient(rgb(248 249 250), rgb(248 249 250 / 52%), rgb(248 249 250 / 54%)), url(../images/coast-logo.png) no-repeat;
   background-position: center;
   max-width: 100%;
   height: auto;
@@ -1186,6 +1186,12 @@ div#trainCta {
 
 .card a:hover {
   color: var(--teal);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #03909e;
+  box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
 
 /*-----------------------------------Footer */
