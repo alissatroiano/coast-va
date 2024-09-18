@@ -215,7 +215,8 @@ h2.coaches-title {
 }
 
 .coach-contact {
-  font-family: var(--secondary-font);
+  font-family: var(--scoreboard-font);
+  font-weight: 650;
 }
 
 #coaches .card.glassmorphism-card .content .imgBx img {
@@ -262,51 +263,70 @@ p.coach-name {
   font-family: var(--primary-font);
 }
 
+h6.team-title {
+  color: var(--teal);
+  font-family: var(--scoreboard-font);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
 .coach-role {
-  font-size: .875rem;
-  font-weight: 400;
-  font-family: var(--primary-font);
-  color: var(--darker-gray);
+  font-size: 1.475rem;
+  font-weight: 800;
+  font-family: var(--scoreboard-font);
+  color: var(--teal);
   text-transform: uppercase;
   line-height: 1;
-  margin: 2px auto;
+  margin-bottom: 12px;
 }
 
 .coach-uni {
-  font-family: var(--secondary-font);
-  font-weight: 400;
-  font-size: .75rem;
-  color: var(--font-color);
+  font-family: var(--scoreboard-font);
+  font-weight: 600;
+  font-size: .85rem;
+  color: var(--gray);
   margin: 1.25px auto;
 }
 
 .coach-prev {
-  font-family: var(--secondary-font);
+  font-family: var(--scoreboard-font);
   font-weight: 400;
-  font-size: .75rem;
+  font-size: .85rem;
   color: var(--dark-gray);
-  font-style: italic;
-  margin-bottom: 5px;
+  margin: 10px 20px;
 }
 
 .coach-bio {
-  font-family: var(--secondary-font);
-  font-weight: 400;
-  font-size: 1rem;
-  color: var(--lightest);
+  font-family: var(--scoreboard-font);
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--teal-light);
   font-style: italic;
   margin: 35px;
-}
-
-h6.team-title {
-  color: var(--teal);
-  font-size: 1rem;
-  letter-spacing: 2px;
-  font-weight: 600;
 }
 
 a.coach-contact {
   color: var(--teal);
   font-size: .725rem;
+  font-family: var(--scoreboard-font);
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  h6.team-title {
+    color: var(--teal);
+    font-family: var(--scoreboard-font);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .coach-role {
+    font-size: 1.75rem;
+    font-family: var(--scoreboard-font);
+    color: var(--teal);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
 }
