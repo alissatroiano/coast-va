@@ -59,7 +59,7 @@ async function loadFAQData() {
                     </div>
                     <div id="collapse-${index + 1}" class="accordion-collapse collapse ${isOpen}" aria-labelledby="heading-${index + 1}"
                         data-bs-parent="#accordionFaq">
-                        <div class="accordion-body mt-3 pb-0">
+                        <div class="accordion-body my-2 pb-1">
                             ${faq.answer}
                         </div>
                     </div>
