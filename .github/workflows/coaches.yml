@@ -1,4 +1,4 @@
-name: Registration
+name: Coaches Page
 
 on:
   repository_dispatch:
@@ -15,15 +15,15 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v2
         with:
-          http_url:         https://docs.google.com/spreadsheets/d/17_JsydEbCgWRR5tjIjfuUQTA-U7BXw85nUtzvH1ObJQ/pub?gid=199751147&single=true&output=csv
-          downloaded_filename: assets/data/register.csv
+          http_url: https://docs.google.com/spreadsheets/d/1_MiyCK6R8eBrvJ7-UbK3ZD7sM_-1fse0bC3DL_XjKFw/pub?output=csv
+          downloaded_filename: assets/data/data.csv
 
       - name: Commit changes
         run: |
           git config --local user.name "Alissa Troiano"
           git config --local user.email "alissatroianonyc@gmail.com"
-          git add assets/data/register.csv
-          git commit -m "Update register.csv from Google Sheets"
+          git add assets/data/data.csv
+          git commit -m "Update data.csv from Google Sheets to edit coaches page"
           git push origin master
 
       - name: Deploy to GitHub Pages
