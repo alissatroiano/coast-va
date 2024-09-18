@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    fetch('https://coastva.github.io/coast-va/data.csv')
+    fetch('assets/data/data.csv')
         .then(response => response.text())
         .then(csv => {
             const data = csvToJson(csv);
