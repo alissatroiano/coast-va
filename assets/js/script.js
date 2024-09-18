@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img src="${person.imgSrc}" alt="${person.name}" class="img-fluid">
                     <div class="overlay">
                         <div class="team-details text-center">
-                            <p class="coach-bio">${person.bio}</p>
+                            <p class="coach-quote">${person.quote}</p>
                         </div>
                     </div>
                 </div>
