@@ -119,6 +119,10 @@ h6 {
   background-color: var(--teal);
 }
 
+.text-teal {
+  color: var(--teal);
+}
+
 .bg-yellow {
   background-color: var(--yellow);
 }
@@ -1192,6 +1196,16 @@ div#trainCta {
   color: #ffffff;
   background-color: #03909e;
   box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: .851px;
+}
+
+button.accordion-button.fw-semibold.rounded.collapsed {
+  background-color: #2bc9d7ac;
+  box-shadow: 1.5px 3px 6px #5f5f5fdb;
+  letter-spacing: .851px;
 }
 
 .accordion-body {
