@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
-                <div class="col-12 text-light text-coach-data my-3 pb-2">
+                <div class="col-12 text-light text-coach-data my-3 px-3 px-md-4 px-lg-5">
                     <h6 class="team-title">${person.name}, </h6>
                     <p class="coach-role">${role}</p>
                     <p class="coach-uni">${person.university} Alum</p>
