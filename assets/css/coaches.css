@@ -107,7 +107,6 @@ h2.coaches-title {
   display: none;
 }
 
-
 /* ----------------------- coaches grid */
 .team-member,
 .team-img {
@@ -209,8 +208,8 @@ h2.coaches-title {
 .team-member,
 #coaches .card .content .imgBx {
   position: relative;
-  max-width: fit-content;
-  height: auto;
+  max-width: 350px;
+  height: 450px;
   overflow: hidden;
 }
 
