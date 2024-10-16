@@ -157,6 +157,20 @@ mark.mark-coaches {
   background-color: transparent;
 }
 
+.contact-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.coach-contact {
+  color: var(--teal);
+  font-size: .725rem;
+  margin: 0 auto;
+  display: block;
+}
+
 .mark-text {
   font-family: 'Phenomena', sans-serif;
   font-weight: 400;

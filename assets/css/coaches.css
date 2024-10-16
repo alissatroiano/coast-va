@@ -134,14 +134,13 @@ h2.coaches-title {
 }
 
 .team-img img {
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  overflow: hidden;
   max-width: 100%;
-  background-position: center center;
   height: auto;
+}
+
+.team-member,
+.team-img {
+  height: 295px;
 }
 
 
@@ -174,7 +173,6 @@ h2.coaches-title {
 .team-member {
   position: relative;
   max-width: 100%;
-  height: auto;
   background: rgba(255, 255, 255, 0.05);
   margin: 20px auto;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
@@ -183,12 +181,6 @@ h2.coaches-title {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
-}
-
-
-.contentBx {
-  max-width: 250px;
-  height: 150px;
 }
 
 #coaches .card.glassmorphism-card .content,
@@ -208,7 +200,7 @@ h2.coaches-title {
 .team-member,
 #coaches .card .content .imgBx {
   position: relative;
-  max-width: 350px;
+  max-width: 250px;
   height: 450px;
   overflow: hidden;
 }
@@ -266,7 +258,7 @@ h6.team-title {
   color: var(--teal);
   font-family: var(--scoreboard-font);
   font-size: 1.25rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 500;
 }
 
@@ -310,22 +302,23 @@ a.coach-contact {
   font-size: .725rem;
   font-family: var(--scoreboard-font);
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
   h6.team-title {
     color: var(--teal);
     font-family: var(--scoreboard-font);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     letter-spacing: 2px;
   }
   
   .coach-role {
-    font-size: 1.75rem;
+    font-size: 1.35rem;
     font-family: var(--scoreboard-font);
     color: var(--teal);
     text-transform: uppercase;
     line-height: 1;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
   }
 }

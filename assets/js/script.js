@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
-                <div class="col-12 text-light text-coach-data my-3 px-3 px-md-4 px-lg-5">
+                <div class="col-12 text-light text-coach-data my-3">
                     <h6 class="team-title">${person.name}, </h6>
                     <p class="coach-role">${role}</p>
                     <p class="coach-uni">${person.university} Alum</p>
@@ -76,16 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
                    <div class="text-center">
                  <i class="fas fa-phone"></i> 
                  </div>
-                    <p class="coach-contact"> 
-${person.number}</p></a>
+            </a>
                     </div>
                   <div class="col-12 col-sm-6 text-center">
                      <a class="coach-contact" href="mailto:${person.email}">
                                             <div class="text-center">
                        <i class="fas fa-envelope"></i>
                        </div>
-             <p class="coach-contact"> 
-${person.email} </p> </a>
+           </a>
                    </div>
                 </div>
             </div>
