@@ -45,15 +45,26 @@ document.addEventListener("DOMContentLoaded", function () {
             const directorRow = document.querySelector(".director-row");
             const teamRow = document.querySelector(".team-row");
 
-            const defaultImgSrc = 'assets/images/coast-logo.png'; // Path to default image
+            // Array of default images to be used randomly
+            const defaultImages = [
+                'assets/images/default-coach1.png',
+                'assets/images/default-coach2.png',
+                'assets/images/default-coach3.png'
+            ];
+
+            // Function to pick a random default image
+            function getRandomDefaultImage() {
+                const randomIndex = Math.floor(Math.random() * defaultImages.length);
+                return defaultImages[randomIndex];
+            }
 
             data.forEach(person => {
                 console.log(`Email for ${person.name}: ${person.email}`);
 
                 const role = person.type === "director" ? "Program Director" : "Coach";
 
-                // Check if imgSrc is provided, else set to default image
-                const imgSrc = person.imgSrc && person.imgSrc.trim() !== '' ? person.imgSrc : defaultImgSrc;
+                // Check if imgSrc is provided, else set to a random default image
+                const imgSrc = person.imgSrc && person.imgSrc.trim() !== '' ? person.imgSrc : getRandomDefaultImage();
 
                 const memberWrap = document.createElement("div");
                 memberWrap.className = "col-xs-8 col-sm-4 team-wrap";
@@ -69,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
                 <div class="col-12 text-light text-coach-data">
-                    <h6 class="team-title mx-1">${person.name}, </h6>
+                    <h6 class="team-title mx-1 mt-3">${person.name}, </h6>
                     <p class="coach-role">${role}</p>
                     <p class="coach-uni">${person.university} Alum</p>
                     <p class="coach-prev">${person.prev}</p>
