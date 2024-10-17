@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return jsonData;
     }
 
-
     fetch('assets/data/data.csv')
         .then(response => response.text())
         .then(csv => {
@@ -46,10 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
             const directorRow = document.querySelector(".director-row");
             const teamRow = document.querySelector(".team-row");
 
+            const defaultImgSrc = 'assets/images/coast-logo.png'; // Path to default image
+
             data.forEach(person => {
                 console.log(`Email for ${person.name}: ${person.email}`);
 
                 const role = person.type === "director" ? "Program Director" : "Coach";
+
+                // Check if imgSrc is provided, else set to default image
+                const imgSrc = person.imgSrc && person.imgSrc.trim() !== '' ? person.imgSrc : defaultImgSrc;
 
                 const memberWrap = document.createElement("div");
                 memberWrap.className = "col-xs-8 col-sm-4 team-wrap";
@@ -57,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 memberWrap.innerHTML = `
             <div class="team-member text-center">
                 <div class="team-img">
-                    <img src="${person.imgSrc}" alt="${person.name}" class="img-fluid">
+                    <img src="${imgSrc}" alt="${person.name}" class="img-fluid">
                     <div class="overlay">
                         <div class="team-details text-center">
                             <p class="coach-quote">${person.quote}</p>
