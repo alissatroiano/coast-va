@@ -92,6 +92,49 @@ hr.training-hr {
   font-family: 'phenomena', sans-serif;
 }
 
+.scoreboard-font {
+  font-family: var(--scoreboard-font);
+}
+
+p.heading-color {
+  /* font-family: var(--scoreeboard-font); */
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.icon-lg {
+  font-size: 2.5rem;
+  color: #fff; /* White color for the quote icon */
+  background-color: #333; /* Dark background */
+  border-radius: 50%; /* Circle background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px; /* Centered with margin below */
+}
+
+.heading-color {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.fa-quote-left, .fa-quote-right {
+  color: #f3f3f3;
+  margin: 0 5px;
+}
+
+.icon-lg {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .text-main {
   color: #515151aa;
 }
