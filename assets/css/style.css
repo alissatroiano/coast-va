@@ -654,68 +654,31 @@ a.carousel-button-3:hover {
 }
 
 /* -------------------- Testimonials */
-
-.avatar {
-  height: 3rem;
-  width: 3rem;
-  position: relative;
-  display: inline-block !important;
+/* Styles for the testimonial carousel items */
+.testimonial-carousel-item {
+  max-width: 100%; /* Reset max-width */
+  min-height: auto; /* Adjust min-height to auto or a fixed height that suits the content */
+  padding: 20px; /* Add padding to the testimonials for spacing */
+  overflow: visible; /* Ensure the content flows properly */
 }
 
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+.testimonial.carousel-control-next,
+.testimonial .carousel-control-prev {
+  margin-top: 420px;
 }
 
-.avatar-group {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.carousel-item.testimonial-carousel-item {
+  min-height: 40vh;
 }
 
-.avatar-group>li {
-  position: relative;
+/* Adjust text alignment and spacing */
+.testimonial-carousel-item p {
+  text-align: left;
 }
 
-.avatar-group>li:not(:last-child) {
-  margin-right: -0.8rem;
-}
-
-.avatar .avatar-name {
-  margin-left: 7px;
-}
-
-.avatar-xxs {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.avatar-xs {
-  height: 2.1875rem;
-  width: 2.1875rem;
-}
-
-.avatar-sm {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.avatar-lg {
-  height: 4rem;
-  width: 4rem;
-}
-
-.avatar-xl {
-  height: 5.125rem;
-  width: 5.125rem;
-}
-
-.avatar-xxl {
-  height: 5.125rem;
-  width: 5.125rem;
+/* Adjust icon size and positioning */
+.testimonial-carousel-item .icon-lg {
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
