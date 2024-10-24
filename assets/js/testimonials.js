@@ -28,7 +28,7 @@ async function loadTestimonialsData() {
                     </div>
                     <p class="heading-color secondary-font my-3">
                         <span class="fa fa-quote-left"></span>
-                        ${testimonial.content}
+                        ${testimonial.quote}
                         <span class="fa fa-quote-right"></span>
                     </p>
                 </div>`;
@@ -42,7 +42,7 @@ async function loadTestimonialsData() {
                         aria-controls="testi-${index + 1}" aria-selected="${ariaSelected}" tabindex="-1">
                         <div class="ms-2">
                             <h6 class="mb-0">${testimonial.name}</h6>
-                            <p class="mb-0 small">${testimonial.year}</p>
+                            <p class="mb-0 small">${testimonial.team}, ${testimonial.year}</p>
                         </div>
                     </div>
                 </div>`;
